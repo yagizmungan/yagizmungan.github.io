@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<style type="text/css">
+td img {display: block;}body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+.style9 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+.style15 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+</style>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Causality</title>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "web.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #bfbfbf;
+		}
+		a:active, a:hover {
+			color: #bfbfbf;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+	<p align="left"><span class="style15">Causality</span></p>
+    <hr noshade="noshade" color: #333333 />&nbsp;</p>
+		<p class="header"><span></p>
+
+    
+    
+		
+	<p>&nbsp;</p>
+	<table width="1110" height="0" border="0" align="center">
+      <tr>
+        <td class="style9"><p><em>Causality </em>is a game-based installation that presents the audience a  slice of life in which they need to make critical choices. By going through a  world of abstract sounds and a story framework, the audience is invited to perform, play and enjoy a  unique, sound-driven audiovisual experience about hearing, decision making and  the visual culture.</p>
+          <p><br />
+            The world of <em>Causality </em>is created such that only the things that one can hear  does exist and are visible. This puts the audience in a position to make the  choices based on sound. From the narrative framework, created with the abstract  sounds, each person creates his or her own sound story like a composer. The  details of the story are defined with the combination of audience’s imagination  and gameplay. In the end, the performances are saved as audio files within the  system.</p>
+          <p><br />
+            With the game mechanics, <em>Causality</em> encourages the audience to use  their hearing actively, and depend less on the visuals thus bringing attention  to the visual culture that we have today. Finally, <em>Causality</em> is also the first implementation of a research that  investigates the idea of games as musical instruments that can be used for  creative expression.</p>
+          <p>Here is a video description of <em>Causality:</em></p>
+          <p><iframe src="//player.vimeo.com/video/74356011" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/74356011">Causality Description</a> from <a href="http://vimeo.com/user601953">Yagiz Mungan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p align="left">You can find an early teaser for <em>Causality</em> <a href="http://web.ics.purdue.edu/~rmungan/CausalityTeaser.html">here</a>.</p>
+          <p align="left">During the installation, the audio performances of the audience have been anonymously recorded and here is some samples of the created abstract sound-stories:</p>
+        <p align="left">&nbsp;</p>
+        <p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F83313719"></iframe>
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Here is a playthrough video from Causality:</p>
+        <p><iframe src="http://player.vimeo.com/video/67924979" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/67924979">Causality playthrough</a> from <a href="http://vimeo.com/user601953">Yagiz Mungan</a> on <a href="http://vimeo.com">Vimeo</a>.</p></p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Here are some images from the installation:</p>
+        <p>&nbsp;</p>
+        <p align="center"><img src="Causality_GalleryEntrence.jpg" alt="Gallery Entrance" width="533" height="800" align="middle"/></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><img src="Causality_GalleryInside.jpg" alt="Gallery inside" width="800" height="533" align="middle"/></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><img src="Causality_Control Pedestal.jpg" alt="Gallery control pedestal" width="800" height="533" align="middle" /></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><img src="Causality_Gameplay1.jpg" alt="Gameplay 1" width="800" height="533" align="middle"/></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><img src="Causality_Gameplay2.jpg" alt="Gameplay 2" width="800" height="533" align="middle" /></p>
+        <p align="center">&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p></td>
+      </tr>
+    </table>
+</body>
+</html>
