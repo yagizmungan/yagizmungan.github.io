@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<style type="text/css">
+td img {display: block;}body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+.style9 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+.style15 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+</style>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Enderman Arena of Music</title>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "web.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #bfbfbf;
+		}
+		a:active, a:hover {
+			color: #bfbfbf;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+	<p align="left"><span class="style15">Enderman Arena of Music</span></p>
+    <hr noshade="noshade" color: #333333 />&nbsp;</p>
+		<p class="header"><span></p>
+
+    
+    
+		
+	<p>&nbsp;</p>
+	<table width="1110" height="0" border="0" align="center">
+      <tr>
+        <td class="style9"><p><em>Enderman Arena of Music</em> is a venue for sonic expression and performance that is open to all the residents of Orwell. It is create as a part of my residency in Orwell and it is the result of my expriments and discoveries about sound in Minecraft.</p>
+          <p><br />
+            <em>Enderman Arena of Music </em>combines concrete sounds (any block or action makes a sound) as well as tonal sounds (Note Blocks) to create a set of instruments for performance, expression, narrative, creation and experimentation. It is a public place that is open to change and evolution that makes Minecraft a dynamic and unique reality. </p>
+        <p><br />
+        <em>Conforming to the acoustic laws of Minecraft, the space is designed as sphere hence it is called an arena. The space is laid out to accomodate the audience to hear all the instruments. At first, Minecraft introduces multiple limitations; however should be seen as beacons that challange the existing approaches and suggest new ways of thinking and values of aesthetics.</p>
+        <p><br /></p>
+        <p>Here is the opening performance of the Enderman Arena of Music:</p>
+        <iframe src="//player.vimeo.com/video/87924918" width="640" height="365" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/87924918">Enderman Arena of Music</a> from <a href="http://vimeo.com/user601953">Yagiz Mungan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <p>&nbsp;</p>
+        <p>Here are some images of the space:</p>
+        <p>&nbsp;</p>
+        <p align="center"><img src="EAoM1.png" alt="Enderman Arena of Music from outside" width="800" align="middle"/></p>
+        <p align="center">&nbsp;Enderman Arena of Music from outside<br /><br /></p>
+        <p align="center"><img src="EAoM2.png" alt="Instruments in Enderman Arena of Music" width="800" align="middle"/></p>
+        <p align="center">&nbsp;Instruments in Enderman Arena of Music<br /><br /></p>
+        <p align="center"><img src="EAoM3.png" alt="Performer's perspective Enderman Arena of Music" width="800" align="middle"/></p>
+        <p align="center">&nbsp;Performer's perspective Enderman Arena of Music<br /><br /></p>
+        <p align="center"><img src="EAoM4.png" alt="Enderman Arena of Music from beneath" width="800" align="middle"/></p>
+        <p align="center">&nbsp;Enderman Arena of Music from beneath<br /><br /></p>
+        <p>&nbsp;</p></td>
+      </tr>
+    </table>
+</body>
+</html>
