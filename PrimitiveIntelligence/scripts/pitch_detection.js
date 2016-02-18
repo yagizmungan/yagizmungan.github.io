@@ -1,5 +1,5 @@
 //Inspired from https://github.com/cwilso/PitchDetect
-//v0.01
+//v0.02
 
 PitchDetection = function() {
 	var context;
@@ -7,8 +7,15 @@ PitchDetection = function() {
 	var analyser;
 	var buffer;
 	var audioBuffer;
-	var oscillator;
+	var oscillator,
+			oscillator_playing = false;
+
 	var gainNode;
+
+	var memory = [],
+			isListening = false,
+			isReplying = false;
+
 
 
 	var start = function(){
@@ -37,6 +44,7 @@ PitchDetection = function() {
     oscillator.type = 'sine';
     oscillator.frequency.value = 0;
 		oscillator.start();
+		// oscillator.frequency.value = 440;
 
 		gainNode = context.createGain();
 
@@ -48,11 +56,61 @@ PitchDetection = function() {
     // analyser.connect(context.destination);
 
 		findPitch();
+
+		initControls();
 	}
+
+
+	var initControls = function(){
+		document.addEventListener("keydown", function(event){
+			if(event.keyCode == 16 && !oscillator_playing) { //
+				//listen
+				listen();
+			}
+		});
+
+
+		document.addEventListener("keyup", function(event){
+			if(event.keyCode == 16 && oscillator_playing) { //
+				//reply
+				reply();
+			}
+		});
+	};
+
+	var listen = function(){
+		memory = [];
+		isListening = true;
+		gainNode.gain.value = 0;
+		oscillator_playing = true;
+	};
+
+	var reply = function(){
+		isListening = false;
+		gainNode.gain.value = 1;
+		oscillator_playing = false;
+		processRespond();
+		console.log(memory);
+	};
+
+	var processRespond = function(time){
+		oscillator.frequency.value = memory[0];
+		memory.shift();
+		if(memory.length > 0){
+			if (!window.requestAnimationFrame){
+				window.requestAnimationFrame = window.webkitRequestAnimationFrame;
+			}
+			hello = window.requestAnimationFrame( processRespond );
+		}
+		else{
+			oscillator.frequency.value = 0;
+			gainNode.gain.value = 0;			
+		}
+	};
 
 	var error = function () {
     alert('Stream generation failed.');
-	}
+	};
 
 
 
@@ -123,15 +181,16 @@ PitchDetection = function() {
 		// var midi = freqToMIDI(pitch);
 
 
-		console.log(pitch);
+		// console.log(pitch);
 		// console.log(midi);
 
-		if(pitch != -1){
-			oscillator.frequency.value = pitch;
-			// oscillator.start();
-		}
-		else {
-			oscillator.frequency.value = 0;
+		if(isListening){
+			if(pitch != -1){
+				memory.push(pitch);
+			}
+			else {
+				memory.push(0);
+			}
 		}
 
 		if (!window.requestAnimationFrame){
