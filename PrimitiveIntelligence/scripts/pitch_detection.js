@@ -16,10 +16,17 @@ PitchDetection = function() {
 			isListening = false,
 			isReplying = false;
 
+	var bufferLength;
+	var dataArray;
+
+	// visuals
+	var canvasCtx;
+	var canvas;
+
 
 
 	var start = function(){
-		// alert('hellow');
+		initVisual();
 		getUserMedia({audio:true}, initAudio);
 	};
 
@@ -29,16 +36,23 @@ PitchDetection = function() {
 	        navigator.webkitGetUserMedia(dictionary, callback, error);
 	    } catch (e) {
 	        alert('webkitGetUserMedia threw exception :' + e);
-	        // finishJSTest();
 	    }
 	}
 
+	var initVisual = function(){
+		canvas = document.querySelector('.visualizer');
+		canvasCtx = canvas.getContext("2d");
+	};
 
-	var initAudio = function(stream) {
+
+	var initAudio = function(stream) {		
     context = new AudioContext();
     
     analyser = context.createAnalyser();
     analyser.fftSize = 2048;
+    bufferLength = analyser.frequencyBinCount;
+		console.log(bufferLength);
+		dataArray = new Float32Array(bufferLength);
 
     oscillator = context.createOscillator();
     oscillator.type = 'sine';
@@ -58,7 +72,7 @@ PitchDetection = function() {
 		findPitch();
 
 		initControls();
-	}
+	};
 
 
 	var initControls = function(){
@@ -174,8 +188,55 @@ PitchDetection = function() {
 
 	var pitch_buffer_length = 1024;
 	var pitch_buffer = new Float32Array( pitch_buffer_length );
+	
+  var drawFreq = function(data){
+  	canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+
+    analyser.getFloatFrequencyData(dataArray);
+
+    canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+    canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+    
+
+    var barWidth = (canvas.width / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+
+    for(var i = 0; i < bufferLength; i++) {
+      barHeight = (data[i] + 140)*2;
+      
+      canvasCtx.fillStyle = 'rgb(' + Math.floor(barHeight+100) + ',50,50)';
+      canvasCtx.fillRect(x,canvas.height-barHeight/2,barWidth,barHeight/2);
+
+      x += barWidth + 1;
+    }
+  };
 
 	var findPitch = function ( time ) {
+		analyser.getFloatFrequencyData(dataArray);
+		// console.log(dataArray);
+
+		
+		drawFreq(dataArray);
+ 
+
+		// var pitch = Math.max(dataArray);
+		// // console.log(dataArray);
+		// // console.log(pitch);
+		
+
+		// if(isListening){
+		// 	if(pitch != -1){
+		// 		memory.push(pitch);
+		// 	}
+		// 	else {
+		// 		memory.push(0);
+		// 	}
+		// }
+		// rafID = window.requestAnimationFrame( findPitch );
+
+		// return;
+
 		analyser.getFloatTimeDomainData( pitch_buffer );
 		var pitch = autoCorrelate( pitch_buffer, context.sampleRate );
 		// var midi = freqToMIDI(pitch);
