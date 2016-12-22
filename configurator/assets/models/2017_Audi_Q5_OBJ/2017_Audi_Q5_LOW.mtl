@@ -1,0 +1,379 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 07.12.2016 12:38:50
+
+newmtl CarPaint
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3922 0.0000 0.0196
+	Ks 0.6000 0.6000 0.6000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Plastic
+	Ns 12.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1176 0.1176 0.1176
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+
+newmtl BlackPaint
+	Ns 34.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0196 0.0196 0.0196
+	Ks 0.9600 0.9600 0.9600
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Chrome
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4275 0.4275 0.4275
+	Ks 1.4000 1.4000 1.4000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Aluminum
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2353 0.2353 0.2353
+	Ks 1.4000 1.4000 1.4000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl GlassTextured
+	Ns 80.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0039 0.0039 0.0039
+	Ks 1.0800 1.0800 1.0800
+	Ke 0.0000 0.0000 0.0000
+	map_d ExteriorOST.jpg
+
+newmtl GlassLights
+	Ns 70.0000
+	Ni 1.5000
+	d 0.1000
+	Tr 0.9000
+	Tf 0.1000 0.1000 0.1000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+
+newmtl LightOptic
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0588 0.0588 0.0588
+	Ks 1.4000 1.4000 1.4000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CarBody
+	Ns 21.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0196 0.0196 0.0196
+	Ks 0.3400 0.3400 0.3400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ExteriorDFS.jpg
+	map_Kd ExteriorDFS.jpg
+	map_bump ExteriorBMP.jpg
+	bump ExteriorBMP.jpg
+
+newmtl Black
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl intRedPlastic
+	Ns 37.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7098 0.0196 0.0196
+	Ks 0.8370 0.8370 0.8370
+	Ke 0.0000 0.0000 0.0000
+
+newmtl GlassWinds
+	Ns 80.0000
+	Ni 1.5000
+	d 0.3500
+	Tr 0.6500
+	Tf 0.3500 0.3500 0.3500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0235 0.0588 0.0588
+	Ks 1.0800 1.0800 1.0800
+	Ke 0.0000 0.0000 0.0000
+
+newmtl intTexButtons
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0471 0.0471 0.0471
+	Ks 0.6800 0.6800 0.6800
+	Ke 0.0000 0.0000 0.0000
+	map_Ka IntDFS.jpg
+	map_Kd IntDFS.jpg
+
+newmtl intLeather
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1255 0.1255 0.1255
+	Ks 0.2250 0.2250 0.2250
+	Ke 0.0000 0.0000 0.0000
+
+newmtl intLeatherPerf
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1255 0.1255 0.1255
+	Ks 0.2250 0.2250 0.2250
+	Ke 0.0000 0.0000 0.0000
+	map_bump InteriorBMP.jpg
+	bump InteriorBMP.jpg
+
+newmtl IntLeatherLight
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3765 0.3765 0.3765
+	Ks 0.2250 0.2250 0.2250
+	Ke 0.0000 0.0000 0.0000
+
+newmtl WheelPaintBlack
+	Ns 35.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0784 0.0784 0.0784
+	Ks 0.8200 0.8200 0.8200
+	Ke 0.0000 0.0000 0.0000
+
+newmtl WheelChrome
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4078 0.4078 0.4078
+	Ks 1.4000 1.4000 1.4000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl WheelTireBump
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1176 0.1176 0.1176
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+	map_bump WheelBMP.jpg
+	bump WheelBMP.jpg
+
+newmtl WheelLogo
+	Ns 29.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 1.3100 1.3100 1.3100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka WheelBMP.jpg
+	map_Kd WheelBMP.jpg
+	map_bump WheelBMP.jpg
+	bump WheelBMP.jpg
+
+newmtl WheelBrakeDisk
+	Ns 29.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 1.3100 1.3100 1.3100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka WheelBMP.jpg
+	map_Kd WheelBMP.jpg
+	map_bump WheelBMP.jpg
+	bump WheelBMP.jpg
+
+newmtl WheelBrakeCaliper
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1529 0.1529 0.1529
+	Ks 0.7700 0.7700 0.7700
+	Ke 0.0000 0.0000 0.0000
+
+newmtl intCarpet
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1765 0.1765 0.1765
+	Ks 0.0325 0.0325 0.0325
+	Ke 0.0000 0.0000 0.0000
+	map_Ka CarpetDFS.jpg
+	map_Kd CarpetDFS.jpg
+	map_bump CarpetBMP.jpg
+	bump CarpetBMP.jpg
+
+newmtl LampIllum
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9882 0.9882 0.9882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.9882 0.9882 0.9882
+
+newmtl LightsChrome
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4275 0.4275 0.4275
+	Ks 1.4000 1.4000 1.4000
+	Ke 0.0000 0.0000 0.0000
+	map_bump LightsBMP.jpg
+	bump LightsBMP.jpg
+
+newmtl GlassRed
+	Ns 70.0000
+	Ni 1.5000
+	d 0.8500
+	Tr 0.1500
+	Tf 0.8500 0.8500 0.8500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4157 0.0000 0.0000
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+
+newmtl LampIllumTail
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9412 0.2549 0.2392
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.9412 0.2549 0.2392
+
+newmtl LightsGlassBump
+	Ns 71.0000
+	Ni 1.5000
+	d 0.1000
+	Tr 0.9000
+	Tf 0.1000 0.1000 0.1000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.9720 0.9720 0.9720
+	Ke 0.0000 0.0000 0.0000
+	map_bump LightsBMP.jpg
+	bump LightsBMP.jpg
+
+newmtl IntPerfSeats
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3765 0.3765 0.3765
+	Ks 0.2250 0.2250 0.2250
+	Ke 0.0000 0.0000 0.0000
+	map_bump IntSeatsBMP.jpg
+	bump IntSeatsBMP.jpg

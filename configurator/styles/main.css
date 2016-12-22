@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'AudiExtendedNormal';
+  src: url("../assets/fonts/AudiType-ExtendedNormal.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'AudiExtendedBold';
+  src: url("../assets/fonts/AudiType-ExtendedBold.otf") format("opentype");
+}
+
+*{
+	margin: 0;
+	border: none;	
+	overflow: hidden;
+	border-image-width: 0 !important;
+}
+
+body {
+	background: white;
+	margin: 0;
+	font-family: 'AudiExtendedNormal', Fallback, sans-serif;	
+}
+
+#header{
+	background: rgb(255,255,255);
+	height: 55px;
+	size: 16px;
+	border-bottom: solid gray 1px;
+}
+
+#header-title{
+	position: absolute;
+	left: 22px;
+	top: 20px;
+	letter-spacing: -1;
+}
+
+#header-chevron{
+	position: absolute;
+    right: 21px;
+    top: 25px;
+    width: 18px;
+}
+
+#main{
+	background: rgb(255,255,255);
+	height: 80%;
+}
+
+/****Login****/
+#login{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 100001;
+}
+
+#login-background{
+    width: 100%;
+}
+
+#login-fake-button{
+    position: absolute;
+    z-index: 100002;
+    width: 167px;
+    height: 48px;
+    top: 426px;
+    left: 24px;
+}
+/****Login****/
+
+/****Loading****/
+#loading{
+    background: white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100001;
+    display: none;
+}
+
+#loading-logo{
+    top: 310px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+#loading-message{
+    top: 345px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+/****Loading****/
+
+
+/****Trims******/
+#trims{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /*z-index: 100001;*/
+}
+
+#trims-page{
+    width: 100%;
+}
+/****Trims******/
+
+
+/****Exterior Color****/
+#exterior-color-car-title{
+	top: 100px;
+    position: absolute;
+    left: 20px;
+    font-size: 44;
+    font-family: 'AudiExtendedBold', Fallback, sans-serif;
+    letter-spacing: -1;
+    line-height: 48px;
+    width: 50%;
+}
+
+#exterior-color-title{
+	top: 494px;
+    position: absolute;
+    font-size: 24;
+    font-family: 'AudiExtendedBold', Fallback, sans-serif;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -1.2;
+}
+
+#exterior-color-selector-window{
+	position: absolute;
+	width: 100%;
+	height: 667px;
+	left: 0px;
+	top: 0px;
+	background: white;
+	/*display: flex;*/
+	/*opacity: 0;*/
+	z-index: 1000;
+}
+
+#exterior-color-selector-window-header{
+	height: 75px;
+}
+
+#exterior-color-selector-window-color-name{
+	position: absolute;
+    left: 22px;
+    top: 20px;
+    font-family: 'AudiExtendedNormal', Fallback, sans-serif;
+    letter-spacing: 0.5;
+}
+
+#exterior-color-selector-window-color-price{
+	position: absolute;
+    left: 22px;
+    top: 44px;
+    font-family: 'AudiExtendedNormal', Fallback, sans-serif;
+    letter-spacing: 0.5;
+    font-size: 9;
+}
+
+#exterior-color-price{
+	top: 524px;
+    position: absolute;
+    text-align: center;
+    font-size: 16;
+    font-family: 'AudiExtendedNormal', Fallback, sans-serif;
+    letter-spacing: 0;
+    width: 100%;
+}
+
+
+#exterior-color-selector-window-main{
+	display: flex;
+	flex-wrap: wrap;
+};
+
+.color-selector-item{
+	width: 33%;
+	height: 25%;
+}
+
+.color-selector-item-selected{
+	-moz-box-shadow:    inset 0 0 40px #ffffff;
+   -webkit-box-shadow: inset 0 0 40px #ffffff;
+   box-shadow:         inset 0 0 40px #ffffff;
+   /*width: 35%;
+   height: 28%;*/
+}
+
+#exterior-color-hero{
+	width: 100%;
+}
+/****Exterior Color****/
+
+
+/****Wheels****/
+#wheel-hero{
+	width: 100%;
+}
+
+#wheel-title{
+	width: 100%;
+	text-align: center;
+	font-size: 24;
+    font-family: 'AudiExtendedBold', Fallback, sans-serif;
+    letter-spacing: -1.2;
+    margin-top: 16px;
+}
+
+#wheel-price{
+	width: 100%;
+	text-align: center;
+    margin-top: 4px;
+}
+
+#wheel-description{
+	width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 11px;
+    letter-spacing: -1;
+    line-height: 16px;
+    z-index: 10000;
+    position: absolute;
+}
+
+#wheel-direction{
+	position: absolute;
+    width: 100%;
+    top: 320px;
+    height: 27px;
+}
+
+#wheel-direction-left{
+    position: absolute; 
+    left: 10px;
+    height: 27px;
+}
+
+#wheel-direction-right{
+    right: 10px;
+    position: absolute;
+    height: 27px;
+}
+/****Wheels****/
+
+/****Interior******/
+#interior{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /*z-index: 100001;*/
+}
+
+#interior-page{
+    width: 100%;
+}
+/****Interior******/
+
+
+/****Summary******/
+#summary{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#summary-page{
+    width: 100%;
+}
+/****Summary******/
+
+
+
+/****PORTRAIT MODE******/
+#landscape{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /*width: 667px;
+    height: 375px;*/
+
+}
+/****PORTRAIT MODE******/
+
+
+
+#footer{
+	background: rgba(255,255,255, 0);
+	/*height: 10%;*/
+}
+
+
+/** GLOBAL UI **/
+#next-arrow{
+	position: absolute;
+    bottom: 13px;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 28px;
+}
+
+#reference{
+    background: url('../assets/images/reference_screens/loading.png');
+	/*background: url('../assets/images/reference_screens/03-Wheels-1a.png');*/
+	/*background: url('../assets/images/reference_screens/color_select_bg.png');*/
+	background-size: contain;
+	width: 375px;
+	height: 667px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.5;
+	z-index: 10000001;
+}
+
