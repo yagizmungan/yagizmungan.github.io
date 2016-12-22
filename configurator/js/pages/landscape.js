@@ -74,7 +74,8 @@ var Landscape = function(){
 
 		var objLoader = new THREE.OBJLoader();
 		// http://yagizmungan.com/assets/models/2017_Audi_Q5_OBJ/2017_Audi_Q5_LOW.obj
-		objLoader.setPath( 'http://yagizmungan.com/assets/models/2017_Audi_Q5_OBJ/' );
+		console.log(4);
+		objLoader.setPath( 'http://yagizmungan.com/configurator/assets/models/2017_Audi_Q5_OBJ/' );
 		objLoader.load( '2017_Audi_Q5_LOW.obj', function ( object ) {
 			alert('model is loaded');
 			car = object;
