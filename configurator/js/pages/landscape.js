@@ -73,7 +73,8 @@ var Landscape = function(){
 		scene.add(room);
 
 		var objLoader = new THREE.OBJLoader();
-		objLoader.setPath( '../../assets/models/2017_Audi_Q5_OBJ/' );
+		// http://yagizmungan.com/assets/models/2017_Audi_Q5_OBJ/2017_Audi_Q5_LOW.obj
+		objLoader.setPath( '../assets/models/2017_Audi_Q5_OBJ/' );
 		objLoader.load( '2017_Audi_Q5_LOW.obj', function ( object ) {
 			alert('model is loaded');
 			car = object;
