@@ -1,10 +1,15 @@
 var Audio = function(){
-
-
-
 	var init = function(){
 		var background_sound = document.createElement("audio");
-		background_sound.src = "./assets/audio/background_sound.mp3";
+		if(background_sound.canPlayType("audio/mpeg").length < 1){
+			background_sound.src = "../assets/audio/background_sound.ogg";	
+			console.log('no mp3');
+		}
+		else{
+			background_sound.src = "../assets/audio/background_sound.mp3";
+			console.log('mp3');
+		}
+		
 		background_sound.volume = 0.03;
 		background_sound.loop = true;
 		background_sound.play();
@@ -25,7 +30,12 @@ var Audio = function(){
 
 	var playSnowflakeSound = function(redo){
 		var temp_audio_element = document.createElement("audio");
-		temp_audio_element.src = "./assets/audio/chime" + Math.round(Level.getRandomArbitrary(2,8)) + ".mp3";
+		if(temp_audio_element.canPlayType("audio/mpeg").length < 1){
+			temp_audio_element.src = "../assets/audio/chime" + Math.round(Level.getRandomArbitrary(2,8)) + ".ogg";
+		}
+		else{
+			temp_audio_element.src = "../assets/audio/chime" + Math.round(Level.getRandomArbitrary(2,8)) + ".mp3";
+		}
 		temp_audio_element.volume = 0.03;
 		temp_audio_element.play();
 		temp_audio_element.onended = function() {

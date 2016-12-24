@@ -1,12 +1,10 @@
-// do I need container
-// camera and controllers now look big... abstract them out
-// what about people dragging in mobile 
-
-// TODO sounds
-// Lights
-// Sounds
-// Post-processing visuals
-// phone orientation change             
+// TODO 
+// Lights - first pass
+// Sounds - first pass
+// Post-processing visuals (scanlines cause grayscale)
+// phone orientation change  is broken on landscape
+// accumulate snow - first pass
+// shadow looks broken and now disabled
 
 var App = function(){
 
@@ -30,7 +28,6 @@ var App = function(){
 		scene = new THREE.Scene();
 		console.log(scene);
 		scene.fog = new THREE.FogExp2( 0xffffff, 0.1 );
-		// scene.fog = new THREE.Fog( 0xffffff, 1, 10);
 
 		/*setup renderer*/
 		setupRenderer();
@@ -59,7 +56,7 @@ var App = function(){
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
-		// Postprocessing.init();
+		Postprocessing.init();
 
 		Audio.init();
 
@@ -73,6 +70,9 @@ var App = function(){
 
 		if(effect){
 			effect.setSize( window.innerWidth, window.innerHeight );
+		}
+		else{
+			renderer.setSize( window.innerWidth, window.innerHeight);
 		}
 	};
 
@@ -103,12 +103,20 @@ var App = function(){
 		}		
 
 		Level.update();
+		Postprocessing.update();
 
 		if(effect){
 			effect.render( scene, camera );
 		}
 		else{
-			renderer.render( scene, camera );
+			if(Postprocessing.getComposer()){
+				var delta = clock.getDelta();
+				Postprocessing.getComposer().render(delta);	
+			}
+			else{
+				renderer.render( scene, camera );
+			}
+			
 		}
 	};
 
@@ -140,6 +148,8 @@ var App = function(){
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		renderer.sortObjects = false;
+		renderer.shadowMap.enabled = true;
+		renderer.shadowMap.renderReverseSided = false;
 		container.appendChild( renderer.domElement );
 	};
 
@@ -186,6 +196,7 @@ var App = function(){
     		// figure out what to fine tune
     		rotate_around = true;
 	        controls = new THREE.DeviceOrientationControlsLimits( camera );
+	        // controls = new THREE.DeviceOrientationControlsLimitsOrientation(camera);
 	        
 	        all_controls.push(controls);
     	}       
@@ -242,12 +253,17 @@ var App = function(){
 		return renderer;
 	};
 
+	var getVREffect = function(){
+		return effect;
+	};
+
 	// public methods
 	return{
 		init: init,
 		getScene: getScene,
 		getClock: getClock,
 		getRenderer: getRenderer,
+		getVREffect: getVREffect,
 		getControl: getControl,
 		getCamera: getCamera
 	}

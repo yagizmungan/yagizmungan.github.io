@@ -7,24 +7,37 @@ var Lights = function(){
 	var init = function(){
 		App.getScene().add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
 
-		var light = new THREE.DirectionalLight( 0xffffff );
+		var directional_light = new THREE.DirectionalLight(0xffffff, 0.5);
+		directional_light.castShadow = true;
+		directional_light.shadow.mapSize.width = 2048;
+		directional_light.shadow.mapSize.height = 2048;
+
+		var d = 5;
+
+		directional_light.shadow.camera.left = -d;
+		directional_light.shadow.camera.right = d;
+		directional_light.shadow.camera.top = d;
+		directional_light.shadow.camera.bottom = -d;
+
+		directional_light.shadow.camera.far = 3500;
+		directional_light.shadow.bias = -0.0001;
 		
 
 		if(WEBVR.isAvailable()){
-			App.getScene().add(light.target);
-			light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
-			light.target.position.x = 0;
-			light.target.position.y = -3;
-			light.target.position.z = -World.getWorldEdgeLength()/3;
+			App.getScene().add(directional_light.target);
+			directional_light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
+			directional_light.target.position.x = 0;
+			directional_light.target.position.y = -3;
+			directional_light.target.position.z = -World.getWorldEdgeLength()/3;
 
 		}
 		else{
-			light.position.set( 1, 1, 1 ).normalize();
+			directional_light.position.set(1, 1, 1 ).normalize();
 		}	
-		lights.push(light);
-		console.log(light);
+		lights.push(directional_light);
+		console.log(directional_light);
 		
-		App.getScene().add( light );
+		App.getScene().add(directional_light);
 
 
 		// createTreeLight(0,2.6,0);
@@ -55,10 +68,14 @@ var Lights = function(){
 
 
 		var bulb_material = new THREE.MeshPhongMaterial({
-			'emissive': bulb_color,
-			'emissiveIntensity': 10,
+			// 'emissive': bulb_color,
+			// 'emissiveIntensity': 10,
 			'color': bulb_color,
-			// 'shininess': 100
+			// 'shininess': 100,
+			// 'shininess': 20, 
+    		// morphTargets: true, 
+    		// vertexColors: THREE.FaceColors, 
+    		// 'shading': THREE.FlatShading
 		});
 
 		bulb_material.emissiveIntensity = 10;
@@ -75,12 +92,19 @@ var Lights = function(){
 		bulb.position.x = x;
 		bulb.position.y = y;
 		bulb.position.z = z;
+
+		if(WEBVR.isAvailable()){
+			bulb.position.z -= World.getWorldEdgeLength()/2
+		}
+		// world.position.z = -edge_length/2;
+
+		// var bulb_light = new THREE.PointLight( bulb_color, 0.1 );
+		// bulb.add( bulb_light );
+
 		App.getScene().add(bulb);
 		tree_lights.push(bulb);
 
 		var second_bulb = bulb.clone();
-		// var axis = new THREE.Vector3(0,1,0);
-		// second_bulb.rotateOnAxis(axis, Math.PI/2);
 		second_bulb.position.x = -x;
 		second_bulb.position.z = -z;
 		App.getScene().add(second_bulb);
@@ -88,21 +112,25 @@ var Lights = function(){
 
 
 		var third_bulb = bulb.clone();
-		// var axis = new THREE.Vector3(0,1,0);
-		// second_bulb.rotateOnAxis(axis, Math.PI/2);
 		third_bulb.position.x = z;
 		third_bulb.position.z = x;
 		App.getScene().add(third_bulb);
 		tree_lights.push(third_bulb);
 
 		var fourth_bulb = bulb.clone();
-		// var axis = new THREE.Vector3(0,1,0);
-		// second_bulb.rotateOnAxis(axis, Math.PI/2);
 		fourth_bulb.position.x = -z;
 		fourth_bulb.position.z = -x;
 		App.getScene().add(fourth_bulb);
 		tree_lights.push(fourth_bulb);
-		// Level.getTree().add(bulb);
+
+
+		var bulbs = [bulb, second_bulb, third_bulb, fourth_bulb];
+		if(WEBVR.isAvailable()){
+			for (var i = bulbs.length - 1; i >= 0; i--) {							
+				bulbs[i].position.z -= World.getWorldEdgeLength()/2;
+
+			}
+		}
 	};
 
 	var getLights = function(){
