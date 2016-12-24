@@ -69,30 +69,30 @@ var Level = function(){
 
 		/*XMAS TREE*/
 		var loader = new THREE.ColladaLoader();	
-		loader.load( 'assets/models/lowPolyPine-v2.dae', function (collada) {
+		loader.load( 'assets/models/lowPolyPine-v4d.dae', function (collada) {
 			tree = collada.scene;
-			tree.position.y -= 2.3;
+			tree.position.y -= 1.2;
 			console.log('tree', tree);
 			if(WEBVR.isAvailable()){
 				tree.scale.x = tree.scale.y = tree.scale.z = 0.02;
 				// tree.position.y  += 1.9;
 			}
 			else{
-				tree.scale.x = tree.scale.y = tree.scale.z = 0.015;
+				tree.scale.x = tree.scale.y = tree.scale.z = 0.02;
 			}
 			tree.updateMatrix();
 
-			// colladaSetProperty(tree, 'castShadow', true);
+			colladaSetProperty(tree, 'castShadow', true);
 			// colladaSetProperty(tree, 'receiveShadow', true);
-			// tree.castShadow = true;
-			// tree.receiveShadow = true;
+			tree.castShadow = true;
+			tree.receiveShadow = true;
 			World.getWorld().add(tree);
 			
 			// App.getScene().add(tree);
 
 			var top_color = new THREE.Color("rgb(50%, 80%, 50%)");
-			var bottom_color = new THREE.Color("rgb(50%, 50%, 10%)");
-			addColorsToTree(top_color, bottom_color);
+			var bottom_color = new THREE.Color("rgb(30%, 30%, 10%)");
+			// addColorsToTree(top_color, bottom_color);
 
 			// var fake_tree = new THREE.Mesh(
 			// 	// new THREE.BoxGeometry( edge_length, edge_length, edge_length, segment_amount, segment_amount, segment_amount),
@@ -111,13 +111,26 @@ var Level = function(){
 			console.log('tree', tree);
 			
 			var style = 1;
-			stylizeObject(tree.children[0].children[0].children[0].children[5], style, bottom_color);
-			stylizeObject(tree.children[0].children[0].children[0].children[0], style, top_color); //1
-			stylizeObject(tree.children[0].children[0].children[0].children[1], style, top_color); //4
-			stylizeObject(tree.children[0].children[0].children[0].children[2], style, top_color); //3
-			stylizeObject(tree.children[0].children[0].children[0].children[3], style, top_color); //2
-			stylizeObject(tree.children[0].children[0].children[0].children[4], style, top_color); //5
+			// stylizeObject(tree.children[0].children[0].children[0].children[5], style, bottom_color);
+			// stylizeObject(tree.children[0].children[0].children[0].children[0], style, top_color); //1
+			// stylizeObject(tree.children[0].children[0].children[0].children[1], style, top_color); //4
+			// stylizeObject(tree.children[0].children[0].children[0].children[2], style, top_color); //3
+			// stylizeObject(tree.children[0].children[0].children[0].children[3], style, top_color); //2
+			// stylizeObject(tree.children[0].children[0].children[0].children[4], style, top_color); //5
 
+			stylizeObject(tree.children[0].children[1].children[0], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[1], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[3], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[4], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[6], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[7], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[9], style, top_color);
+			stylizeObject(tree.children[0].children[1].children[10], style, top_color);
+			stylizeObject(tree.children[0].children[0].children[0], style, bottom_color); //1
+			stylizeObject(tree.children[0].children[0].children[1], style, bottom_color); //4
+
+
+			// createCopyTree();
 			
 			// var asd= tree.clone();
 			// World.getWorld().add();
@@ -198,6 +211,39 @@ var Level = function(){
 				}
 			}
 		}
+	};
+
+	var createCopyTree = function(){
+		var container = new THREE.Object3D;
+
+		tree.traverse( function(child){
+			console.log('CHILD', child);
+			if(child.geometry){				
+				console.log('has geo');
+				try{
+					var geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
+					geometry.boundingSphere = null;
+					var material = new THREE.MeshPhongMaterial({
+						color: 0xfffafa, 
+					});
+					var tree_part = new THREE.Mesh(geometry, material);
+					container.add(tree_part);
+				}
+				catch(error){
+					console.log("error", error);
+				}
+			}
+		});
+
+		tree.add(container);
+		container.scale.x = container.scale.y = container.scale.z = 0.02;
+		var look_at = new THREE.Vector3(0, 1, 0);
+		container.lookAt(look_at);
+		// container.position = tree.position
+		// container.position.x = 0;
+		// container.position.y = 0;
+		// container.position.z = 0;
+
 	};
 
 
@@ -341,87 +387,150 @@ var Level = function(){
 		// var direction = new THREE.Vector3(0,-1,0).normalize();
 		// console.log('direction', direction);
 		// console.log('direction origin', origin+direction);
+		// // var cube = new THREE.Mesh(
+		// // 	new THREE.BoxGeometry( 1, 1, 1, 1, 1, 1),
+		// // 	// new THREE.SphereGeometry( edge_length, segment_amount, segment_amount ),
+		// // 	new THREE.MeshBasicMaterial({ 
+		// // 		color: 0x0000aa,
+		// // 		side: THREE.BackSide
+		// // 		,
+		// // 		// fog: false
+		// // 		// color: 0x404040, 
+		// // 		// wireframe: true 
+		// // 	})
+		// // );
+
+		// var sp1 = new THREE.Mesh(
+		// 	// new THREE.BoxGeometry( 1, 1, 1, 1, 1, 1),
+		// 	new THREE.SphereGeometry( 0.1, 4, 4 ),
+		// 	new THREE.MeshBasicMaterial({ 
+		// 		color: 0x00aaaa,
+		// 		side: THREE.BackSide
+		// 		,
+		// 		// fog: false
+		// 		// color: 0x404040, 
+		// 		// wireframe: true 
+		// 	})
+		// );
+		// sp1.position.x = origin.x;
+		// sp1.position.y = origin.y;
+		// sp1.position.z = origin.z;
+		// App.getScene().add(sp1);
+
+		// var sp2 = sp1 = new THREE.Mesh(
+		// 	// new THREE.BoxGeometry( 1, 1, 1, 1, 1, 1),
+		// 	new THREE.SphereGeometry( 0.1, 4, 4 ),
+		// 	new THREE.MeshBasicMaterial({ 
+		// 		color: 0x00aaaa,
+		// 		// side: THREE.BackSide
+		// 		// ,
+		// 		// fog: false
+		// 		// color: 0x404040, 
+		// 		// wireframe: true 
+		// 	})
+		// );
+		// sp2.position.x = origin.x + direction.x;
+		// sp2.position.y = origin.y + direction.y;
+		// sp2.position.z = origin.z + direction.z;
+		// App.getScene().add(sp2);
+
+		// // cube.position.x =0;
+		// // cube.position.y =3;
+		// // cube.position.z =0;
+
+
+		// // var testar_geometry = new THREE.Geometry().fromBufferGeometry(tree.children[0].children[1].children[10].geometry);
+		// // testar_geometry.boundingSphere = null;
+		// // var testar_material = new THREE.MeshPhongMaterial({
+		// // 	color: 0xfafafa, 
+		// // });
+		// // var testar = new THREE.Mesh(testar_geometry,testar_material);
+		// // testar.position.x =0;
+		// // testar.position.y =0;
+		// // testar.position.z =0;
+		// // testar.scale.x = testar.scale.y = testar.scale.z =  0.02;
+		// // console.log('cube',cube);
+		// // console.log('trestar',testar);
+		// // App.getScene().add(testar);
+		// // App.getScene().add(cube);
 		// // Lights.createTreeLight((origin.x+direction.x), (origin.y+direction.y), (origin.z+direction.z));
-		// var raycaster = new THREE.Raycaster(origin, direction);
-		// // var tree_leaves = tree2;
-		// // var tree_leaves_parent = tree.children[0].children[0];
-		// // console.log(tree_leaves[0]);
-		// // var asd = raycaster.intersectObjects(tree_leaves, false);
-		// // var asd = raycaster.intersectObjects(App.getScene().children, true);
-		// // var asd = raycaster.intersectObjects(World.getWorld().children, true);
-		// var asd = raycaster.intersectObjects(tree2, true);
-		// // var asd = raycaster.intersectObjects(fake_trees, true);
-		// // var asd = raycaster.intersectObject(tree_leaves[0], true);
-		// // Lights.createTreeLight(0, (origin.y - asd[0].distance), 0);
+		// // var raycaster = new THREE.Raycaster(origin, direction);
+
+		// // var asd = raycaster.intersectObject(tree, true);
+
+		// // for (var i = asd.length - 1; i >= 0; i--) {
+		// // 	console.log('lights', (origin.y - asd[i].distance));
+		// // 	Lights.createTreeLight(0, (origin.y - asd[i].distance), 0);
+		// // }
+		
 		// // console.log('raycaster', raycaster);
-		// console.log('asd', asd);
+		// // console.log('asd', asd);
 
-		// /// manual :( raycast on collada does not work?
+		// // /// manual :( raycast on collada does not work?
 		if(WEBVR.isAvailable()){
-			Lights.createTreeLight(0, 3.9, 0.275);
-			Lights.createTreeLight(0.37, 3.55, 0.33);
-			Lights.createTreeLight(0.7, 3.2, 0.1);
-			Lights.createTreeLight(0.68, 2.85, 0.625);
-			Lights.createTreeLight(1.1, 2.52, 0.1);
+			Lights.createTreeLight(0, 3.2, 0);
 
-			Lights.createTreeLight(0.5, 2.4, 0.65);
-			Lights.createTreeLight(0.6, 2.25, 0.85);
-			Lights.createTreeLight(1.1, 2.1, 0.5);
-			Lights.createTreeLight(1.3, 1.90, 0.5);
+			Lights.createTreeLight(0, 3, 0.1);
+			Lights.createTreeLight(0.2, 2.8, 0.15);
+			Lights.createTreeLight(0.1, 2.6, 0.33);
+			Lights.createTreeLight(0, 2.4, 0.45);
+			Lights.createTreeLight(-0.1, 2.2, 0.53);
+			Lights.createTreeLight(-0.2, 2, 0.6);
+			Lights.createTreeLight(0.1, 1.8, 0.7);
+			Lights.createTreeLight(0.3, 1.6, 0.8);
+			Lights.createTreeLight(0.5, 1.4, 0.83);
 
-			Lights.createTreeLight(-0.9, 1.8, 0.85);
-			Lights.createTreeLight(-0.8, 1.65, 1.12);
-			Lights.createTreeLight(-0.7, 1.5, 1.4);
-			Lights.createTreeLight(-0.6, 1.35, 1.65);;
+			Lights.createTreeLight(0.1, 1.2, 0.83);
+			Lights.createTreeLight(-0.1, 1.1, 0.88);
+			Lights.createTreeLight(-0.2, 1, 0.95);
+			Lights.createTreeLight(-0.3, 0.9, 1.03);
+			Lights.createTreeLight(-0.4, 0.8, 1.1);
+			Lights.createTreeLight(-0.6, 0.7, 1.1);
 
-			Lights.createTreeLight(-0.3, 1.25, 1.45);
-			Lights.createTreeLight(-0.2, 1.1, 1.65);
-			Lights.createTreeLight(-0.1, 0.95, 1.8);
-			Lights.createTreeLight(0, 0.8, 2);
+			Lights.createTreeLight(-0.3, 0.55, 1.15);
+			Lights.createTreeLight(0, 0.45, 1.31);
+			Lights.createTreeLight(0.3, 0.35, 1.31);
+			Lights.createTreeLight(0.6, 0.25, 1.31);
+			Lights.createTreeLight(0.9, 0.15, 1.251);
 
-			Lights.createTreeLight(0, 0.65, 1.55);
-			Lights.createTreeLight(0.1, 0.5, 1.77);
-			Lights.createTreeLight(0.2, 0.35, 2.05);
-			Lights.createTreeLight(0.3, 0.2, 2.35);		
-			Lights.createTreeLight(0.4, 0.05, 2.65);	
+			Lights.createTreeLight(0.5, 0.00, 1.15);
+			Lights.createTreeLight(0.1, -0.10, 1.38);
+			Lights.createTreeLight(-0.3, -0.20, 1.48);
+			Lights.createTreeLight(-0.7, -0.30, 1.48);
+			Lights.createTreeLight(-1.08, -0.40, 1.38);
 		}
 		else{
-			Lights.createTreeLight(0, 2.28, 0.275);
-			Lights.createTreeLight(0.2, 2, 0.33);
-			Lights.createTreeLight(0.25, 1.8, 0.475);
-			Lights.createTreeLight(0.25, 1.6, 0.625);
-			Lights.createTreeLight(0.24, 1.35, 0.775);
+			Lights.createTreeLight(0, 3.2, 0);
 
-			Lights.createTreeLight(0.1, 1.20, 0.65);
-			Lights.createTreeLight(0.1, 1.10, 0.775);
-			Lights.createTreeLight(0, 1.0, 0.905);
-			Lights.createTreeLight(-0.1, 0.9, 1.025);
+			Lights.createTreeLight(0, 3, 0.1);
+			Lights.createTreeLight(0.2, 2.8, 0.15);
+			Lights.createTreeLight(0.1, 2.6, 0.33);
+			Lights.createTreeLight(0, 2.4, 0.45);
+			Lights.createTreeLight(-0.1, 2.2, 0.53);
+			Lights.createTreeLight(-0.2, 2, 0.6);
+			Lights.createTreeLight(0.1, 1.8, 0.7);
+			Lights.createTreeLight(0.3, 1.6, 0.8);
+			Lights.createTreeLight(0.5, 1.4, 0.83);
 
-			Lights.createTreeLight(-0.2, 0.75, 0.95);
-			Lights.createTreeLight(-0.4, 0.65, 1);
-			Lights.createTreeLight(-0.55, 0.55, 1);
-			Lights.createTreeLight(-0.73, 0.45, 1.05);
-			// Lights.createTreeLight(-0.85, 0.35, 0.2);
+			Lights.createTreeLight(0.1, 1.2, 0.83);
+			Lights.createTreeLight(-0.1, 1.1, 0.88);
+			Lights.createTreeLight(-0.2, 1, 0.95);
+			Lights.createTreeLight(-0.3, 0.9, 1.03);
+			Lights.createTreeLight(-0.4, 0.8, 1.1);
+			Lights.createTreeLight(-0.6, 0.7, 1.1);
 
-			Lights.createTreeLight(-0.5, 0.35, 0.95);
-			Lights.createTreeLight(-0.65, 0.25, 1.05);
-			Lights.createTreeLight(-0.8, 0.15, 1.15);
-			Lights.createTreeLight(-0.95, 0.05, 1.25);
+			Lights.createTreeLight(-0.3, 0.55, 1.15);
+			Lights.createTreeLight(0, 0.45, 1.31);
+			Lights.createTreeLight(0.3, 0.35, 1.31);
+			Lights.createTreeLight(0.6, 0.25, 1.31);
+			Lights.createTreeLight(0.9, 0.15, 1.251);
 
-			Lights.createTreeLight(-0.6, -0.1, 1.05);
-			Lights.createTreeLight(-0.3, -0.2, 1.35);
-			Lights.createTreeLight(-0.0, -0.3, 1.65);
-			Lights.createTreeLight(0.3, -0.44, 1.95);
-			Lights.createTreeLight(0.55, -0.58, 2.20);
+			Lights.createTreeLight(0.5, 0.00, 1.15);
+			Lights.createTreeLight(0.1, -0.10, 1.38);
+			Lights.createTreeLight(-0.3, -0.20, 1.48);
+			Lights.createTreeLight(-0.7, -0.30, 1.48);
+			Lights.createTreeLight(-1.08, -0.40, 1.38);
 		}
-		
-		// Lights.createTreeLight(-0.65, 0.25, 1.05);
-		// Lights.createTreeLight(-0.8, 0.15, 1.15);
-		// Lights.createTreeLight(-0.95, 0.05, 1.25);
-
-		// Lights.createTreeLight(5, 5, 0);
-		// Lights.createTreeLight(0, 5, 5);
-		// Lights.createTreeLight(0, 0.5, 0.92);
 	};
 
 	var initSnowflake = function(){

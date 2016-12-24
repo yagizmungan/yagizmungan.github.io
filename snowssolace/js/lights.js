@@ -27,8 +27,8 @@ var Lights = function(){
 			App.getScene().add(directional_light.target);
 			directional_light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
 			directional_light.target.position.x = 0;
-			directional_light.target.position.y = -3;
-			directional_light.target.position.z = -World.getWorldEdgeLength()/3;
+			directional_light.target.position.y = -5;
+			directional_light.target.position.z = 0;
 
 		}
 		else{
@@ -93,9 +93,9 @@ var Lights = function(){
 		bulb.position.y = y;
 		bulb.position.z = z;
 
-		if(WEBVR.isAvailable()){
-			bulb.position.z -= World.getWorldEdgeLength()/2
-		}
+		// if(WEBVR.isAvailable()){
+			// bulb.position.z -= World.getWorldEdgeLength()/2
+		// }
 		// world.position.z = -edge_length/2;
 
 		// var bulb_light = new THREE.PointLight( bulb_color, 0.1 );

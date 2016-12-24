@@ -10,7 +10,7 @@ var Audio = function(){
 			console.log('mp3');
 		}
 		
-		background_sound.volume = 0.03;
+		background_sound.volume = 0.3;
 		background_sound.loop = true;
 		background_sound.play();
 		playSnowflakeSound(true);	
@@ -36,7 +36,7 @@ var Audio = function(){
 		else{
 			temp_audio_element.src = "./assets/audio/chime" + Math.round(Level.getRandomArbitrary(2,8)) + ".mp3";
 		}
-		temp_audio_element.volume = 0.03;
+		temp_audio_element.volume = 0.3;
 		temp_audio_element.play();
 		temp_audio_element.onended = function() {
 		    // alert("The audio has ended");
