@@ -5,7 +5,7 @@ var World = function(){
 	var segment_amount = 10;
 
 	var init = function(){
-		var world_texture = new THREE.TextureLoader().load( "../assets/images/world_texture.png" );
+		var world_texture = new THREE.TextureLoader().load( "./assets/images/world_texture.png" );
 		world_texture.wrapS = THREE.RepeatWrapping;
 		world_texture.wrapT = THREE.RepeatWrapping;
 		world_texture.repeat.set( segment_amount/2, segment_amount/2);
