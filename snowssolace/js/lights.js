@@ -1,6 +1,7 @@
 var Lights = function(){
 	var lights = [];
 	var tree_lights = [];
+	var activated_tree_light;
 
 	var bulb_colors = [0xff0000, 0x00ff00, 0x0000ff, 0xff00ff, 0x00ffff, 0xffff00, 0xa05600, 0x66f066];
 
@@ -137,10 +138,23 @@ var Lights = function(){
 		return lights;
 	};
 
+	var activateRandomTreeLight = function(){
+		// activated_tree_light.remove();
+		activated_tree_light = null;
+
+		var index = Math.round(Level.getRandomArbitrary(0, tree_lights.length -1));
+		var target_light = tree_lights[index];
+
+		var point_light = new THREE.PointLight( target_light.material.color, 1, 1 );
+		point_light.fog = null;
+		target_light.add( point_light );
+	};
+
 	// public methods
 	return{
 		init: init,
 		getLights: getLights,
-		createTreeLight: createTreeLight
+		createTreeLight: createTreeLight,
+		activateRandomTreeLight: activateRandomTreeLight
 	}
 }();

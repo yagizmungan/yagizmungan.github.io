@@ -208,6 +208,7 @@ var Level = function(){
 
 					initSnowflake();
 					Audio.playSnowflakeSound();
+					// Lights.activateRandomTreeLight();
 				}
 			}
 		}
@@ -248,7 +249,7 @@ var Level = function(){
 
 
 	var stylizeObject = function(object, style, new_color){
-		console.log(object);
+		// console.log(object);
 
 		if(!new_color){
 			new_color = object.material.color;
@@ -566,9 +567,9 @@ var Level = function(){
 		target_snowflake.position.x -= getRandomArbitrary(-0.01, 0.01)/2;
 		target_snowflake.position.z -= getRandomArbitrary(-0.01, 0.01)/2;
 
-		target_snowflake.rotation.x += getRandomArbitrary(-Math.PI/180, Math.PI/180);
-		target_snowflake.rotation.y += getRandomArbitrary(-Math.PI/180, Math.PI/180);
-		target_snowflake.rotation.z += getRandomArbitrary(-Math.PI/180, Math.PI/180);
+		target_snowflake.rotation.x += Math.PI/180;//target_snowflake.target_snowflake.snowflake_movement.rotation.x;
+		target_snowflake.rotation.y += Math.PI/180;//target_snowflake.target_snowflake.snowflake_movement.rotation.y;
+		target_snowflake.rotation.z += Math.PI/180;//target_snowflake.target_snowflake.snowflake_movement.rotation.z;
 	};
 
 	var moveSnowflake2 = function(target_snowflake, snowflake_index){
@@ -581,11 +582,12 @@ var Level = function(){
 		if(snowflake_index == 0){
 			// console.log("prev", target_snowflake.snowflake_movement.previous["x"],"current", target_snowflake.snowflake_movement.current["x"]);
 			// console.log("current", target_snowflake.snowflake_movement.current["x"]);
+			// console.log('rotation', target_snowflake.snowflake_movement.rotation.x, target_snowflake.snowflake_movement.rotation.y, target_snowflake.snowflake_movement.rotation.z);
 		}
 
-		target_snowflake.rotation.x += getRandomArbitrary(-Math.PI/180, Math.PI/180);
-		target_snowflake.rotation.y += getRandomArbitrary(-Math.PI/180, Math.PI/180);
-		target_snowflake.rotation.z += getRandomArbitrary(-Math.PI/180, Math.PI/180);
+		target_snowflake.rotation.x += target_snowflake.snowflake_movement.rotation.x;
+		target_snowflake.rotation.y += target_snowflake.snowflake_movement.rotation.y;
+		target_snowflake.rotation.z += target_snowflake.snowflake_movement.rotation.z;
 	};
 
 
@@ -658,6 +660,11 @@ var Level = function(){
 			"speed": {
 				"x": getRandomArbitrary(0, max_speed),
 				"z": getRandomArbitrary(0, max_speed)
+			},
+			"rotation":{
+				"x": getRandomArbitrary(-Math.PI/180, Math.PI/180),
+				"y": getRandomArbitrary(-Math.PI/180, Math.PI/180),
+				"z": getRandomArbitrary(-Math.PI/180, Math.PI/180),
 			}
 		}
 		// console.log(target_snowflake.snowflake_movement);
