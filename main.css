@@ -1,0 +1,27 @@
+#header{
+  margin: 4px;
+  letter-spacing: 1px;
+}
+#header-navigation {
+  padding: 0px;
+  margin: 0px;
+}
+.header-item{
+  list-style-type: none; 
+}
+.header-link{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+
+}
+.header-link:hover{
+  color: rgb(102, 0, 0);
+}
+/*.header-link:visited{
+  color: white;
+}*/
+.header-link:active{
+  color: rgb(102, 102, 102);
+}
