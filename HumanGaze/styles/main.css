@@ -1,0 +1,12 @@
+#regular-content {
+	height: 100vh;
+}
+
+#start-button {
+	width: 200px;
+	height: 30px;
+	margin: auto 0;
+	display: block;
+	top: 500px;
+	background-color: green;
+}

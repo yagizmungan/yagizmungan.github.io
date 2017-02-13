@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Snow's Solace</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #101010;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			a {
+				color: #f00;
+			}
+		</style>
+		<link rel="stylesheet" href="./styles/main.css">
+	</head>
+	<body>
+		<script src="./js/jquery-3.1.1.min.js"></script>
+
+		<script src="./js/three.js-dev/build/three.js"></script>
+		<script src="./js/utils/dat.gui.js"></script>
+		<script src="./js/three.js-dev/examples/js/Detector.js"></script>
+
+		<script src="./js/three.js-dev/examples/js/controls/VRControls.js"></script>
+		<script src="./js/three.js-dev/examples/js/controls/OrbitControls.js"></script>
+		<script src="./js/three.js-dev/examples/js/controls/DeviceOrientationControlsLimits.js"></script>
+		<script src="./js/three.js-dev/examples/js/controls/DeviceOrientationControlsLimitsOrientation.js"></script>
+		<script src="./js/three.js-dev/examples/js/effects/VREffect.js"></script>
+		<script src="./js/three.js-dev/examples/js/vr/ViveController.js"></script>
+		<script src="./js/three.js-dev/examples/js/vr/WebVR.js"></script>
+
+		<!-- postprocessing -->
+		<script src="./js/three.js-dev/examples/js/postprocessing/EffectComposer.js"></script>
+		<script src="./js/three.js-dev/examples/js/postprocessing/UnrealBloomPass.js"></script>
+		<script src="./js/three.js-dev/examples/js/postprocessing/DotScreenPass.js"></script>
+		<script src="./js/three.js-dev/examples/js/shaders/DotScreenShader.js"></script>
+		<script src="./js/three.js-dev/examples/js/postprocessing/BloomPass.js"></script>
+		<script src="./js/three.js-dev/examples/js/shaders/ConvolutionShader.js"></script>
+		<script src="./js/three.js-dev/examples/js/postprocessing/ShaderPass.js"></script>
+		<script src="./js/three.js-dev/examples/js/postprocessing/RenderPass.js"></script>
+		<script src="./js/three.js-dev/examples/js/shaders/CopyShader.js"></script>
+		<script src="./js/utils/StaticShader.js"></script>
+		<script src="./js/three.js-dev/examples/js/shaders/FilmShader.js"></script>
+		<script src="./js/three.js-dev/examples/js/shaders/LuminosityHighPassShader.js"></script>
+
+		<script src="./js/three.js-dev/examples/js/GPUParticleSystem.js" charset="utf-8"></script>
+
+		<script src="./js/three.js-dev/examples/js/loaders/OBJLoader.js"></script>
+		<script src="./js/three.js-dev/examples/js/loaders/MTLLoader.js"></script>
+		<script src="./js/three.js-dev/examples/js/loaders/DDSLoader.js"></script>
+		<script src="./js/three.js-dev/examples/js/loaders/ColladaLoader2.js"></script>
+
+		<script src="./js/three.js-dev/examples/js/renderers/Projector.js"></script>
+
+		<script src="./js/world.js"></script>
+		<script src="./js/lights.js"></script>
+		<script src="./js/level.js"></script>
+		<script src="./js/postprocessing.js"></script>
+		<script src="./js/audio.js"></script>
+		<script src="./js/page.js"></script>
+		<script src="./js/app.js"></script>
+
+		<div id="regular-content">
+			<div id="quote">
+				Observing affects the observed
+			</div>
+			<div id="start-button">
+				Start the experience
+			</div>
+		</div>
+
+		<script>
+			//add loaded/ready check
+			$( document ).ready(function() {
+				if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+				App.init();
+			});
+		</script>
+
+		<audio id="main_loop" autoplay loop>
+			<source src="./assets/audio/main_loop.mp3" type="audio/mp3">
+			<source src="./assets/audio/main_loop.ogg" type="audio/ogg">
+		</audio>
+		
+		<audio id="negative-1" autoplay="false">
+			<source src="./assets/audio/negative_1.mp3" type="audio/mp3">
+			<source src="./assets/audio/negative_1.ogg" type="audio/ogg">
+		</audio>
+		<audio id="negative-2" autoplay="false">
+			<source src="./assets/audio/negative_2.mp3" type="audio/mp3">
+			<source src="./assets/audio/negative_2.ogg" type="audio/ogg">
+		</audio>
+
+		<audio id="positive-1" autoplay="false">
+			<source src="./assets/audio/positive_1.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_1.ogg" type="audio/ogg">
+		</audio>
+		<audio id="positive-2" autoplay="false">
+			<source src="./assets/audio/positive_2.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_2.ogg" type="audio/ogg">
+		</audio>
+		<audio id="positive-3" autoplay="false">
+			<source src="./assets/audio/positive_3.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_3.ogg" type="audio/ogg">
+		</audio>
+		<audio id="positive-4" autoplay="false">
+			<source src="./assets/audio/positive_4.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_4.ogg" type="audio/ogg">
+		</audio>
+		<audio id="positive-5" autoplay="false">
+			<source src="./assets/audio/positive_5.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_5.ogg" type="audio/ogg">
+		</audio>
+		<audio id="positive-6" autoplay="false">
+			<source src="./assets/audio/positive_6.mp3" type="audio/mp3">
+			<source src="./assets/audio/positive_6.ogg" type="audio/ogg">
+		</audio>
+	</body>
+</html>
