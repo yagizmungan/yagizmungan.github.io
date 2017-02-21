@@ -63,7 +63,7 @@ var App = function(){
 
 		animate();
 
-		Page.init();
+		// Page.init();
 	};
 
 
@@ -187,7 +187,7 @@ var App = function(){
 			// enable animation loop when using damping or autorotation
 			// controls.enableDamping = true;
 			// controls.dampingFactor = 0.25;
-			// controls.enableZoom = false;
+			controls.enableZoom = false;
 
 			all_controls.push(controls);
     	}

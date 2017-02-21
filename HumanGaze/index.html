@@ -1,21 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Snow's Solace</title>
+		<title>Human Gaze: a VR Experience about Earth and Humanity</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<style>
-			body {
-				font-family: Monospace;
-				background-color: #101010;
-				color: #fff;
-				margin: 0px;
-				overflow: hidden;
-			}
-			a {
-				color: #f00;
-			}
-		</style>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 		<link rel="stylesheet" href="./styles/main.css">
 	</head>
 	<body>
@@ -66,18 +55,26 @@
 
 		<div id="regular-content">
 			<div id="quote">
-				Observing affects the observed
+				maybe we are Schrödinger's cat<br/>
+				and the Earth is now the box<br/>
+				that we converted it to
 			</div>
 			<div id="start-button">
-				Start the experience
+				<div id="start-button-text">
+					Start the experience
+				</div>
+			</div>
+			<div id="img-container">
+				<img src="./assets/images/HG.png" />
 			</div>
 		</div>
 
 		<script>
 			//add loaded/ready check
-			$( document ).ready(function() {
+			$(document).ready(function() {
 				if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-				App.init();
+				// App.init();
+				Page.init();
 			});
 		</script>
 
