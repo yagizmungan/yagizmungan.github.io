@@ -22,6 +22,9 @@ var Level = function(){
 		timeScale: 0.1
 	};
 
+	var simple_particle_rotation_speed = 0.001;
+	var universe_particle_timer = 0.001;
+
 	var options = {
 		position: new THREE.Vector3(),
 		positionRandomness: 5,
@@ -70,15 +73,46 @@ var Level = function(){
 
 	// neighbour checker //
 	var collision_object_radius = 0.6;
+	var collision_object_vr_radius = 0.15;
 	var collision_object;
 	var collision_object_position_reference;
 	// neighbour checker //
 
+	// model scale
+	var earth_scalar;
+	var earth_vr_scalar = 0.01;
+	var earth_non_vr_scalar = 0.04;
 
+	// model default colouring
+	var earth_colouring = {
+		'vr':{
+			'land_sea': 0.557,
+			'cold': 1
+		},
+		'non_vr':{
+			'land_sea': 2.2,
+			'cold': 1.9
+		}
+	}
+	var cold_colouring;
+	var land_sea_colouring
 	
 
 	
 	var init = function(){
+
+		if(WEBVR.isAvailable()){
+			earth_scalar = earth_vr_scalar;
+			land_sea_colouring = earth_colouring['vr']['land_sea'];
+			cold_colouring = earth_colouring['vr']['cold'];
+			collision_object_radius = collision_object_vr_radius;
+		}
+		else{
+			earth_scalar = earth_non_vr_scalar;
+			land_sea_colouring = earth_colouring['non_vr']['land_sea'];
+			cold_colouring = earth_colouring['non_vr']['cold'];
+		}
+		
 
 		var manager = new THREE.LoadingManager();
 		manager.onProgress = function ( item, loaded, total ) {
@@ -151,8 +185,6 @@ var Level = function(){
 							land_material_cold,
 							normal_color_sea_cold
 						];
-
-						console.log('ads');
 						// child.materials = materials;
 						// child.material = null;
 						child.material = land_material;
@@ -168,74 +200,8 @@ var Level = function(){
 				// console.log(object);
 				// console.log(object.children[0]);
 
-				for (var i = earth.children[0].geometry.faces.length - 1; i >= 0; i--) {
-					// object.children[0].geometry.faces[i].color.setHex( 0xDDC2A3);        
-					// object.children[0].geometry.faces[i].color = new THREE.Color( 0xffffff);   
-					// console.log(earth.children[0].geometry.faces[i]);
-					var face_position = getFacePosition(i);
-					face_position.multiplyScalar(0.04);
-					// console.log(face_position.y);
-					var distance = face_position.distanceTo(earth.position);
-					// console.log(distance);
-					if(distance > 2.21){
-						// earth.children[0].geometry.faces[i].color = new THREE.Color( 0x00ff00);  
-						if(face_position.y > 2){
-							earth.children[0].geometry.faces[i].color.setHex(normal_color_land_cold);	
-						}
-						else {
-							earth.children[0].geometry.faces[i].color.setHex(normal_color_land);	
-						}
-						
-					}	
-					else{
-						// earth.children[0].geometry.faces[i].color = new THREE.Color( 0x0000ff);  
-						earth.children[0].geometry.faces[i].color.setHex(normal_color_sea);
-					}
-					// console.log(distance);
-					// earth.children[0].geometry.faces[i].color = new THREE.Color( 0xffffff);  
-					// earth.children[0].geometry.faces[i].color.setHex ((distance - 2.1)/3 * 0xffffff);
-					// object.children[0].geometry.faces[i].color.setHex( i/object.children[0].geometry.faces.length * 0xffffff);        
-					// console.log(object.children[0].geometry.faces[i].color);
-				}
-
-				// object.children[0].geometry.faces[0].color = new THREE.Color( 0xff00000);  
-
-				// var faceIndices = [ 'a', 'b', 'c' ];
-		  //       var radius = 100;
-
-				// var color, f, f2, f3, p, vertexIndex;
-
-				// for ( var i = 0; i < geometry.faces.length; i ++ ) {
-
-				// 	f = geometry.faces[ i ];
-				// 	// f2 = geometry2.faces[ i ];
-				// 	// f3 = geometry3.faces[ i ];
-
-				// 	for( var j = 0; j < 3; j++ ) {
-
-				// 		vertexIndex = f[ faceIndices[ j ] ];
-
-				// 		p = geometry.vertices[ vertexIndex ];
-
-				// 		color = new THREE.Color( 0xffffff );
-				// 		color.setHSL( ( p.y / radius + 1 ) / 2, 1.0, 0.5 );
-				// 		// color.setHSL( 0.5, 1 / 2, ( p.y / radius + 1 ) );
-				// 		// color.setHSL( 0, 0 ,1 );
-
-				// 		f.vertexColors[ j ] = color;
-
-				// 		// color = new THREE.Color( 0xffffff );
-				// 		// color.setHSL( 0.0, ( p.y / radius + 1 ) / 2, 0.5 );
-
-				// 		// f2.vertexColors[ j ] = color;
-
-				// 		// color = new THREE.Color( 0xffffff );
-				// 		// color.setHSL( 0.125 * vertexIndex/geometry.vertices.length, 1.0, 0.5 );
-
-				// 		// f3.vertexColors[ j ] = color;
-
-				// 	}
-				// }
+				updateColors();
+				
 
 				earth.children[0].geometry.colorsNeedUpdate = true;
 
@@ -243,12 +209,18 @@ var Level = function(){
 				// console.log('object', object);
 				// console.log('scene', App.getScene());
 				earth.updateMatrix();
-				earth.scale.x = object.scale.y = object.scale.z = 0.04;
+				earth.scale.x = object.scale.y = object.scale.z = earth_scalar;
 				earth.position.z = 0;
 				targetList.push(earth);
 				App.getScene().add( earth );
-				World.getWorld().add( earth );
+				// World.getWorld().add( earth );
 				// console.log('scene', App.getScene());
+
+				if(WEBVR.isAvailable()){
+					earth.position.z = 0;
+					earth.position.x = World.getAbsoluteCenter().x;
+					earth.position.y = 1.5;
+				}
 
 				Lights.init();
 			}, onProgress, onError );
@@ -270,16 +242,19 @@ var Level = function(){
 		}		
 
 		setupCollisionObject();
-		setupUniverseParticles();
+		if(!WEBVR.isAvailable()){
+			setupUniverseParticles();	
+		}
+		
 		setupSimpleUniverseParticles();
 	};
 	
 	var setupCollisionObject = function(){
-		var collision_object_geometry = new THREE.SphereGeometry(collision_object_radius,32, 32);
+		var collision_object_geometry = new THREE.SphereGeometry(collision_object_radius,32, 32);//32, 32);
 		// var collision_object_geometry = new THREE.BoxGeometry( 0.8, 0.8, 0.8);
 		var collision_object_material = new THREE.MeshBasicMaterial( { 
 			color: 0xff0000, 
-			// wireframe:true,
+			wireframe:true,
 			transparent: true,
 			opacity: 0
 		});
@@ -321,26 +296,12 @@ var Level = function(){
 			}
 
 			gazed_index = intersects[0].faceIndex;
+			
 		}
 
-		// handle the colouring	
-		for (var j = earth.children[0].geometry.faces.length - 1; j >= 0; j--) {
-			var found = false;
-
-			// this is just intersects[i].faceIndex
-			for (var i = intersects.length - 1; i >= 0; i--) {
-				if(j == intersects[i].faceIndex){
-					found = true;
-					current_gazed_faces.push(j);
-				}
-			}
-
-			// if(found){
-			// 	earth.children[0].geometry.faces[j].color.setHex(0x000000);
-			// }
-			// else{
-			// 	earth.children[0].geometry.faces[j].color.setHex(0x55ffaa);	
-			// }
+		for (var i = intersects.length - 1; i >= 0; i--) {
+			found = true;
+			current_gazed_faces.push(j);
 		}
 
 		still_focused = false; //gaze_expanded_faces
@@ -361,9 +322,6 @@ var Level = function(){
 			}
 		}
 
-		// for (var i = gaze_expanded_faces.length - 1; i >= 0; i--) {
-		// 	earth.children[0].geometry.faces[gaze_expanded_faces[i]].color.setHex(0x000000);
-		// }
 
 		gazed_faces = current_gazed_faces;
 		
@@ -371,6 +329,15 @@ var Level = function(){
 		if ( intersects.length > 0) {	
 			INTERSECTED = intersects[0];	
 			debug_sphere_position = [INTERSECTED.point.x,INTERSECTED.point.y,INTERSECTED.point.z];
+			if (WEBVR.isAvailable()){
+				gazed_index = intersects[0].faceIndex;
+				var asd = getFacePosition(gazed_index);
+				asd = asd.multiplyScalar(earth_scalar);
+
+				debug_sphere_position[0] = asd.x + earth.position.x;
+				debug_sphere_position[1] = asd.y + earth.position.y;
+				debug_sphere_position[2] = asd.z + earth.position.z;
+			}
 		} 
 		else {
 			INTERSECTED = null;
@@ -382,13 +349,19 @@ var Level = function(){
 
 	var setCollisionObjectPosition = function(){
 		if(debug_sphere_position != null){
-			if(gaze_expanded_faces.length == 0 || gaze_target_changed) {
-				collision_object.position.set(debug_sphere_position[0]*1.1,debug_sphere_position[1]*1.1,debug_sphere_position[2]*1.1);	
+			if(WEBVR.isAvailable()){
+				collision_object.position.set(debug_sphere_position[0], debug_sphere_position[1], debug_sphere_position[2]);
 			}
-			else {
-				var position = getFacePosition(collision_object_position_reference);
-				collision_object.position.set(position.x * 0.04, position.y * 0.04, position.z * 0.04);
+			else{
+				if(gaze_expanded_faces.length == 0 || gaze_target_changed) {
+					collision_object.position.set(debug_sphere_position[0]*1.1,debug_sphere_position[1]*1.1,debug_sphere_position[2]*1.1);	
+				}
+				else {
+					var position = getFacePosition(collision_object_position_reference);
+					collision_object.position.set(position.x * earth_scalar, position.y * earth_scalar, position.z * earth_scalar);
+				}
 			}
+			
 		}
 		else {
 			collision_object.position.set(100, 100, 100);
@@ -428,7 +401,9 @@ var Level = function(){
 		}
 		Lights.update();
 		updateColors();
-		updateParticles()
+		if(!WEBVR.isAvailable()){
+			updateParticles()
+		}
 		updateSimpleParticles();
 				
 	};
@@ -439,12 +414,14 @@ var Level = function(){
 			for (var i = earth.children[0].geometry.faces.length - 1; i >= 0; i--) {
 				// earth.children[0].geometry.faces[j].color.setHex(normal_color);	
 				var face_position = getFacePosition(i);
-				face_position.multiplyScalar(0.04);
-				var distance = face_position.distanceTo(earth.position);
+				face_position.multiplyScalar(earth_scalar);
+				var earth_position_clone = earth.position.clone();
+				earth_position_clone.multiplyScalar(earth_scalar);
+				var distance = face_position.distanceTo(earth_position_clone);
 				// console.log(distance);
-				if(distance > 2.2){
+				if(distance > land_sea_colouring){
 					// earth.children[0].geometry.faces[i].color = new THREE.Color( 0x00ff00);  
-					if(Math.abs(face_position.y) >= 1.9){
+					if(Math.abs(face_position.y) >= cold_colouring){
 						earth.children[0].geometry.faces[i].color.setHex(normal_color_land_cold);	
 					}
 					else {
@@ -453,7 +430,7 @@ var Level = function(){
 				}	
 				else{
 					// earth.children[0].geometry.faces[i].color = new THREE.Color( 0x0000ff);  
-					if(Math.abs(face_position.y) >= 1.9){
+					if(Math.abs(face_position.y) >= cold_colouring){
 						// console.log('cold sea');
 						earth.children[0].geometry.faces[i].color.setHex(normal_color_sea_cold);	
 					}
@@ -484,42 +461,102 @@ var Level = function(){
 		var originPoint = collision_object.position.clone();
 		var all_collisions = [];
 
-		for (var vertexIndex = 0; vertexIndex < collision_object.geometry.vertices.length; vertexIndex++) {		
-			var localVertex = collision_object.geometry.vertices[vertexIndex].clone();
-			// var globalVertex = localVertex.applyMatrix4( collision_object.matrix );
-			var globalVertex = localVertex.applyMatrix4( collision_object.matrixWorld );
-			var directionVector = globalVertex.sub( collision_object.position );
+		if(WEBVR.isAvailable()){		
+			////faces
+			//// not sure why it is not working that is raycasting
+			// for(var face_index = 0; face_index < collision_object.geometry.faces.length; face_index++){
+			// 	var target_position = getGenericFacePosition(collision_object, face_index);
 
-			
-			// var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize(), 0, collision_object_radius * 1.1);
-			var ray = new THREE.Raycaster( originPoint, globalVertex.clone().normalize(), 0, collision_object_radius * 1.1);
-			var collisionResults = ray.intersectObjects( targetList, true );
+			// 	// // regular method
+			// 	// var direction_vector = target_position.clone();//.sub(originPoint);
+			// 	// direction_vector.normalize();
 
-			all_collisions = all_collisions.concat(collisionResults);
 
-			
-			if(App.isDebug()) {
-				var material = new THREE.LineBasicMaterial({
-					color: 0x0000ff
-				});
+			// 	// var ray = new THREE.Raycaster( originPoint, direction_vector, 0, collision_object_radius * 1.1 * 1);				
+			// 	// var collisionResults = ray.intersectObjects( targetList, true );
 
-				var geometry = new THREE.Geometry();
-				globalVertex.add(collision_object.position);
-				geometry.vertices.push(
-					originPoint,
-					globalVertex
-				);
+			// 	// all_collisions = all_collisions.concat(collisionResults);
 
-				var line = new THREE.Line( geometry, material );
-				App.getScene().add( line );
+			// 	// if(App.isDebug()) {
+			// 	// 	var material = new THREE.LineBasicMaterial({
+			// 	// 		color: 0x0000ff
+			// 	// 	});
+
+			// 	// 	var geometry = new THREE.Geometry();
+					
+			// 	// 	var temp_vector = direction_vector.clone();
+			// 	// 	// temp_vector = originPoint.add(temp_vector.multiplyScalar(collision_object_radius * 1.1 * 1));
+			// 	// 	geometry.vertices.push(
+			// 	// 		originPoint,
+			// 	// 		target_position.add(originPoint)
+			// 	// 	);
+
+			// 	// 	var line = new THREE.Line( geometry, material );
+			// 	// 	App.getScene().add( line );
+			// 	// }
+			// 	// var target_position2 = target_position.clone();
+			// 	// console.log('bfore', target_position);
+			// 	// target_position2.project(App.getCamera());
+			// 	// console.log('isthis',target_position2);
+			// }
+			dx_limit = 0.1;
+			dy_limit = 0.1;
+			dx_step = 0.01;
+			dy_step = 0.01;
+			for(var dx = -dx_limit; dx < dx_limit; dx+= dx_step){				
+				for(var dy = -dx_limit; dy < dy_limit; dy += dy_step){					
+					ray = new THREE.Raycaster();
+					ray.setFromCamera( { x: dx, y: dy }, App.getCamera() );			
+					// collisionResults = ray.intersectObjects( targetList, true );
+					collisionResults = ray.intersectObjects( earth.children, true );
+					all_collisions = all_collisions.concat(collisionResults);
+					// console.log('hel',collisionResults);
+				}
+			}
+		}
+		else
+		{
+			for (var vertexIndex = 0; vertexIndex < collision_object.geometry.vertices.length; vertexIndex++) {		
+				var localVertex = collision_object.geometry.vertices[vertexIndex].clone();
+				// var globalVertex = localVertex.applyMatrix4( collision_object.matrix );
+				var globalVertex = localVertex.applyMatrix4( collision_object.matrixWorld );
+				var directionVector = globalVertex.sub( collision_object.position );
+
+				console.log('local vertex positions', localVertex);
+				console.log('global vertex positions', globalVertex);
+				
+				// var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize(), 0, collision_object_radius * 1.1);
+				var ray = new THREE.Raycaster( originPoint, globalVertex.clone().normalize(), 0, collision_object_radius * 1.1);
+				var collisionResults = ray.intersectObjects( targetList, true );
+
+				all_collisions = all_collisions.concat(collisionResults);
+
+				
+				if(App.isDebug()) {
+					var material = new THREE.LineBasicMaterial({
+						color: 0x0000ff
+					});
+
+					var geometry = new THREE.Geometry();
+					globalVertex.add(collision_object.position);
+					geometry.vertices.push(
+						originPoint,
+						globalVertex
+					);
+
+					var line = new THREE.Line( geometry, material );
+					App.getScene().add( line );
+				}
 			}
 		}
 
+		
+
 		var min_dist = 999;
-		console.log(all_collisions);
+		// console.log(all_collisions);
 		if(all_collisions.length === 0 && gaze_expanded_faces.length > 0){
 			var position = getFacePosition(gaze_expanded_faces[gaze_expanded_faces.length - 1]);
-			collision_object.position.set(position.x * 0.04, position.y * 0.04, position.z * 0.04);
+			collision_object.position.set(position.x * earth_scalar, position.y * earth_scalar, position.z * earth_scalar);
 			findNeighbourFaces();
 			return;
 		}
@@ -591,7 +628,7 @@ var Level = function(){
 
 	var updateParticles = function(){
 		// var delta = App.getClock().getDelta() * spawnerOptions.timeScale;
-		var delta = 0.001 * spawnerOptions.timeScale;
+		var delta = universe_particle_timer * spawnerOptions.timeScale;
 		tick += delta;
 		if (tick < 0) tick = 0;
 		if (delta > 0) {
@@ -608,7 +645,7 @@ var Level = function(){
 	};
 
 	var updateSimpleParticles = function(){
-		starField.rotation.y += 0.001;//App.getClock().getDelta() * 0.01;
+		starField.rotation.y += simple_particle_rotation_speed;//App.getClock().getDelta() * 0.01;
 	}
 
 	var updateGazeTimer = function(){
@@ -665,6 +702,24 @@ var Level = function(){
 		}
 
 		return exists;
+	};
+
+	var getGenericFacePosition = function(reference_object, face_index){
+		var input_face = reference_object.geometry.faces[face_index];
+		// seems borked!
+		var v1 = reference_object.geometry.vertices[input_face.a];
+		var v2 = reference_object.geometry.vertices[input_face.b];
+		var v3 = reference_object.geometry.vertices[input_face.c];
+
+		// console.log('vs', v1, v2, v3);
+
+		// calculate the centroid
+		var position = new THREE.Vector3();
+		position.x = (v1.x + v2.x + v3.x) / 3;
+		position.y = (v1.y + v2.y + v3.y) / 3;
+		position.z = (v1.z + v2.z + v3.z) / 3;
+
+		return position;
 	};
 
 	var getFacePosition = function(input_face_index){

@@ -26,9 +26,9 @@ var World = function(){
 
 		console.log(world);
 
-		if(WEBVR.isAvailable()){
-			world.position.z = -edge_length/2;
-		}
+		// if(WEBVR.isAvailable()){
+		// 	world.position.z = -edge_length/2;
+		// }
 
 		App.getScene().add(world);
 	};

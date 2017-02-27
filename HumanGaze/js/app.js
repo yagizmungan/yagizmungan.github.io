@@ -129,9 +129,9 @@ var App = function(){
 			camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, World.getWorldEdgeLength()*2 );
 
 			// TODO needs to be changed
-			camera.position.x = World.getVRCameraStartingPoint().x;
-			camera.position.y = World.getVRCameraStartingPoint().y;
-			camera.position.z = World.getVRCameraStartingPoint().z;
+			// camera.position.x = World.getVRCameraStartingPoint().x;
+			// camera.position.y = World.getVRCameraStartingPoint().y;
+			// camera.position.z = World.getVRCameraStartingPoint().z;
 
 			scene.add( camera );			
 		}
