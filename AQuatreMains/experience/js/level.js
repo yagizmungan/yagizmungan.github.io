@@ -76,7 +76,7 @@ var Level = function(){
 
 		var loader = new THREE.ColladaLoader();
 		loader.options.convertUpAxis = true;
-		loader.load( './assets/models/hexagon.dae', function ( collada ) {
+		loader.load( './assets/models/hexagon2.dae', function ( collada ) {
 			dae = collada.scene;
 			dae.traverse( function ( child ) {
 				if ( child instanceof THREE.SkinnedMesh ) {
@@ -91,7 +91,10 @@ var Level = function(){
 
 			// App.getScene().add(dae);
 			hexagon_geometry = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[0].geometry );
-			hexagon_lines_geometery = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[2].geometry );
+			// for geometry 2
+			var hexagon_geometry_p2 = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[3].geometry );
+			hexagon_geometry.merge(hexagon_geometry_p2, hexagon_geometry_p2.matrix);
+			// hexagon_lines_geometery = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[2].geometry );
 
 			setupHexagons();
 		} );
@@ -203,10 +206,20 @@ var Level = function(){
 	var createHexagon = function(size) {
 		// var group = new THREE.Object3D();
 		// var hexagon_material = new THREE.MeshBasicMaterial({
-		var hexagon_material = new THREE.MeshToonMaterial({
-			color: 0xBBBBBB, 
-			// vertexColors: THREE.FaceColors, 
-			side: THREE.DoubleSide
+		// var hexagon_material = new THREE.MeshToonMaterial({
+		// 	color: 0xBBBBBB, 
+		// 	// vertexColors: THREE.FaceColors, 
+		// 	side: THREE.DoubleSide,
+		// 	shading: THREE.FlatShading
+		// });
+
+		var hexagon_material = new THREE.MeshPhongMaterial({ 
+			color: 0xffffff, 
+			specular: 0xdddddd, 
+			shininess: 5, 
+			morphTargets: true, 
+			vertexColors: THREE.FaceColors, 
+			shading: THREE.FlatShading 
 		});
 		// var hexagon_geometry = new THREE.RegularHexagonGeometry(size);
 
