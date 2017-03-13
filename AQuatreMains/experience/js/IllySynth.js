@@ -121,7 +121,7 @@ IllySynth = function(){
 		audio_context = new (window.AudioContext || window.webkitAudioContext)();
 
 		master_volume = audio_context.createGain();
-		master_volume.gain.value = 1;
+		master_volume.gain.value = 0.2;
 
 		// initialize the instruments
 		// for (var i = 0; i < instruments.length; i++){
@@ -204,7 +204,7 @@ IllySynth = function(){
 		synth.vol2 = audio_context.createGain();
 		synth.vol_master = audio_context.createGain();
 
-		synth.filter = audio_context.createBiquadFilter();
+		// synth.filter = audio_context.createBiquadFilter();
 
 		// setup oscillators
 		synth.osc1.type = instruments[i].osc1_type;
@@ -220,11 +220,11 @@ IllySynth = function(){
 			synth.osc3.detune.value = instruments[i].osc3_detune;; // value in cents
 		}
 		
-		// setup envelop
-		synth.filter.type = "lowshelf";
-		synth.filter.frequency.value = instruments[i].filter_frequency;
-		synth.filter.gain.value = instruments[i].filter_gain;
-		synth.filter.Q.value = instruments[i].filter_Q;
+		// // setup envelop
+		// synth.filter.type = "lowshelf";
+		// synth.filter.frequency.value = instruments[i].filter_frequency;
+		// synth.filter.gain.value = instruments[i].filter_gain;
+		// synth.filter.Q.value = instruments[i].filter_Q;
 
 		// setup gain
 		synth.vol1.gain.value = 0.2;
@@ -241,9 +241,9 @@ IllySynth = function(){
 		synth.vol1.connect(synth.vol_master);
 		synth.vol2.connect(synth.vol_master);
 
-		synth.vol_master.connect(synth.filter);
-		
-		synth.filter.connect(master_volume);
+		// synth.vol_master.connect(synth.filter);
+		synth.vol_master.connect(master_volume);
+		// synth.filter.connect(master_volume);
 
 		synth.osc1.start();
 		synth.osc2.start();	

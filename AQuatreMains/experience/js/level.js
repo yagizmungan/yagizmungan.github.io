@@ -112,7 +112,7 @@ var Level = function(){
 		angle_y = 0;
 		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += angle_step) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
-			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
+			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y), 0);
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;// - hexagon_size;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius;
 			hexagon.position.z = Math.cos(angle_x) * dome_radius;
@@ -125,7 +125,7 @@ var Level = function(){
 		angle_y = (Math.PI/2)* (1/6);
 
 		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += angle_step) {
-			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
+			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y), 1);
 			// hexagon.position.y = 1.55;//Math.cos(angle_y) * dome_radius - hexagon_size;
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
@@ -139,7 +139,7 @@ var Level = function(){
 
 		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += target_angle/12) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			var hexagon = createHexagon(0.85);
+			var hexagon = createHexagon(0.85, 2);
 			// hexagon.position.y = 2.95;//Math.cos(angle_y) * dome_radius - hexagon_size;
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
@@ -153,7 +153,7 @@ var Level = function(){
 
 		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += target_angle/9) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			var hexagon = createHexagon(0.9);
+			var hexagon = createHexagon(0.9, 3);
 			// hexagon.position.y = 4.1;//Math.cos(angle_y) * dome_radius - hexagon_size;
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
@@ -167,7 +167,7 @@ var Level = function(){
 
 		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += target_angle/6) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			var hexagon = createHexagon(1);
+			var hexagon = createHexagon(1, 4);
 			// hexagon.position.y = 5;//Math.cos(angle_y) * dome_radius - hexagon_size;
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
@@ -181,7 +181,7 @@ var Level = function(){
 
 		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += target_angle/3) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			var hexagon = createHexagon(1 );
+			var hexagon = createHexagon(1, 0);
 			// hexagon.position.y = 6;//Math.cos(angle_y) * dome_radius - hexagon_size;
 			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
@@ -192,18 +192,19 @@ var Level = function(){
 
 		angle_y = (Math.PI/2)* (6/6);
 
-		var hexagon = createHexagon(1 );
+		var hexagon = createHexagon(1, 0);
 		hexagon.position.y = dome_radius;
 		hexagon.position.x = 0;
 		// hexagon.position.z = -0.25;
 		hexagon.lookAt(new THREE.Vector3(0,0,0));
+		raycast_targets.push(hexagon);
 
 		instruments_created = true;
 		console.log (hexagons.meshes.length);
 		console.log (hexagons);
 	};
 
-	var createHexagon = function(size) {
+	var createHexagon = function(size, synths_index) {
 		// var group = new THREE.Object3D();
 		// var hexagon_material = new THREE.MeshBasicMaterial({
 		// var hexagon_material = new THREE.MeshToonMaterial({
@@ -212,6 +213,11 @@ var Level = function(){
 		// 	side: THREE.DoubleSide,
 		// 	shading: THREE.FlatShading
 		// });
+
+		// if(!synths_index){
+		// 	synths_index = Math.round(Math.random() * 4);
+		// }
+		console.log(synths_index);
 
 		var hexagon_material = new THREE.MeshPhongMaterial({ 
 			color: 0xffffff, 
@@ -235,7 +241,7 @@ var Level = function(){
 
 
 		hexagon.hexagonID = hexagons.meshes.length;
-		var synths_index = Math.round(Math.random() * 4);
+		
 		var synth = IllySynth.createSynth(synths_index);
 		// group.add(hexagon);
 
