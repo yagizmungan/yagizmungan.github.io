@@ -23,6 +23,8 @@ var Level = function(){
 	var hexagons_mode2 = [];
 
 	var hexagon_geometry;
+	var hexagon_lines_geometery;
+	var hexagon_lines_material;
 
 	// // particles //
 	// var tick = 0;
@@ -86,7 +88,10 @@ var Level = function(){
 			dae.updateMatrix();
 			
 			console.log(dae);
-			// hexagon_geometry = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[0].geometry );
+
+			// App.getScene().add(dae);
+			hexagon_geometry = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[0].geometry );
+			hexagon_lines_geometery = new THREE.Geometry().fromBufferGeometry( dae.children[0].children[2].geometry );
 
 			setupHexagons();
 		} );
@@ -101,112 +106,94 @@ var Level = function(){
 		var angle_step = Math.PI/12;
 
 		// for (angle_y = 0; angle_y < target_angle * 2/10; angle_y += angle_step) {
-			for (var angle_x = 0; angle_x < target_angle * 2; angle_x += angle_step) {
-				// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
-				var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
-				hexagon.position.y = Math.cos(angle_y) - hexagon_size;
-				hexagon.position.x = Math.sin(angle_x) * dome_radius;
-				hexagon.position.z = Math.cos(angle_x) * dome_radius;
-				hexagon.lookAt(new THREE.Vector3(0,0,0));
-				hexagon.rotateY( (2 * Math.PI) * 352/360);
-				raycast_targets.push(hexagon);
-			}
+		angle_y = 0;
+		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += angle_step) {
+			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
+			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y));
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;// - hexagon_size;
+			hexagon.position.x = Math.sin(angle_x) * dome_radius;
+			hexagon.position.z = Math.cos(angle_x) * dome_radius;
+			hexagon.lookAt(new THREE.Vector3(0,0,0));
+			// hexagon.rotateY( (2 * Math.PI) * 352/360);
+			raycast_targets.push(hexagon);
+		}
 		// }
 
-		angle_y = Math.PI/12;
+		angle_y = (Math.PI/2)* (1/6);
 
 		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += angle_step) {
 			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			hexagon.position.y = 1.4;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			// hexagon.position.y = 1.55;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
+			// hexagon.rotateY( (2 * Math.PI) * 352/360);
 			raycast_targets.push(hexagon);
 		}
 
-		angle_y = 2*Math.PI/12;
+		angle_y = (Math.PI/2)* (2/6);
 
-		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += angle_step) {
-			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			hexagon.position.y = 2.6;//Math.cos(angle_y) * dome_radius - hexagon_size;
+		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += target_angle/12) {
+			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
+			var hexagon = createHexagon(0.85);
+			// hexagon.position.y = 2.95;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
+			// hexagon.rotateY( (2 * Math.PI) * 352/360);
 			raycast_targets.push(hexagon);
 		}
 
-		angle_y = 3*Math.PI/12;
+		angle_y = (Math.PI/2)* (3/6);
 
-		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += angle_step) {
-			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			hexagon.position.y = 3.6;//Math.cos(angle_y) * dome_radius - hexagon_size;
+		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += target_angle/9) {
+			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
+			var hexagon = createHexagon(0.9);
+			// hexagon.position.y = 4.1;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
+			// hexagon.rotateY( (2 * Math.PI) * 352/360);
 			raycast_targets.push(hexagon);
 		}
 
-		angle_y = 4*Math.PI/12;
+		angle_y = (Math.PI/2)* (4/6);
 
 		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += target_angle/6) {
 			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
 			var hexagon = createHexagon(1);
-			hexagon.position.y = 4.4;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			// hexagon.position.y = 5;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
-			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
-			raycast_targets.push(hexagon);
-		}
-
-
-		// angle_y = 4*Math.PI/12;
-
-		// for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += angle_step) {
-		// 	var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-		// 	hexagon.position.y = 5;//Math.cos(angle_y) * dome_radius - hexagon_size;
-		// 	hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
-		// 	hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
-		// 	hexagon.lookAt(new THREE.Vector3(0,0,0));
-		// 	hexagon.rotateY( (2 * Math.PI) * 352/360);
-		// }
-
-		angle_y = 5*Math.PI/12;
-
-		for (var angle_x =0; angle_x < target_angle * 2; angle_x += target_angle/3) {
-			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			var hexagon = createHexagon(1 );
-			hexagon.position.y = 5;//Math.cos(angle_y) * dome_radius - hexagon_size;
-			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
-			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
-			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
-			raycast_targets.push(hexagon);
-		}
-
-		angle_y = 6*Math.PI/12;
-
-		var hexagon = createHexagon(1 );
-			hexagon.position.y = 5.5;//Math.cos(angle_y) * dome_radius - hexagon_size;
-			hexagon.position.x = 0.15;
-			// hexagon.position.z = -0.25;
 			hexagon.lookAt(new THREE.Vector3(0,0,0));
 			// hexagon.rotateY( (2 * Math.PI) * 352/360);
+			raycast_targets.push(hexagon);
+		}
 
-		angle_y = 6*Math.PI/12;
+		angle_y = (Math.PI/2)* (5/6);
 
-		for (var angle_x = angle_step/2; angle_x < target_angle * 2; angle_x += angle_step) {
-			var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
-			hexagon.position.y = 6;//Math.cos(angle_y) * dome_radius - hexagon_size;
+		for (var angle_x = 0; angle_x < target_angle * 2; angle_x += target_angle/3) {
+			// var hexagon = createHexagon(hexagon_size * Math.cos(angle_y) );
+			var hexagon = createHexagon(1 );
+			// hexagon.position.y = 6;//Math.cos(angle_y) * dome_radius - hexagon_size;
+			hexagon.position.y = Math.sin(angle_y) * dome_radius;
 			hexagon.position.x = Math.sin(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.position.z = Math.cos(angle_x) * dome_radius * Math.cos(angle_y);
 			hexagon.lookAt(new THREE.Vector3(0,0,0));
-			hexagon.rotateY( (2 * Math.PI) * 352/360);
+			raycast_targets.push(hexagon);
 		}
 
+		angle_y = (Math.PI/2)* (6/6);
+
+		var hexagon = createHexagon(1 );
+		hexagon.position.y = dome_radius;
+		hexagon.position.x = 0;
+		// hexagon.position.z = -0.25;
+		hexagon.lookAt(new THREE.Vector3(0,0,0));
 
 		instruments_created = true;
 		console.log (hexagons.meshes.length);
@@ -214,14 +201,18 @@ var Level = function(){
 	};
 
 	var createHexagon = function(size) {
-		var hexagon_material = new THREE.MeshBasicMaterial({
+		// var group = new THREE.Object3D();
+		// var hexagon_material = new THREE.MeshBasicMaterial({
+		var hexagon_material = new THREE.MeshToonMaterial({
 			color: 0xBBBBBB, 
 			// vertexColors: THREE.FaceColors, 
 			side: THREE.DoubleSide
 		});
-		var hexagon_geometry = new THREE.RegularHexagonGeometry(size);
+		// var hexagon_geometry = new THREE.RegularHexagonGeometry(size);
+
 
 		var hexagon = new THREE.Mesh(hexagon_geometry, hexagon_material);
+		hexagon.scale.x = hexagon.scale.y = hexagon.scale.z = 0.045 * size;
 		var random_color = Math.random() * 0xffffff
 		hexagon.material.color.setHex( random_color );
 
@@ -233,9 +224,19 @@ var Level = function(){
 		hexagon.hexagonID = hexagons.meshes.length;
 		var synths_index = Math.round(Math.random() * 4);
 		var synth = IllySynth.createSynth(synths_index);
+		// group.add(hexagon);
+
+		// var hexagon_line_material = new THREE.MeshBasicMaterial({
+		// 	color: 0xffffff,
+		// 	wireframe: true
+		// });
+		// var hexagon_line =  new THREE.Mesh(hexagon_lines_geometery, hexagon_lines_material);
+		// var hexagon_line = new THREE.Mesh(hexagon_geometry, )
 		// console.log(synth);
+		// group.add(hexagon_line);
 		hexagons.synths.push(synth);
 		hexagons.meshes.push(hexagon);
+		// App.getScene().add( group );
 		App.getScene().add( hexagon );
 
 		return hexagon;
