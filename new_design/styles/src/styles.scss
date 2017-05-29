@@ -1,0 +1,12 @@
+@import 'reset';
+@import 'colors';
+@import '_threejs-scene';
+@import '_intro';
+@import '_main-content';
+@import '_footer';
+
+
+body{
+  background-color: $background-color;
+}
+

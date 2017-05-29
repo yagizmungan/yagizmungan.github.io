@@ -1,0 +1,139 @@
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#threejs-magic {
+  position: fixed;
+  width: 100vw;
+  height: 100vh; }
+
+#intro {
+  position: absolute;
+  width: 100vw;
+  height: 75vh;
+  left: 0px;
+  top: 0px;
+  color: #0f0; }
+
+#about {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center; }
+
+#main-content {
+  position: absolute;
+  top: 75vh;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  color: #0f0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  justify-content: center; }
+
+.main__container {
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 10px; }
+
+.main__bw-image {
+  /*position: absolute;
+  left: 0px;
+  left: 0px;*/
+  width: 100%;
+  height: 100%; }
+
+.main__color-image {
+  width: 100%;
+  height: 100%; }
+
+.invisible {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; }
+
+.main__text-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .main__text-container__top {
+    top: 20px; }
+  .main__text-container .__top {
+    top: 20px; }
+  .main__text-container .main__text-container__top {
+    top: 20px; }
+  .main__text-container__bottom {
+    bottom: 20px; }
+  .main__text-container .main__text-container__bottom {
+    bottom: 20px; }
+
+.main__text-container__top {
+  position: absolute;
+  width: 100%;
+  top: 20px; }
+
+.main__text-container__bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 20px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  color: #0f0; }
+
+body {
+  background-color: #000; }

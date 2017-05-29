@@ -20,10 +20,26 @@
 
 .invisible {
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .main__text-container {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.main__text-container__top {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+.main__text-container__bottom {
+  position: absolute;
+  padding-bottom: : 20px;
+  width: 100%;
 }
