@@ -46,7 +46,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-      app = new App(Options);
+      let threejs_magic = new ThreejsMagic();
+      let app = new App(Options);
       app.init();
     });
   </script>
