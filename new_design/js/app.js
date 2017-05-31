@@ -5,9 +5,14 @@ class App {
 
   init(){
   	console.log(this.options);
-  	for (var i = this.options.items.length - 1; i >= 0; i--) {
+  	for (let i =  0; i < this.options.items.length; i++) {
   		// this.options.items[i]
   		let item = new MainItem(this.options.items[i]);
   	}
+
+
+    for (let i in this.options.footer_items){      
+      let footer_item_element = new FooterItem(this.options.footer_items[i]);
+    }
   }
 }

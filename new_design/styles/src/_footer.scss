@@ -1,7 +1,18 @@
 footer {
+  background-color: rgba(0,0,0,0.8);
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
 	height: 25px;
 	color: $main-text-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: center;
+
+  a {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
+
