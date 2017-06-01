@@ -87,8 +87,10 @@ class ThreejsMagic {
     var updateObject = () => {
       let vertices = object.geometry.vertices;
       let multiplier = 1;
+      let sin_multiplier = 1;
       let time = Date.now();//CLOCK.elapsedTime;
       // console.log(time);
+      let scale = 2 * Math.PI/vertices.length;
 
       for(let i = 0; i < vertices.length; i++) {
         // vertices[i].x = default_vertices[i].x + Math.sin(time);
@@ -103,9 +105,15 @@ class ThreejsMagic {
         // vertices[i].y = default_vertices[i].y + Math.sin(i + time/(93 + i)) * multiplier;
         // vertices[i].z = default_vertices[i].z + Math.sin(i + time/(83 + i)) * multiplier;
 
-        vertices[i].x = default_vertices[i].x + Math.sin(i + time/(103 + i/5)) * multiplier;
-        vertices[i].y = default_vertices[i].y + Math.sin(i + time/(93 + i/5)) * multiplier;
-        vertices[i].z = default_vertices[i].z + Math.sin(i + time/(83 + i/5)) * multiplier;
+        // best so far
+        vertices[i].x = default_vertices[i].x + Math.sin(i + sin_multiplier * time/(103 + i/5)) * multiplier;
+        vertices[i].y = default_vertices[i].y + Math.sin(i + sin_multiplier * time/(93 + i/5)) * multiplier;
+        vertices[i].z = default_vertices[i].z + Math.sin(i + sin_multiplier * time/(83 + i/5)) * multiplier;
+
+        // vertices[i].x = default_vertices[i].x + Math.sin(i * scale + time/(103 + i/5)) * multiplier;
+        // vertices[i].y = default_vertices[i].y + Math.sin(i * scale + time/(93 + i/5)) * multiplier;
+        // vertices[i].z = default_vertices[i].z + Math.sin(i * scale + time/(83 + i/5)) * multiplier;
+
 
         // vertices[i].x = default_vertices[i].x + Math.sin(time * i) * multiplier;
         // vertices[i].y = default_vertices[i].y + Math.sin(time * i) * multiplier;
