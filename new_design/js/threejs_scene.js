@@ -11,7 +11,7 @@ class ThreejsMagic {
 
 		let geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
 		let material = new THREE.MeshPhongMaterial( { 
-      color: 0xaa0000, 
+      color: 0xffffff, 
       // wireframe: true,
       shading: THREE.FlatShading
     });
@@ -61,13 +61,25 @@ class ThreejsMagic {
 		CAMERA.position.z = 30;
 
     let lights = [];
-    lights[ 0 ] = new THREE.PointLight( 0xffffff, 1, 0 );
-    lights[ 1 ] = new THREE.PointLight( 0xffffff, 1, 0 );
-    lights[ 2 ] = new THREE.PointLight( 0xffffff, 1, 0 );
+    lights[ 0 ] = new THREE.PointLight( 0xff0000, 1, 0 );
+    lights[ 1 ] = new THREE.PointLight( 0x00ff00, 1, 0 );
+    lights[ 2 ] = new THREE.PointLight( 0x0000ff, 1, 0 );
 
     lights[ 0 ].position.set( 0, 200, 0 );
-    lights[ 1 ].position.set( 100, 200, 100 );
-    lights[ 2 ].position.set( - 100, - 200, - 100 );
+    lights[ 0 ].theta = {
+      modes: [0,0,0],
+      r: 200
+    };
+    lights[ 1 ].position.set( 200, 0, 0 );
+    lights[ 1 ].theta = {
+      modes: [0,0,0],
+      r: 200
+    };
+    lights[ 2 ].position.set( 0, 0, - 200 );
+    lights[ 2 ].theta = {
+      modes: [0,0,0],
+      r: 200
+    };
 
     SCENE.add( lights[ 0 ] );
     SCENE.add( lights[ 1 ] );
@@ -82,6 +94,9 @@ class ThreejsMagic {
 			RENDERER.render(SCENE, CAMERA);
 
       updateObject();
+      rotateLight(lights[0], 2, 0.003);
+      rotateLight(lights[1], 1, 0.01);
+      rotateLight(lights[2], 0, 0.03);
 		};
 
     var updateObject = () => {
@@ -183,6 +198,28 @@ class ThreejsMagic {
       object.geometry.computeFaceNormals();
       object.geometry.computeVertexNormals();
     };
+
+    var rotateLight = (light_object, mode, speed) => {
+      // console.log(light_object.theta.modes[mode]);
+      if(mode == 2) {
+        light_object.position.y = light_object.theta.r * Math.sin(light_object.theta.modes[mode]);
+        light_object.position.z = light_object.theta.r * Math.cos(light_object.theta.modes[mode]);
+
+        light_object.theta.modes[mode] += speed;
+      }
+      else if(mode == 1) {
+        light_object.position.x = light_object.theta.r * Math.sin(light_object.theta.modes[mode]);
+        light_object.position.z = light_object.theta.r * Math.cos(light_object.theta.modes[mode]);
+
+        light_object.theta.modes[mode] += speed;
+      }
+      else if(mode == 0) {
+        light_object.position.x = light_object.theta.r * Math.sin(light_object.theta.modes[mode]);
+        light_object.position.y = light_object.theta.r * Math.cos(light_object.theta.modes[mode]);
+
+        light_object.theta.modes[mode] += speed;
+      }
+    }
 
 		render();
 	}
