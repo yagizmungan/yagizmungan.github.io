@@ -120,7 +120,18 @@ class ThreejsMagic {
       changeColor(lights[0], 0, 0.003, 0.7, 1);
       changeColor(lights[1], 1, 0.001, 0, 0.3);
       changeColor(lights[2], 2, 0.002, 0, 1);
+      window.addEventListener( 'resize', onWindowResize, false );
 		};
+
+    
+
+
+    var onWindowResize = () => {
+      CAMERA.aspect = window.innerWidth / window.innerHeight;
+      CAMERA.updateProjectionMatrix();
+      RENDERER.setSize( window.innerWidth, window.innerHeight );
+    }
+
 
     var updateObject = () => {
       let vertices = object.geometry.vertices;
@@ -131,93 +142,15 @@ class ThreejsMagic {
       let scale = 2 * Math.PI/vertices.length;
 
       for(let i = 0; i < vertices.length; i++) {
-        // vertices[i].x = default_vertices[i].x + Math.sin(time);
-        // vertices[i].y = default_vertices[i].y + Math.sin(time);
-        // vertices[i].z = default_vertices[i].z + Math.sin(time);
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(i + time/100);
-        // vertices[i].y = default_vertices[i].y + Math.sin(i + time/90);
-        // vertices[i].z = default_vertices[i].z + Math.sin(i + time/80);
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(i + time/(103 + i)) * multiplier;
-        // vertices[i].y = default_vertices[i].y + Math.sin(i + time/(93 + i)) * multiplier;
-        // vertices[i].z = default_vertices[i].z + Math.sin(i + time/(83 + i)) * multiplier;
 
         // best so far
         vertices[i].x = default_vertices[i].x + Math.sin(i + sin_multiplier * time/(103 + i/5)) * multiplier;
         vertices[i].y = default_vertices[i].y + Math.sin(i + sin_multiplier * time/(93 + i/5)) * multiplier;
-        vertices[i].z = default_vertices[i].z + Math.sin(i + sin_multiplier * time/(83 + i/5)) * multiplier;
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(i * scale + time/(103 + i/5)) * multiplier;
-        // vertices[i].y = default_vertices[i].y + Math.sin(i * scale + time/(93 + i/5)) * multiplier;
-        // vertices[i].z = default_vertices[i].z + Math.sin(i * scale + time/(83 + i/5)) * multiplier;
-
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(time * i) * multiplier;
-        // vertices[i].y = default_vertices[i].y + Math.sin(time * i) * multiplier;
-        // vertices[i].z = default_vertices[i].z + Math.sin(time * i) * multiplier;
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(time * i);
-        // vertices[i].y = default_vertices[i].y + Math.sin(time * i);
-        // vertices[i].z = default_vertices[i].z + Math.sin(time * i);
-
-        // vertices[i].x = default_vertices[i].x + Math.random() * multiplier;
-        // vertices[i].y = default_vertices[i].y + Math.random() * multiplier;
-        // vertices[i].z = default_vertices[i].z + Math.random() * multiplier;
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(Math.random() * multiplier * Math.PI);
-        // vertices[i].y = default_vertices[i].y + Math.sin(Math.random() * multiplier * Math.PI);
-        // vertices[i].z = default_vertices[i].z + Math.sin(Math.random() * multiplier * Math.PI);
-
-        // vertices[i].x = default_vertices[i].x + Math.sin(Math.random() * multiplier * i);
-        // vertices[i].y = default_vertices[i].y + Math.sin(Math.random() * multiplier * i);
-        // vertices[i].z = default_vertices[i].z + Math.sin(Math.random() * multiplier * i);
+        vertices[i].z = default_vertices[i].z + Math.sin(i + sin_multiplier * time/(83 + i/5)) * multiplier; 
       }
-
-      // var magn = .5;
-      // // var time = Date.now();
-      // var max=2;
-
-      // for (var i = 0; i < vertices.length; i++) {
-      //   // console.log(vert[i].ox, vert[i].oy, vert[i].oz);
-      //   var mod=0.2;
-      //   // if(default_vertices[i].z>-2)mod=1;
-      //   vertices[i].x=default_vertices[i].x+mod*Math.max(-max,Math.min(max,Math.sin( i*.96+time/113)*magn))
-      //   vertices[i].y=default_vertices[i].y+mod*Math.max(-max,Math.min(max,Math.sin( i*1.23+time/122)*magn))
-      //   vertices[i].z=default_vertices[i].z+mod*Math.max(-max,Math.min(max,Math.sin(-i*1.4+time/135)*magn))
-      // };  
-
-      // for (var i = 0; i < vert.length; i++) {
-      //   // console.log(vert[i].ox, vert[i].oy, vert[i].oz);
-      //   var mod=0.2;
-      //   if(vert[i].oz>-2)mod=1;
-      //   vert[i].x=vert[i].ox+mod*Math.max(-max,Math.min(max,Math.sin( i*.96+time/113)*magn))
-      //   vert[i].y=vert[i].oy+mod*Math.max(-max,Math.min(max,Math.sin( i*1.23+time/122)*magn))
-      //   vert[i].z=vert[i].oz+mod*Math.max(-max,Math.min(max,Math.sin(-i*1.4+time/135)*magn))
-      // };      
 
       object.geometry.verticesNeedUpdate = true;
       object.geometry.normalsNeedUpdate = true;
-      object.geometry.computeFaceNormals();
-      object.geometry.computeVertexNormals();
-    };
-
-    var updateObjectM = () => {
-      var magn = .2;
-      var time = Date.now();
-      var max=2;
-      var vert = object.geometry.vertices
-
-      for (var i = 0; i < vert.length; i++) {
-        // console.log(vert[i].ox, vert[i].oy, vert[i].oz);
-        var mod=0.2;
-        if(vert[i].oz>-2)mod=1;
-        vert[i].x=vert[i].ox+mod*Math.max(-max,Math.min(max,Math.sin( i*.96+time/113)*magn))
-        vert[i].y=vert[i].oy+mod*Math.max(-max,Math.min(max,Math.sin( i*1.23+time/122)*magn))
-        vert[i].z=vert[i].oz+mod*Math.max(-max,Math.min(max,Math.sin(-i*1.4+time/135)*magn))
-      };
-      object.geometry.verticesNeedUpdate = true;
-      object.geometry.normalsNeedUpdate=true;
       object.geometry.computeFaceNormals();
       object.geometry.computeVertexNormals();
     };
