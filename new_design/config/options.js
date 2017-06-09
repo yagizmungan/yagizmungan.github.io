@@ -112,7 +112,7 @@ var Options = {
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     }
 	],
-  "footer_items":[
+  "footer_items": [
     {
       "text": "bio",
       "link": "bio.html"
@@ -121,5 +121,26 @@ var Options = {
       "text": "more",
       "link": "yagizmungan.com"
     },
+  ],
+  "bio_footer_items": [
+    {
+      "text": "home",
+      "link": "index.html"
+    },
+    {
+      "text": "more",
+      "link": "yagizmungan.com"
+    },
+  ],
+  "bio_exhibitions": [
+    {
+      "text": "2017, Toronto: The Jordan Standard"
+    },
+    {
+      "text": "2017, Bay Area Maker Faire: Illy: A Primitive Intelligence"
+    },
+    {
+      "text": "2017, Bay Area Maker Faire: Illy: A Primitive Intelligence"
+    }
   ]
 }

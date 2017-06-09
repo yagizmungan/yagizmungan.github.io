@@ -58,7 +58,7 @@ table {
   height: 75vh;
   left: 0px;
   top: 0px;
-  color: #0f0; }
+  color: #F6AC97; }
 
 #about {
   position: absolute;
@@ -76,7 +76,7 @@ table {
   left: 0px;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
-  color: #0f0;
+  color: #F6AC97;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1300px;
@@ -157,13 +157,33 @@ footer {
   bottom: 0;
   width: 100vw;
   height: 40px;
-  color: #0f0;
+  color: #F6AC97;
   display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
   justify-content: center; }
   footer a {
     margin: auto 20px; }
+
+#bio {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #F6AC97;
+  text-align: center; }
+  #bio__main {
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%; }
+  #bio__works {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%; }
+    #bio__works .title {
+      text-align: right; }
 
 body {
   background-color: #000; }

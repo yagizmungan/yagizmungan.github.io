@@ -60,7 +60,7 @@ class ThreejsMagic {
     // var object2 = new THREE.Mesh(geometry2, material2);
     // SCENE.add(object2);
 
-		CAMERA.position.z = 30;
+		CAMERA.position.z = 40;
 
     let lights = [];
     lights[ 0 ] = new THREE.PointLight( 0xff0000, 1, 0 );
