@@ -183,7 +183,8 @@ footer {
     margin-left: 20%;
     margin-right: 20%; }
     #bio__works .title {
-      text-align: right; }
+      text-align: right;
+      color: #F6ACD7; }
 
 body {
   background-color: #000; }

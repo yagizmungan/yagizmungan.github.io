@@ -134,13 +134,36 @@ var Options = {
   ],
   "bio_exhibitions": [
     {
-      "text": "2017, Toronto: The Jordan Standard"
+      "entry": [
+        { 
+          "text": "2017, ",
+          "link": ""
+        },
+        { 
+          "text": "Toronto: ",
+          "link": ""
+        },
+        { 
+          "text": "The Jordan Standard",
+          "link": ""
+        }
+      ]
     },
     {
-      "text": "2017, Bay Area Maker Faire: Illy: A Primitive Intelligence"
+      "entry": [
+        { 
+          "text": "2017, Toronto: The Jordan Standard",
+          "link": ""
+        }
+      ]
     },
     {
-      "text": "2017, Bay Area Maker Faire: Illy: A Primitive Intelligence"
+      "entry": [
+        { 
+          "text": "2017, Toronto: The Jordan Standard",
+          "link": "http://localhost:3000/bio.html"
+        }
+      ]
     }
   ]
 }
