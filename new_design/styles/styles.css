@@ -59,6 +59,14 @@ table {
   left: 0px;
   top: 0px;
   color: #F6AC97; }
+  #intro #title {
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    font-size: 22px; }
 
 #about {
   position: absolute;
@@ -182,6 +190,11 @@ footer {
     text-align: left;
     margin-left: 20%;
     margin-right: 20%; }
+    #bio__works .works-section {
+      margin-top: 10%; }
+      #bio__works .works-section .bio__item {
+        margin-top: 2%;
+        margin-bottom: 2%; }
     #bio__works .title {
       text-align: right;
       color: #F6ACD7; }
