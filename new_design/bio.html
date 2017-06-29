@@ -13,29 +13,26 @@
 
   <body>
     <section id="threejs-magic">
-      <!-- <canvas></canvas> -->
     </section>
-  	<!-- <header>
-  		<nav>
-  		</nav>
-  	</header> -->
-  	<section id="intro">
-      <div id="title">
-        Yagiz Mungan | Technology - Art - Music
+  	<section id="bio">
+      <div id="bio__main">
+        <img id="bio__main__picture"/>
+        <div id="bio__main__text">Best fur in the show</div>      
+        Works | Exhibitions | Publications | Workshops | CV
       </div>
-      <div id="about">
-        Let's give him a friend too. Everybody needs a friend. Trees get lonely too, so we'll give him a little friend. Just use the old one inch brush.
-        <div id="nav"> Works | Contact | Archive</div>
-      </div>
-      <!-- <nav></nav> -->
 
-    </section>
-  	<section id="main-content">  		
+      <div id="bio__works">
+        <div id="bio__works__exhibitions" class="works-section">
+          <div class="title">Exhibitions</div>
+        </div>
+        <div id="bio__works__publications" class="works-section">
+          <div class="title">Publications</div>
+        </div>
+        <div id="bio__works__workshops-teaching" class="works-section">
+          <div class="title">Workshops</div>
+        </div>
+      </div>
   	</section>
-
-  	<aside>
-  	</aside>
-
   	<footer id="footer">
   	</footer>
   </body>
@@ -43,14 +40,14 @@
   <script type="text/javascript" src="./js/threejs_scene.js"></script>
 
   <script type="text/javascript" src="./js/app.js"></script>
-  <script type="text/javascript" src="./js/item.js"></script>
+  <script type="text/javascript" src="./js/bio_item.js"></script>
   <script type="text/javascript" src="./js/footer_item.js"></script>
   <script type="text/javascript" src="./config/options.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       let threejs_magic = new ThreejsMagic();
-      Options.role = 'works';
+      Options.role = 'bio';
       let app = new App(Options);
       app.init();
     });
