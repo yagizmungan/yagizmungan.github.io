@@ -1,5 +1,6 @@
 var Lights = function(){
 	var lights = [];
+	var outer_point_light;
 
 	var init = function(){
 		App.getScene().add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
@@ -20,21 +21,41 @@ var Lights = function(){
 		directional_light.shadow.bias = -0.0001;
 		
 
-		if(WEBVR.isAvailable()){
-			App.getScene().add(directional_light.target);
-			directional_light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
-			directional_light.target.position.x = 0;
-			directional_light.target.position.y = -5;
-			directional_light.target.position.z = 0;
+		// if(WEBVR.isAvailable()){
+		// 	// App.getScene().add(directional_light.target);
+		// 	// directional_light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
+		// 	// directional_light.target.position.x = 0;
+		// 	// directional_light.target.position.y = -5;
+		// 	// directional_light.target.position.z = 0;
 
-		}
-		else{
+		// }
+		// else{
 			directional_light.position.set(1, 1, 1 ).normalize();
-		}	
+		// }	
 		lights.push(directional_light);
-		console.log(directional_light);
+
+		if(WEBVR.isAvailable()){
+			var spotLight = new THREE.SpotLight( 0xffffff );
+			// spotLight.intensity = 100;
+			App.getCamera().add(spotLight);
+		}
+
+		var inner_point_light = new THREE.PointLight(0xffffff, 0.3);
+		inner_point_light.position = new THREE.Vector3(0,0,0);
+
+		outer_point_light = new THREE.PointLight(0xffffff, 0.3);
+		outer_point_light.position.set(14, 2, 0);
+
+		App.getScene().add(inner_point_light);
+		App.getScene().add(outer_point_light);
+
 		
-		App.getScene().add(directional_light);
+		// App.getScene().add(directional_light);
+	};
+
+	var update = function(time){
+		time = App.getClock().getElapsedTime();
+		outer_point_light.position.set(14 * Math.sin(time), 2, 14 * Math.cos(time));
 	};
 
 
@@ -45,6 +66,7 @@ var Lights = function(){
 	// public methods
 	return{
 		init: init,
+		update: update,
 		getLights: getLights
 	}
 }();
