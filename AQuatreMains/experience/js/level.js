@@ -642,7 +642,7 @@ var Level = function(){
 				checkHandHits(App.getController1(), 0);
 				checkHandHits(App.getController2(), 0);
 
-				if(App.getController1() && App.getController2()) {
+				if(App.getController1().getGamepad() && App.getController2().getGamepad()) {
 					if(App.getController1().getGamepad().axes[0] < -0.9 && App.getController2().getGamepad().axes[0] > 0.9) {
 						console.log('silence');
 						silenceAllSynths();
