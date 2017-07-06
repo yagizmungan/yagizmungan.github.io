@@ -9,7 +9,6 @@ class App {
     switch (this.options.role){
       case 'bio':
         for (let i =  0; i < this.options.bio_exhibitions.length; i++) {
-          // this.options.items[i]
           let item = new BioItem({
             "content": this.options.bio_exhibitions[i],
             "parent_id": 'bio__works__exhibitions' 
@@ -17,10 +16,16 @@ class App {
         }
 
         for (let i =  0; i < this.options.bio_publications.length; i++) {
-          // this.options.items[i]
           let item = new BioItem({
             "content": this.options.bio_publications[i],
             "parent_id": 'bio__works__publications' 
+          });
+        }
+
+        for (let i =  0; i < this.options.bio_workshops.length; i++) {
+          let item = new BioItem({
+            "content": this.options.bio_workshops[i],
+            "parent_id": 'bio__works__workshops' 
           });
         }
 

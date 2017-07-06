@@ -520,19 +520,19 @@ var Options = {
     }
   ],
   "bio_publications": [
-  {
-    "entry": [
-      { 
-        "text": "DeC 2015, ",
-        "link": ""
-      },
-      { 
-        "text": "100 Greatest Game Franchieses: Minecraft ",
-        "link": ""
-      }
-    ]
-  }, 
-  {  
+    {
+      "entry": [
+        { 
+          "text": "Dec 2015, ",
+          "link": ""
+        },
+        { 
+          "text": "100 Greatest Game Franchieses: Minecraft ",
+          "link": ""
+        }
+      ]
+    }, 
+    {  
     "entry": [
         { 
           "text": "Fall 2014, ",
@@ -564,6 +564,104 @@ var Options = {
         }
       ]
     },   
+  ],
+  "bio_workshops": [
+    {
+      "entry": [
+        { 
+          "text": "May 2017, ",
+          "link": ""
+        },
+        { 
+          "text": "Gray Area Festival ",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "entry": [
+        { 
+          "text": "June 2015, ",
+          "link": ""
+        },
+        { 
+          "text": "Emergence Art and Game Design ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Sept 2013, ",
+          "link": ""
+        },
+        { 
+          "text": "Merging Physical and Virtual ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Summer 2013, ",
+          "link": ""
+        },
+        { 
+          "text": "Pong in Unity3D ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Summer 2013, ",
+          "link": ""
+        },
+        { 
+          "text": "Introduction to Physical Computing ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Spring 2013, ",
+          "link": ""
+        },
+        { 
+          "text": "Vision to Sound ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Summer 2012, ",
+          "link": ""
+        },
+        { 
+          "text": "Introduction to Algorithmic Computing and Pure Data ",
+          "link": ""
+        }
+      ]
+    }, 
+    {
+      "entry": [
+        { 
+          "text": "Fall 2012, ",
+          "link": ""
+        },
+        { 
+          "text": "Unity3D - MAX/MSP/JITTER ",
+          "link": ""
+        }
+      ]
+    }
   ]
 }
 // MFA

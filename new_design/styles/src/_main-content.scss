@@ -1,7 +1,7 @@
 #main-content{
-  position: absolute;
-  top: 75vh;
-  left: 0px;
+  // position: absolute;
+  // top: 75vh;
+  // left: 0px;
   background-color: rgba(0,0,0,0.3);
   display: flex;
   color: $main-text-color;
@@ -10,6 +10,8 @@
   max-width: 1300px;
   justify-content: center;
   user-select: none;
+  margin: 0 auto;
+  margin-top: 75vh;
 }
 
 .main__container {
