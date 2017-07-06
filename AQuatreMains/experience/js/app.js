@@ -18,11 +18,35 @@ var App = function(){
 	var controller1_trigger_object, controller1_trigger_object;
 	var room;
 
+	var vrCanWork = false;
+
 	var all_controls = [];
 
 	var rotate_around = false;
 
 	var init = function(){
+
+		if(!navigator.getVRDisplays || !WEBVR.isAvailable()) {
+			vrCanWork = false;
+			setupAll();
+		}
+		else {
+			navigator.getVRDisplays().then(function(displays){
+				if(displays.length > 0 && WEBVR.isAvailable() === true) {
+					vrCanWork = true;
+				}
+
+				if(displays.length == 0 && WEBVR.isAvailable() === true) {
+					console.warn("either no VR HMD or the browser can not access the hardware: ie regular Chrome without the full VR support");
+				}
+
+				setupAll();
+			});
+		}
+			
+	};
+
+	var setupAll = function() {
 		IllyNotes.init();
 		AQMSynthMaster.init();
 
@@ -51,10 +75,8 @@ var App = function(){
 
 		/*Actual Content*/
 		Level.init();
-
-		
-					
-		if ( WEBVR.isAvailable() === true ) {
+	
+		if(vrCanWork) {
 			scene.position.y -= World.getWorldEdgeLength();
 			effect = new THREE.VREffect( renderer );
 			document.body.appendChild( WEBVR.getButton( effect ) );
@@ -68,8 +90,8 @@ var App = function(){
 
 		
 		// createHandMesh();
-		animate();		
-	};
+		animate();
+	}
 
 
 	var onWindowResize = function() {
@@ -140,7 +162,7 @@ var App = function(){
 
 
 	var setupCamera = function(){		
-		if(WEBVR.isAvailable()){
+		if(getVrCanWork()){
 			camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, World.getWorldEdgeLength()*2 );
 
 			// TODO needs to be changed
@@ -173,7 +195,7 @@ var App = function(){
 
 	var setupControls = function(){
 		// make sure it is generic
-		if(WEBVR.isAvailable()){
+		if(getVrCanWork()){
 			controls = new THREE.VRControls( camera );
 			controls.standing = true;
 
@@ -220,7 +242,7 @@ var App = function(){
     	}       
     };
 
-	var setupHandControllers = function(){
+	var setupHandControllers = function() {
 
 		/***************VIVE CONTROLLERS***************/
 		controller1 = new THREE.ViveController( 0 );
@@ -251,41 +273,45 @@ var App = function(){
 		controller2.add(controller2_mesh);
 	};
 
-	var getScene = function(){
+	var getScene = function() {
 		return scene;
 	};
 
-	var getClock = function(){
+	var getClock = function() {
 		return clock;
 	};
 
-	var getControl = function(){
+	var getControl = function() {
 		return controls;
 	};
 
-	var getCamera = function(){
+	var getCamera = function() {
 		return camera;
 	};
 	
-	var getRenderer = function(){
+	var getRenderer = function() {
 		return renderer;
 	};
 
-	var getVREffect = function(){
+	var getVREffect = function() {
 		return effect;
 	};
 
-	var isDebug = function(){
+	var isDebug = function() {
 		return false;
 	};
 
-	var getController1 = function(){
+	var getController1 = function() {
 		return controller1;
 	};
 
-	var getController2 = function(){
+	var getController2 = function() {
 		return controller2;
 	};
+
+	var getVrCanWork = function() {
+		return vrCanWork;
+	}
 
 	// public methods
 	return{
@@ -299,6 +325,7 @@ var App = function(){
 		isDebug: isDebug,
 		getController1: getController1,
 		getController2: getController2,
-		setupControls: setupControls
+		setupControls: setupControls,
+		getVrCanWork: getVrCanWork
 	}
 }();

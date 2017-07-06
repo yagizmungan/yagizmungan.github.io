@@ -66,7 +66,7 @@ var Level = function(){
 	// // particles //
 	
 	var init = function(){
-		if(WEBVR.isAvailable()){
+		if(App.getVrCanWork()){
 			dome_radius = dome_radius_vr;
 			webvr_size_scalar =  dome_radius/5*dome_radius_vr;
 
@@ -310,7 +310,7 @@ var Level = function(){
 
 
 		// App.setupControls();
-		if(WEBVR.isAvailable()) {
+		if(App.getVrCanWork()) {
 			App.getController1().addEventListener( 'triggerdown', function(){
 				checkHandHits(App.getController1(), 1);
 			});
@@ -518,7 +518,7 @@ var Level = function(){
 		var vector;
 		var ray;
 
-		if(WEBVR.isAvailable()){
+		if(App.getVrCanWork()){
 			// raycast from camera to the scene
 			ray = new THREE.Raycaster();
 			ray.setFromCamera( { x: 0, y: 0 }, App.getCamera() );
@@ -638,7 +638,7 @@ var Level = function(){
 			current_highlights = [];
 			// hexagons_mode2_removal = [];
 
-			if(WEBVR.isAvailable()) {
+			if(App.getVrCanWork()) {
 				checkHandHits(App.getController1(), 0);
 				checkHandHits(App.getController2(), 0);
 

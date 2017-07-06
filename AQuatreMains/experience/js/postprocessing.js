@@ -23,7 +23,7 @@ var Postprocessing = function(){
 		
 
 	var init = function(){
-		// if ( WEBVR.isAvailable() === true ) {
+		// if ( App.getVrCanWork() === true ) {
 		// 	composer = new THREE.EffectComposer( App.getVREffect() );
 		// }
 		// else{

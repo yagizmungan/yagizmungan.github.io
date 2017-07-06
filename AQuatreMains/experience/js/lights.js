@@ -21,7 +21,7 @@ var Lights = function(){
 		directional_light.shadow.bias = -0.0001;
 		
 
-		// if(WEBVR.isAvailable()){
+		// if(App.getVrCanWork()){
 		// 	// App.getScene().add(directional_light.target);
 		// 	// directional_light.position.set( App.getCamera().position.x, App.getCamera().position.y + 2, App.getCamera().position.z ).normalize();
 		// 	// directional_light.target.position.x = 0;
@@ -34,7 +34,7 @@ var Lights = function(){
 		// }	
 		lights.push(directional_light);
 
-		if(WEBVR.isAvailable()){
+		if(App.getVrCanWork()){
 			var spotLight = new THREE.SpotLight( 0xffffff );
 			// spotLight.intensity = 100;
 			App.getCamera().add(spotLight);

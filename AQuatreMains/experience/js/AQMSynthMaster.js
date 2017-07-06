@@ -25,9 +25,9 @@ AQMSynthMaster = function() {
 	var current_beat;
 	var previous_beat;
 
-	console.log('beat_time', beat_time);
-	console.log('BPM_resolution_time', BPM_resolution_time);
-	console.log('measure_time', measure_time);
+	// console.log('beat_time', beat_time);
+	// console.log('BPM_resolution_time', BPM_resolution_time);
+	// console.log('measure_time', measure_time);
 
 	var init = function(autosetup){
 		audio_context = new (window.AudioContext || window.webkitAudioContext)();
@@ -133,18 +133,6 @@ AQMSynthMaster = function() {
 			synth.default_volume = 1.0;
 			filter.connect(master_volume);
 		}
-
-		// ////FIND A WAY TO HANDLE CHANGING VOLUME////
-		// /*
-		// https://www.youtube.com/watch?v=Fne0oIEv-WI
-		// http://www.bytenoise.co.uk/How_to_Sound_Like_Vangelis
-		// https://www.gearslutz.com/board/electronic-music-instruments-electronic-music-production/786642-show-us-your-blade-runner-type-synth-brass.html
-		// http://www.musictech.net/2016/08/the-7-deadly-synth-sounds/
-		// https://noisehack.com
-
-		// https://github.com/burnson/Reverb.js/tree/master
-		// https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createConvolver
-		// */
 		// /** blade runner v1  **/
 
 
@@ -184,22 +172,9 @@ AQMSynthMaster = function() {
 			synth.default_volume = 1.0;
 			filter.connect(master_volume);
 		}
-
-		////FIND A WAY TO HANDLE CHANGING VOLUME////
-		/*
-		https://www.youtube.com/watch?v=Fne0oIEv-WI
-		http://www.bytenoise.co.uk/How_to_Sound_Like_Vangelis
-		https://www.gearslutz.com/board/electronic-music-instruments-electronic-music-production/786642-show-us-your-blade-runner-type-synth-brass.html
-		http://www.musictech.net/2016/08/the-7-deadly-synth-sounds/
-		https://noisehack.com
-
-		https://github.com/burnson/Reverb.js/tree/master
-		https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createConvolver
-		*/
 		/** blade runner v2  **/
 
 		/** base synth **/
-		// https://music.tutsplus.com/tutorials/essential-synthesis-part-3-synth-bass--audio-6844
 		else if (type == 3) {
 			var osc1 = audio_context.createOscillator();
 			osc1.type = 'sawtooth';
