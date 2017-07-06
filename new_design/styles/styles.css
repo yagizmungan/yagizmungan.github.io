@@ -198,7 +198,7 @@ footer {
     #bio__works .title {
       text-align: right;
       color: #F6ACD7; }
-  #bio__cv {
+  #bio__cv, #bio__oldsite {
     text-align: left;
     margin-left: 20%;
     margin-right: 20%;
