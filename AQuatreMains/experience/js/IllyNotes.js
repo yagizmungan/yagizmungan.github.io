@@ -4,12 +4,15 @@ var IllyNotes = function(){
 	var notes_length = 36;//36
 	var current_note= notes_length/2;
 	var major = [2,2,1,2,2,2,1];
+	var minor = [2,1,2,2,1,2,2];
+
+	var scale = minor;
 	//fn = f0 * (a)n 
 
 	var init = function(){
 		var j=0
 		for (var i = 0; i < notes_length; i++) {
-			var scale_index = i%major.length;
+			var scale_index = i%scale.length;
 			// if(scale_index < 0){
 			// 	scale_index += major.length;
 			// }
@@ -18,8 +21,8 @@ var IllyNotes = function(){
 			// }
 			// console.log(scale_index);
 			// console.log(j+major[i%major.length]);
-			var new_note = reference_note * Math.pow(Math.pow(2, (1/12)), j+major[scale_index]);
-			j = (j+major[i%major.length]);
+			var new_note = reference_note * Math.pow(Math.pow(2, (1/12)), j+scale[scale_index]);
+			j = (j+scale[i%scale.length]);
 			notes.push(Math.round(new_note));
 		}		
 		// console.log(notes);

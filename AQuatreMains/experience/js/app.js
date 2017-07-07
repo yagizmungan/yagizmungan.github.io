@@ -1,10 +1,10 @@
 // TODO 
-// Lights - first pass
-// Sounds - first pass
-// Post-processing visuals (scanlines cause grayscale)
-// phone orientation change  is broken on landscape
-// accumulate snow - first pass
-// shadow looks broken and now disabled
+// Improve/second pass feedback
+// Lights - final pass
+// colors - second pass
+// shapes - second pass
+
+
 
 var App = function(){
 
@@ -14,15 +14,41 @@ var App = function(){
 	var camera, scene, renderer;
 	var effect, controls;
 	var controller1, controller2;
+	var controller1_mesh, controller2_mesh;
+	var controller1_trigger_object, controller1_trigger_object;
 	var room;
+
+	var vrCanWork = false;
 
 	var all_controls = [];
 
 	var rotate_around = false;
 
 	var init = function(){
+
+		if(!navigator.getVRDisplays || !WEBVR.isAvailable()) {
+			vrCanWork = false;
+			setupAll();
+		}
+		else {
+			navigator.getVRDisplays().then(function(displays){
+				if(displays.length > 0 && WEBVR.isAvailable() === true) {
+					vrCanWork = true;
+				}
+
+				if(displays.length == 0 && WEBVR.isAvailable() === true) {
+					console.warn("either no VR HMD or the browser can not access the hardware: ie regular Chrome without the full VR support");
+				}
+
+				setupAll();
+			});
+		}
+			
+	};
+
+	var setupAll = function() {
 		IllyNotes.init();
-		IllySynth.init();
+		AQMSynthMaster.init();
 
 		container = document.createElement( 'div' );
 		document.body.appendChild( container );
@@ -44,13 +70,13 @@ var App = function(){
 		/*Global lights*/
 		Lights.init();
 
+		// /*controllers*/
+		setupControls();
+
 		/*Actual Content*/
 		Level.init();
-
-		/*controllers*/
-		setupControls();
-					
-		if ( WEBVR.isAvailable() === true ) {
+	
+		if(vrCanWork) {
 			scene.position.y -= World.getWorldEdgeLength();
 			effect = new THREE.VREffect( renderer );
 			document.body.appendChild( WEBVR.getButton( effect ) );
@@ -63,9 +89,9 @@ var App = function(){
 		Audio.init();
 
 		
-
-		animate();		
-	};
+		// createHandMesh();
+		animate();
+	}
 
 
 	var onWindowResize = function() {
@@ -95,6 +121,13 @@ var App = function(){
 
 	var render = function() {
 
+		if(controller1_mesh){
+			GeometryUtils.rippleObject(controller1_mesh, 0.001);
+		}
+		if (controller2_mesh) {
+			GeometryUtils.rippleObject(controller2_mesh, 0.001);
+		}
+
 		for (var i = all_controls.length - 1; i >= 0; i--) {
 			// console.log('calling update on controllers');
 			all_controls[i].update();
@@ -107,10 +140,13 @@ var App = function(){
 		}		
 
 		Level.update();
+		Lights.update();
+		AQMSynthMaster.update();
 		Postprocessing.update();
 
 		if(effect){
 			effect.render( scene, camera );
+			renderer.render( scene, camera );
 		}
 		else{
 			if(Postprocessing.getComposer()){
@@ -126,7 +162,7 @@ var App = function(){
 
 
 	var setupCamera = function(){		
-		if(WEBVR.isAvailable()){
+		if(getVrCanWork()){
 			camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, World.getWorldEdgeLength()*2 );
 
 			// TODO needs to be changed
@@ -159,7 +195,7 @@ var App = function(){
 
 	var setupControls = function(){
 		// make sure it is generic
-		if(WEBVR.isAvailable()){
+		if(getVrCanWork()){
 			controls = new THREE.VRControls( camera );
 			controls.standing = true;
 
@@ -188,7 +224,7 @@ var App = function(){
 			// enable animation loop when using damping or autorotation
 			// controls.enableDamping = true;
 			// controls.dampingFactor = 0.25;
-			// controls.enableZoom = false;
+			controls.enableZoom = false;
 
 			all_controls.push(controls);
     	}
@@ -206,7 +242,7 @@ var App = function(){
     	}       
     };
 
-	var setupHandControllers = function(){
+	var setupHandControllers = function() {
 
 		/***************VIVE CONTROLLERS***************/
 		controller1 = new THREE.ViveController( 0 );
@@ -220,49 +256,61 @@ var App = function(){
 		all_controls.push(controller1);
 		all_controls.push(controller2);
 
-		var loader = new THREE.OBJLoader();
-		loader.setPath( './js/three.js-dev/examples/models/obj/vive-controller/' );
-		loader.load( 'vr_controller_vive_1_5.obj', function ( object ) {
+		controller1_mesh = GeometryUtils.createHandMesh();
+		controller2_mesh = GeometryUtils.createHandMesh();
+		// controller1_mesh = object.clone();
+		// controller1_mesh.default_vertices = object.default_vertices;
+		// controller2_mesh = object.clone();
+		// controller2_mesh.default_vertices = object.default_vertices;
 
-			var loader = new THREE.TextureLoader();
-			loader.setPath( './js/three.js-dev/examples/models/obj/vive-controller/' );
+		controller1_trigger_object = GeometryUtils.createHandTriggerMesh();
+		controller2_trigger_object = GeometryUtils.createHandTriggerMesh();
 
-			var controller = object.children[ 0 ];
-			controller.material.map = loader.load( 'onepointfive_texture.png' );
-			controller.material.specularMap = loader.load( 'onepointfive_spec.png' );
-
-			controller1.add( object.clone() );
-			controller2.add( object.clone() );
-
-		} );
+		controller1.add(controller1_trigger_object);
+		controller2.add(controller2_trigger_object);
+		
+		controller1.add(controller1_mesh);
+		controller2.add(controller2_mesh);
 	};
 
-	var getScene = function(){
+	var getScene = function() {
 		return scene;
 	};
 
-	var getClock = function(){
+	var getClock = function() {
 		return clock;
 	};
 
-	var getControl = function(){
+	var getControl = function() {
 		return controls;
 	};
 
-	var getCamera = function(){
+	var getCamera = function() {
 		return camera;
 	};
 	
-	var getRenderer = function(){
+	var getRenderer = function() {
 		return renderer;
 	};
 
-	var getVREffect = function(){
+	var getVREffect = function() {
 		return effect;
 	};
 
-	var isDebug = function(){
+	var isDebug = function() {
 		return false;
+	};
+
+	var getController1 = function() {
+		return controller1;
+	};
+
+	var getController2 = function() {
+		return controller2;
+	};
+
+	var getVrCanWork = function() {
+		return vrCanWork;
 	}
 
 	// public methods
@@ -274,6 +322,10 @@ var App = function(){
 		getVREffect: getVREffect,
 		getControl: getControl,
 		getCamera: getCamera,
-		isDebug: isDebug
+		isDebug: isDebug,
+		getController1: getController1,
+		getController2: getController2,
+		setupControls: setupControls,
+		getVrCanWork: getVrCanWork
 	}
 }();

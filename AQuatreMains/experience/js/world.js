@@ -24,9 +24,9 @@ var World = function(){
 			})
 		);
 
-		console.log(world);
+		// console.log(world);
 
-		if(WEBVR.isAvailable()){
+		if(App.getVrCanWork()){
 			world.position.z = -edge_length/2;
 		}
 
