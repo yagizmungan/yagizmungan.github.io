@@ -4,9 +4,27 @@ var Options = {
 	},
 	"items": [
     {
+      "title": "Human Gaze",
+      "subtitle": "VR Experince",
+      "date": "2017, ",
+      "location": "Balance un-Balance",
+      "link": "./HumanGaze",
+      "color_image": "./assets/images/HG/HG_thumb_color.png",
+      "bw_image": "./assets/images/HG/HG_thumb_bw.png"
+    },
+    {
+      "title": "Á Quatre Mains",
+      "subtitle": "VR Musical Instrument",
+      "date": "2017, ",
+      "location": "3D Web Fest",
+      "link": "./AQuatreMains/",
+      "color_image": "./assets/images/EAoM/EAoM1.png",
+      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+    },
+    {
       "title": "Jordan Standard",
       "subtitle": "VR Experince",
-      "date": "2016",
+      "date": "2017",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
       "color_image": "./assets/images/EAoM/EAoM1.png",
@@ -21,14 +39,23 @@ var Options = {
       "color_image": "./assets/images/EAoM/EAoM1.png",
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     },
+    {
+      "title": "Music",
+      "subtitle": "VR Experince",
+      "date": "2016",
+      "location": "Everywhere",
+      "link": "https://illy-pi.github.io/",
+      "color_image": "./assets/images/EAoM/EAoM1.png",
+      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+    },
 		{
 			"title": "Illy: A Primitive Intelligence",
 			"subtitle": "VR Experince",
 			"date": "2016",
 			"location": "Everywhere",
 			"link": "https://illy-pi.github.io/",
-			"color_image": "./assets/images/EAoM/EAoM1.png",
-			"bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+			"color_image": "./assets/images/Illy/Illy_thumb_color.jpg",
+			"bw_image": "./assets/images/Illy/Illy_thumb_bw.jpg"
 		},
 		{
 			"title": "Music Crafted Digital Environments",
@@ -38,16 +65,7 @@ var Options = {
 			"link": "https://github.com/yagizmungan/GAF17_music-crafted-environments",
 			"color_image": "./assets/images/EAoM/EAoM1.png",
 			"bw_image": "./assets/images/EAoM/EAoM1_bw.png"
-		},
-    {
-      "title": "Human Gaze",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
-    },
+		},    
     {
       "title": "Snow's Solace",
       "subtitle": "VR Experince",
@@ -92,6 +110,15 @@ var Options = {
       "link": "https://illy-pi.github.io/",
       "color_image": "./assets/images/EAoM/EAoM1.png",
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+    },    
+    {
+      "title": "Float Hybrid Entertainment",
+      "subtitle": "VR Experince",
+      "date": "2016",
+      "location": "Everywhere",
+      "link": "https://illy-pi.github.io/",
+      "color_image": "./assets/images/EAoM/EAoM1.png",
+      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     },
     {
       "title": "Mobile Music Apps",
@@ -103,14 +130,32 @@ var Options = {
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     },
     {
-      "title": "Float Hybrid Entertainment",
+      "title": "Enderman Arena of Music",
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
       "color_image": "./assets/images/EAoM/EAoM1.png",
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
-    }
+    },
+    {
+      "title": "Causailty",
+      "subtitle": "VR Experince",
+      "date": "2016",
+      "location": "Everywhere",
+      "link": "https://illy-pi.github.io/",
+      "color_image": "./assets/images/EAoM/EAoM1.png",
+      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+    },
+    {
+      "title": "Ad Infinitum3",
+      "subtitle": "VR Experince",
+      "date": "2016",
+      "location": "Everywhere",
+      "link": "https://illy-pi.github.io/",
+      "color_image": "./assets/images/EAoM/EAoM1.png",
+      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+    },
 	],
   "footer_items": [
     {
