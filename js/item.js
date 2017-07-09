@@ -32,9 +32,12 @@ class MainItem {
     info.classList.add('main__text-container__bottom');
     info.innerHTML = options.date + ' ' + options.location;
 
+    // let link = document.createElement('a');
+
     let interaction_zone = document.createElement('div');
     interaction_zone.classList.add('main__interaction-zone');
 
+    // link.appendChild('main__interaction-zone');
 
     container.appendChild(bw_image);
     // container.appendChild(color_image);
@@ -42,6 +45,7 @@ class MainItem {
     text_container.appendChild(info);
     container.appendChild(text_container);
     container.appendChild(interaction_zone);
+    // container.appendChild(link);
 
     // TweenLite.to(bw_image, 0.2, {width:"200px", height:"150px"});
 
@@ -62,6 +66,7 @@ class MainItem {
 
     interaction_zone.onclick =  () => {
       console.log(options.link);
+      window.location.href = options.link;
     }
 
     document.getElementById('main-content').appendChild(container);

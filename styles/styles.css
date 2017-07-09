@@ -90,7 +90,8 @@ table {
   justify-content: center;
   user-select: none;
   margin: 0 auto;
-  margin-top: 75vh; }
+  margin-top: 75vh;
+  margin-bottom: 60px; }
 
 .main__container {
   width: 400px;
@@ -98,7 +99,8 @@ table {
   background-size: cover;
   position: relative;
   margin: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid gold; }
 
 .main__bw-image {
   /*position: absolute;

@@ -18,8 +18,8 @@ var Options = {
       "date": "2017, ",
       "location": "3D Web Fest",
       "link": "./AQuatreMains/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/AQM/AQM_thumb_color.png",
+      "bw_image": "./assets/images/AQM/AQM_thumb_bw.png"
     },
     {
       "title": "Jordan Standard",
@@ -27,8 +27,8 @@ var Options = {
       "date": "2017",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/JS/JS_thumb_color.png",
+      "bw_image": "./assets/images/JS/JS_thumb_bw.png"
     },
     {
       "title": "Latest Experiments",
@@ -63,8 +63,8 @@ var Options = {
 			"date": "2017",
 			"location": "Gray Area Festival",
 			"link": "https://github.com/yagizmungan/GAF17_music-crafted-environments",
-			"color_image": "./assets/images/EAoM/EAoM1.png",
-			"bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+			"color_image": "./assets/images/GAF/GAF_thumb_color.png",
+			"bw_image": "./assets/images/GAF/GAF_thumb_bw.png"
 		},    
     {
       "title": "Snow's Solace",
@@ -72,8 +72,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/SS/SS_thumb_color.png",
+      "bw_image": "./assets/images/SS/SS_thumb_bw.png"
     },
     {
       "title": "Nike Trial Zone",
@@ -81,8 +81,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
+      "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png"
     },
     {
       "title": "Urban Intermezzo",
@@ -90,8 +90,8 @@ var Options = {
       "date": "2016",
       "location": "Soundwave Biennale",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/UI/UI_thumb_color.png",
+      "bw_image": "./assets/images/UI/UI_thumb_bw.png"
     },
     {
       "title": "Overfall",
@@ -99,8 +99,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/Overfall/Overfall_thumb_color.png",
+      "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png"
     },
     {
       "title": "Anything Interactive",
@@ -108,8 +108,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/AI/AI_thumb_color.png",
+      "bw_image": "./assets/images/AI/AI_thumb_bw.png"
     },    
     {
       "title": "Float Hybrid Entertainment",
@@ -117,8 +117,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/Float/Float_thumb_color.png",
+      "bw_image": "./assets/images/Float/Float_thumb_bw.png"
     },
     {
       "title": "Mobile Music Apps",
@@ -135,8 +135,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/EAoM/EAoM_thumb_color.png",
+      "bw_image": "./assets/images/EAoM/EAoM_thumb_bw.png"
     },
     {
       "title": "Causailty",
@@ -144,8 +144,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/Causality/Causality_thumb_color.jpg",
+      "bw_image": "./assets/images/Causality/Causality_thumb_bw.jpg"
     },
     {
       "title": "Ad Infinitum3",
