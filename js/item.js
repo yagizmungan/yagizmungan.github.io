@@ -60,7 +60,7 @@ class MainItem {
       // TweenLite.to(bw_image, 0.2, {autoAlpha: 1});
       TweenLite.to(bw_image, 0.25, {opacity: 1});
       setTimeout( function(){
-        TweenLite.to(text_container, 0, {opacity: 0});
+        TweenLite.to(text_container, 0.2, {opacity: 0});
       }, 250);
     }
 

@@ -1,0 +1,78 @@
+html{
+	background: color;
+}
+
+body {
+	min-width: 320px;
+	background-color: black;
+	color: white;
+	overflow-x: hidden;
+	/*overflow-y: hidden;*/
+	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
+	margin: 0% 5%;
+}
+
+
+#title{
+	text-align: center;
+    font-size: 36px;
+    margin: 5% 0%;
+}
+
+#hero-image{
+	background-image: url('./AQM.png');
+    max-height: 1080px;
+    min-height: 600px;
+    /* height: 1152px; */
+    height: auto;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+
+}
+
+#hero-image img{
+	/*width: 100%;*/
+	margin: 0 auto;
+	display: block;
+	max-height: 1080px;
+	/*height: 50%;*/
+}
+
+.liner{
+	/*margin: 8px 0px;*/
+}
+
+#live-links{
+	margin: 5% 0%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#live-link{
+	display: flex;
+}
+
+
+#description {
+	margin: 5% 5%;
+}
+
+#instructions {
+	margin: 5% 5%;
+}
+
+#exhibitions{
+	margin: 5% 5%;
+}
+
+#images{
+	margin: 5% 5%;
+}
+.image{
+	margin: 5% auto;
+    display: block;
+    width: 100%;
+}

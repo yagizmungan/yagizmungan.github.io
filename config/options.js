@@ -18,8 +18,8 @@ var Options = {
       "date": "2017, ",
       "location": "3D Web Fest",
       "link": "./AQuatreMains/",
-      "color_image": "./assets/images/AQM/AQM_thumb_color.png",
-      "bw_image": "./assets/images/AQM/AQM_thumb_bw.png"
+      "color_image": "./assets/images/AQM/AQM_thumb_color_v2.png",
+      "bw_image": "./assets/images/AQM/AQM_thumb_bw_v2.png"
     },
     {
       "title": "Jordan Standard",
@@ -134,7 +134,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./EAoM.html",
       "color_image": "./assets/images/EAoM/EAoM_thumb_color.png",
       "bw_image": "./assets/images/EAoM/EAoM_thumb_bw.png"
     },
