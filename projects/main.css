@@ -11,6 +11,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-family: sans-serif;
 	margin: 0% 5%;
+	font-size: 12px;
 }
 
 
@@ -20,8 +21,7 @@ body {
     margin: 5% 0%;
 }
 
-#hero-image{
-	background-image: url('./AQM.png');
+#hero-image{	
     max-height: 1080px;
     min-height: 600px;
     /* height: 1152px; */
@@ -49,6 +49,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	font-size: 16px;
 }
 
 #live-link{
@@ -75,4 +76,15 @@ body {
 	margin: 5% auto;
     display: block;
     width: 100%;
+}
+
+iframe {
+	margin: 5% auto;
+    display: block;
+    width: 100%;
+}
+
+.subtitle {
+	color:rgb(100,100,100);
+	font-size: 16px;
 }

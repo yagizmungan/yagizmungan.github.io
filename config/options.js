@@ -22,11 +22,11 @@ var Options = {
       "bw_image": "./assets/images/AQM/AQM_thumb_bw_v2.png"
     },
     {
-      "title": "Jordan Standard",
+      "title": "The Jordan Standard",
       "subtitle": "VR Experince",
       "date": "2017",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/JordanStandard/",
       "color_image": "./assets/images/JS/JS_thumb_color.png",
       "bw_image": "./assets/images/JS/JS_thumb_bw.png"
     },
@@ -80,7 +80,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/NTZ/",
       "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
       "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png"
     },
@@ -89,7 +89,7 @@ var Options = {
       "subtitle": "",
       "date": "2016",
       "location": "Soundwave Biennale",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/UrbanIntermezzo/",
       "color_image": "./assets/images/UI/UI_thumb_color.png",
       "bw_image": "./assets/images/UI/UI_thumb_bw.png"
     },
@@ -107,7 +107,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/AnythingInteractive/",
       "color_image": "./assets/images/AI/AI_thumb_color.png",
       "bw_image": "./assets/images/AI/AI_thumb_bw.png"
     },    
@@ -116,7 +116,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/Float/",
       "color_image": "./assets/images/Float/Float_thumb_color.png",
       "bw_image": "./assets/images/Float/Float_thumb_bw.png"
     },
