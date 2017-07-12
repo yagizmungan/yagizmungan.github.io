@@ -35,7 +35,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/LatestExperiments/",
       "color_image": "./assets/images/EAoM/EAoM1.png",
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     },
@@ -44,7 +44,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/Music/",
       "color_image": "./assets/images/EAoM/EAoM1.png",
       "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
     },
