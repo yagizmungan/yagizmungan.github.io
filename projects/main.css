@@ -84,6 +84,10 @@ iframe {
     width: 100%;
 }
 
+iframe.soundcloud {
+	max-width: 800px;
+}
+
 .subtitle {
 	color:rgb(100,100,100);
 	font-size: 16px;
