@@ -45,8 +45,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "./projects/Music/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/Music/Music_thumb_color.png",
+      "bw_image": "./assets/images/Music/Music_thumb_bw.png"
     },
 		{
 			"title": "Illy: A Primitive Intelligence",
