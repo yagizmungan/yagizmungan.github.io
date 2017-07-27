@@ -98,7 +98,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "link": "./projects/Overfall/",
       "color_image": "./assets/images/Overfall/Overfall_thumb_color.png",
       "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png"
     },
@@ -126,8 +126,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "./projects/BB10MusicApps/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/BB10/BB10_thumb_color.png",
+      "bw_image": "./assets/images/BB10/BB10_thumb_bw.png"
     },
     {
       "title": "Enderman Arena of Music",
