@@ -36,8 +36,8 @@ var Options = {
       "date": "2016",
       "location": "Everywhere",
       "link": "./projects/LatestExperiments/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "color_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_color.png",
+      "bw_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_bw.png"
     },
     {
       "title": "Music",
