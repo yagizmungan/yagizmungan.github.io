@@ -152,9 +152,9 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
-      "color_image": "./assets/images/EAoM/EAoM1.png",
-      "bw_image": "./assets/images/EAoM/EAoM1_bw.png"
+      "link": "./projects/AI3/",
+      "color_image": "./assets/images/AI3/AI3_thumb_color.jpg",
+      "bw_image": "./assets/images/AI3/AI3_thumb_bw.jpg"
     },
 	],
   "footer_items": [
