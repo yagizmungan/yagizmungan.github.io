@@ -5,7 +5,7 @@ var Options = {
 	"items": [
     {
       "title": "Human Gaze",
-      "subtitle": "VR Experince",
+      "subtitle": "A VR Experince",
       "date": "2017, ",
       "location": "Balance un-Balance",
       "link": "./HumanGaze",
@@ -23,36 +23,36 @@ var Options = {
     },
     {
       "title": "The Jordan Standard",
-      "subtitle": "VR Experince",
+      "subtitle": "In-Store Interactive Experince",
       "date": "2017",
-      "location": "Everywhere",
+      "location": "Toronto",
       "link": "./projects/JordanStandard/",
       "color_image": "./assets/images/JS/JS_thumb_color.png",
       "bw_image": "./assets/images/JS/JS_thumb_bw.png"
     },
     {
       "title": "Latest Experiments",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "",
+      "date": "",
+      "location": "",
       "link": "./projects/LatestExperiments/",
       "color_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_color.png",
       "bw_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_bw.png"
     },
     {
       "title": "Music",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "",
+      "date": "",
+      "location": "",
       "link": "./projects/Music/",
       "color_image": "./assets/images/Music/Music_thumb_color.png",
       "bw_image": "./assets/images/Music/Music_thumb_bw.png"
     },
 		{
 			"title": "Illy: A Primitive Intelligence",
-			"subtitle": "VR Experince",
-			"date": "2016",
-			"location": "Everywhere",
+			"subtitle": "VR/Browser Experince",
+			"date": "2016 - 2017",
+			"location": "",
 			"link": "https://illy-pi.github.io/",
 			"color_image": "./assets/images/Illy/Illy_thumb_color.jpg",
 			"bw_image": "./assets/images/Illy/Illy_thumb_bw.jpg"
@@ -60,7 +60,7 @@ var Options = {
 		{
 			"title": "Music Crafted Digital Environments",
 			"subtitle": "Workshop with A-Frame",
-			"date": "2017",
+			"date": "2017,",
 			"location": "Gray Area Festival",
 			"link": "https://github.com/yagizmungan/GAF17_music-crafted-environments",
 			"color_image": "./assets/images/GAF/GAF_thumb_color.png",
@@ -70,24 +70,24 @@ var Options = {
       "title": "Snow's Solace",
       "subtitle": "VR Experince",
       "date": "2016",
-      "location": "Everywhere",
+      "location": "",
       "link": "https://illy-pi.github.io/",
       "color_image": "./assets/images/SS/SS_thumb_color.png",
       "bw_image": "./assets/images/SS/SS_thumb_bw.png"
     },
     {
       "title": "Nike Trial Zone",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "In-Store Interactive Experince",
+      "date": "2016,",
+      "location": "New York, Paris, Beijing",
       "link": "./projects/NTZ/",
       "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
       "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png"
     },
     {
       "title": "Urban Intermezzo",
-      "subtitle": "",
-      "date": "2016",
+      "subtitle": "Interactive Installation",
+      "date": "2016,",
       "location": "Soundwave Biennale",
       "link": "./projects/UrbanIntermezzo/",
       "color_image": "./assets/images/UI/UI_thumb_color.png",
@@ -95,63 +95,63 @@ var Options = {
     },
     {
       "title": "Overfall",
-      "subtitle": "VR Experince",
+      "subtitle": "Indie Game",
       "date": "2016",
-      "location": "Everywhere",
+      "location": "",
       "link": "./projects/Overfall/",
       "color_image": "./assets/images/Overfall/Overfall_thumb_color.png",
       "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png"
     },
     {
       "title": "Anything Interactive",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "In-Store Interactive Experince",
+      "date": "2015 - 2016",
+      "location": "",
       "link": "./projects/AnythingInteractive/",
       "color_image": "./assets/images/AI/AI_thumb_color.png",
       "bw_image": "./assets/images/AI/AI_thumb_bw.png"
     },    
     {
       "title": "Float Hybrid Entertainment",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "",
+      "date": "2013 - 2016",
+      "location": "",
       "link": "./projects/Float/",
       "color_image": "./assets/images/Float/Float_thumb_color.png",
       "bw_image": "./assets/images/Float/Float_thumb_bw.png"
     },
     {
       "title": "Mobile Music Apps",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "",
+      "date": "2011 - 2013",
+      "location": "",
       "link": "./projects/BB10MusicApps/",
       "color_image": "./assets/images/BB10/BB10_thumb_color.png",
       "bw_image": "./assets/images/BB10/BB10_thumb_bw.png"
     },
     {
       "title": "Enderman Arena of Music",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "Artist Residency",
+      "date": "2013, ",
+      "location": "Orwell",
       "link": "./EAoM.html",
       "color_image": "./assets/images/EAoM/EAoM_thumb_color.png",
       "bw_image": "./assets/images/EAoM/EAoM_thumb_bw.png"
     },
     {
       "title": "Causailty",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
-      "link": "https://illy-pi.github.io/",
+      "subtitle": "Interactive Installation",
+      "date": "2013, ",
+      "location": "Purdue University",
+      "link": "./Causality.html",
       "color_image": "./assets/images/Causality/Causality_thumb_color.jpg",
       "bw_image": "./assets/images/Causality/Causality_thumb_bw.jpg"
     },
     {
       "title": "Ad Infinitum3",
-      "subtitle": "VR Experince",
-      "date": "2016",
-      "location": "Everywhere",
+      "subtitle": "Interactive Experience",
+      "date": "2011",
+      "location": "Prague Quadrennial",
       "link": "./projects/AI3/",
       "color_image": "./assets/images/AI3/AI3_thumb_color.jpg",
       "bw_image": "./assets/images/AI3/AI3_thumb_bw.jpg"
@@ -159,7 +159,7 @@ var Options = {
 	],
   "footer_items": [
     {
-      "text": "bio",
+      "text": "about",
       "link": "bio.html"
     },
     {
@@ -169,7 +169,7 @@ var Options = {
   ],
   "bio_footer_items": [
     {
-      "text": "home",
+      "text": "projects",
       "link": "index.html"
     },
     {
@@ -186,11 +186,11 @@ var Options = {
         },
         { 
           "text": "3D Web Fest: ",
-          "link": ""
+          "link": "http://www.3dwebfest.com"
         },
         { 
           "text": "Á Quatre Mains",
-          "link": ""
+          "link": "http://yagizmungan.com/AQuatreMains/"
         }
       ]
     },
@@ -202,11 +202,11 @@ var Options = {
         },
         { 
           "text": "Bay Area Maker Faire: ",
-          "link": ""
+          "link": "http://codame.com/events/maker-faire"
         },
         { 
           "text": "Illy: A Primitive Intelligence (The Entity)",
-          "link": ""
+          "link": "https://illy-pi.github.io"
         }
       ]
     },
@@ -229,16 +229,16 @@ var Options = {
     {
       "entry": [
         { 
-          "text": "June 2017, ",
+          "text": "March 2017, ",
           "link": ""
         },
         { 
           "text": "UploadVR Soiree: ",
-          "link": ""
+          "link": "https://www.eventbrite.com/e/art-and-vr-a-soiree-of-immersive-art-tech-tickets-32872431327#"
         },
         { 
           "text": "Illy, a Primitive Intelligence (The Eye)",
-          "link": ""
+          "link": "https://illy-pi.github.io"
         }
       ]
     },
@@ -250,11 +250,11 @@ var Options = {
         },
         { 
           "text": "Dance Hack Day: ",
-          "link": ""
+          "link": "http://www.dancehack.org/history/"
         },
         { 
           "text": "Illy, a Primitive Intelligence (The Eye)",
-          "link": ""
+          "link": "https://illy-pi.github.io"
         }
       ]
     },
@@ -266,11 +266,11 @@ var Options = {
         },
         { 
           "text": "CODAME ARTEX: ",
-          "link": ""
+          "link": "http://codame.com/events/art-tech-festival-2016-artex"
         },
         { 
           "text": "Illy, a Primitive Intelligence (The Entity)",
-          "link": ""
+          "link": "https://illy-pi.github.io"
         }
       ]
     },
@@ -286,7 +286,7 @@ var Options = {
         },
         { 
           "text": "Nike Trial Zone",
-          "link": ""
+          "link": "./projects/NTZ/"
         }
       ]
     },
@@ -302,7 +302,7 @@ var Options = {
         },
         { 
           "text": "Nike Trial Zone",
-          "link": ""
+          "link": "./projects/NTZ/"
         }
       ]
     },
@@ -314,11 +314,11 @@ var Options = {
         },
         { 
           "text": "Soundwave SF: California Academy of Sciences, Gray Area Incubator ",
-          "link": ""
+          "link": "http://me-di-ate.net"
         },
         { 
           "text": "Urban Intermezzo",
-          "link": ""
+          "link": "./UrbanIntermezzo/"
         }
       ]
     },
@@ -330,11 +330,11 @@ var Options = {
         },
         { 
           "text": "3D Web Fest ",
-          "link": ""
+          "link": "https://www.youtube.com/watch?v=Z8WhaCPIrzs"
         },
         { 
           "text": "Illy, a Primitive Intelligence",
-          "link": ""
+          "link": "https://illy-pi.github.io"
         }
       ]
     },
@@ -346,11 +346,11 @@ var Options = {
         },
         { 
           "text": "3D Web Fest ",
-          "link": ""
+          "link": "https://www.youtube.com/watch?v=D-FILGRGqXw"
         },
         { 
           "text": "Tone Pong",
-          "link": ""
+          "link": "./TonePong/"
         }
       ]
     },
@@ -362,11 +362,11 @@ var Options = {
         },
         { 
           "text": "Dog Patch Gallery, AvaCon Metaverse Culture Series 2014",
-          "link": ""
+          "link": "https://www.youtube.com/watch?v=7KbX990ossw"
         },
         { 
           "text": "MineOpticon II",
-          "link": ""
+          "link": "https://soundcloud.com/yagizmungan/sets/mineopticon-ii"
         }
       ]
     },
