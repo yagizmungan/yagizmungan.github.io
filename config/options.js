@@ -378,11 +378,11 @@ var Options = {
         },
         { 
           "text": "AvaCon Metaverse Culture Series 2013",
-          "link": ""
+          "link": "https://www.avacon.org/blog/2013/10/metaverse-cultural-series-mineopticon/"
         },
         { 
           "text": "MineOpticon",
-          "link": ""
+          "link": "https://soundcloud.com/yagizmungan/sets/mineopticon"
         }
       ]
     },
@@ -394,11 +394,11 @@ var Options = {
         },
         { 
           "text": "Ars Virtua - Artist in Residence ",
-          "link": ""
+          "link": "http://arsvirtua.com/residence.html"
         },
         { 
           "text": "Enderman Arena of Music",
-          "link": ""
+          "link": "./EAoM.html"
         }
       ]
     },
@@ -414,7 +414,7 @@ var Options = {
         },
         { 
           "text": "Causality",
-          "link": ""
+          "link": "./Causality.html"
         }
       ]
     },
@@ -446,7 +446,7 @@ var Options = {
         },
         { 
           "text": "Coronal Rings",
-          "link": ""
+          "link": "https://vimeo.com/55908302"
         }
       ]
     },    
@@ -462,7 +462,7 @@ var Options = {
         },
         { 
           "text": "I Remember Coconut Skins: AUDO 2013",
-          "link": ""
+          "link": "https://www.dropbox.com/s/ufe0duyvbovlz1o/AUDO3_mix.mp3"
         }
       ]
     },  
@@ -478,7 +478,7 @@ var Options = {
         },
         { 
           "text": "In Ink",
-          "link": ""
+          "link": "https://www.dropbox.com/s/tku2jnm6ei4ioag/In%20Ink%20%28Radio%20Edit%29.mp3"
         }
       ]
     },
@@ -494,7 +494,7 @@ var Options = {
         },
         { 
           "text": "The Thought",
-          "link": ""
+          "link": "https://vimeo.com/46470320"
         }
       ]
     },
@@ -511,7 +511,7 @@ var Options = {
         },
         { 
           "text": "Ad Infinitum3",
-          "link": ""
+          "link": "./projecets/AI3/"
         }
       ]
     },
@@ -527,7 +527,7 @@ var Options = {
         },
         { 
           "text": "Instrument",
-          "link": ""
+          "link": "http://vimeo.com/28375410"
         }
       ]
     },
@@ -538,12 +538,12 @@ var Options = {
           "link": ""
         },
         { 
-          "text": "14o, Patti and Rusty Rueff Galleries",
+          "text": "14o, Patti and Rusty Rueff Galleries ",
           "link": ""
         },
         { 
           "text": "The Castle of Asterion",
-          "link": ""
+          "link": "./TheCastleofAsterion.html"
         }
       ]
     },
@@ -573,7 +573,7 @@ var Options = {
         },
         { 
           "text": "100 Greatest Game Franchieses: Minecraft ",
-          "link": ""
+          "link": "https://www.amazon.com/100-Greatest-Video-Game-Franchises/dp/1442278145"
         }
       ]
     }, 
@@ -589,7 +589,7 @@ var Options = {
         },
         { 
           "text": "Fine Arts, Culture and Creativity in Minecraft",
-          "link": ""
+          "link": "https://www.amazon.com/Understanding-Minecraft-Community-Possibilities-Minedraft/dp/0786479744"
         }
       ]
     },    
@@ -600,12 +600,12 @@ var Options = {
           "link": ""
         },
         { 
-          "text": "Patti and Rusty Rueff Galleries ",
+          "text": "Purdue Libraries ",
           "link": ""
         },
         { 
           "text": "Performing Video Games: Approaching Games as Musical Instruments",
-          "link": ""
+          "link": "./PerformingVideoGames.pdf"
         }
       ]
     },   
@@ -619,7 +619,11 @@ var Options = {
         },
         { 
           "text": "Gray Area Festival ",
-          "link": ""
+          "link": "http://grayareafestival.io/workshops/"
+        },
+        { 
+          "text": "Music Crafted Digital Environments ",
+          "link": "https://github.com/yagizmungan/GAF17_music-crafted-environments"
         }
       ]
     },
@@ -629,9 +633,13 @@ var Options = {
           "text": "June 2015, ",
           "link": ""
         },
+        {
+          "text": "FDG 2015 ",
+          "link": "http://www.fdg2015.org/"
+        },
         { 
           "text": "Emergence Art and Game Design ",
-          "link": ""
+          "link": "http://emergence-art-minecraft.weebly.com/"
         }
       ]
     }, 
@@ -641,9 +649,13 @@ var Options = {
           "text": "Sept 2013, ",
           "link": ""
         },
+        {
+          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+          "link": ""
+        },
         { 
           "text": "Merging Physical and Virtual ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/MergingPhysicalandVirtual.rar"
         }
       ]
     }, 
@@ -655,7 +667,7 @@ var Options = {
         },
         { 
           "text": "Pong in Unity3D ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/FSU/Pong.rar"
         }
       ]
     }, 
@@ -665,9 +677,13 @@ var Options = {
           "text": "Summer 2013, ",
           "link": ""
         },
+        {
+          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+          "link": ""
+        },
         { 
           "text": "Introduction to Physical Computing ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/PhysicalComputing.zip"
         }
       ]
     }, 
@@ -677,9 +693,13 @@ var Options = {
           "text": "Spring 2013, ",
           "link": ""
         },
+        {
+          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+          "link": ""
+        },
         { 
           "text": "Vision to Sound ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/VisiontoSound.rar"
         }
       ]
     }, 
@@ -689,9 +709,13 @@ var Options = {
           "text": "Summer 2012, ",
           "link": ""
         },
+        {
+          "text": "Purdue Univesity ",
+          "link": ""
+        },
         { 
           "text": "Introduction to Algorithmic Computing and Pure Data ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/AlgorithmicComposition&PureData.rar"
         }
       ]
     }, 
@@ -701,9 +725,13 @@ var Options = {
           "text": "Fall 2012, ",
           "link": ""
         },
+        {
+          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+          "link": ""
+        },
         { 
           "text": "Unity3D - MAX/MSP/JITTER ",
-          "link": ""
+          "link": "https://dl.dropboxusercontent.com/u/265455/Unity-MaxMSPJitter.rar"
         }
       ]
     }

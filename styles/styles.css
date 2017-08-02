@@ -60,7 +60,7 @@ table {
   height: 75vh;
   left: 0px;
   top: 0px;
-  color: #F6AC97; }
+  color: #f1f1f1; }
   #intro #title {
     position: absolute;
     top: 30%;
@@ -68,7 +68,15 @@ table {
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
-    font-size: 22px; }
+    font-size: 66px; }
+    #intro #title #subtitle {
+      position: relative;
+      padding-top: 5%;
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: center;
+      font-size: 22px; }
 
 #about {
   position: absolute;
@@ -83,7 +91,7 @@ table {
 #main-content {
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
-  color: #F6AC97;
+  color: #f1f1f1;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1300px;
@@ -168,7 +176,7 @@ footer {
   bottom: 0;
   width: 100vw;
   height: 40px;
-  color: #F6AC97;
+  color: #f1f1f1;
   display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
@@ -182,7 +190,7 @@ footer {
   position: absolute;
   top: 0px;
   left: 0px;
-  color: #F6AC97;
+  color: #f1f1f1;
   text-align: center; }
   #bio__main {
     margin-top: 20%;
@@ -206,6 +214,22 @@ footer {
     margin-right: 20%;
     margin-bottom: 60px;
     margin-top: 60px; }
+
+html {
+  font-family: helvetica; }
+
+a {
+  text-decoration: none;
+  font-style: bold; }
+
+a:hover {
+  color: #ccffcc; }
+
+a:visited {
+  color: #ccffcc; }
+
+a:link {
+  color: #ccffcc; }
 
 body {
   background-color: #000; }
