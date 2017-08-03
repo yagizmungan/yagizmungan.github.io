@@ -71,7 +71,7 @@ var Options = {
       "subtitle": "VR Experince",
       "date": "2016",
       "location": "",
-      "link": "https://illy-pi.github.io/",
+      "link": "./snowssolace/",
       "color_image": "./assets/images/SS/SS_thumb_color.png",
       "bw_image": "./assets/images/SS/SS_thumb_bw.png"
     },
