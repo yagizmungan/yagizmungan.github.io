@@ -1,11 +1,13 @@
 @import 'reset';
 @import 'colors';
+@import '_font-sizes';
 @import '_threejs-scene';
 @import '_intro';
 @import '_main-content';
 @import '_footer';
 @import '_bio';
 @import 'global';
+
 
 body{
   background-color: $background-color;

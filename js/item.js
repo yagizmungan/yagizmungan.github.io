@@ -20,9 +20,14 @@ class MainItem {
 
 
     let title = document.createElement('div');
+    title.classList.add('main__text-container__title');
     title.innerHTML = options.title;
+    if(options.title_dark) {
+      title.classList.add('main__text-container__title-dark');
+    }
 
     let subtitle = document.createElement('div');
+    subtitle.classList.add('main__text-container__subtitle');
     subtitle.innerHTML = options.subtitle;
 
     text_header_container.appendChild(title);
@@ -30,7 +35,7 @@ class MainItem {
 
     let info = document.createElement('div');
     info.classList.add('main__text-container__bottom');
-    info.innerHTML = options.date + ' ' + options.location;
+    info.innerHTML = options.location + ',&nbsp;' + options.date;
 
     // let link = document.createElement('a');
 

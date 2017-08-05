@@ -56,16 +56,20 @@
   &__top {
     top: 20px;
   }
-  .__top {
-    top: 20px;
+  &__title {
+    color:red;
+    font-size: $xlarge;
+    color: $title-color;
   }
-  .main__text-container__top {
-    top: 20px;
+  &__title-dark {
+    color: $title-dark-color;
+    text-shadow: 1px 1px 2px white;
+  }
+  &__subtitle {
+    margin-top: 5%;
+    font-size: $large;
   }
   &__bottom {
-    bottom: 20px;
-  }
-  .main__text-container__bottom {
     bottom: 20px;
   }
 }

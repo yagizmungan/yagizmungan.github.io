@@ -5,9 +5,9 @@ var Options = {
 	"items": [
     {
       "title": "Human Gaze",
-      "subtitle": "A VR Experince",
-      "date": "2017, ",
-      "location": "Balance un-Balance",
+      "subtitle": "VR Experince",
+      "date": "UK",
+      "location": "Balance un-Balance 2107",
       "link": "./HumanGaze",
       "color_image": "./assets/images/HG/HG_thumb_color.png",
       "bw_image": "./assets/images/HG/HG_thumb_bw.png"
@@ -15,8 +15,8 @@ var Options = {
     {
       "title": "Á Quatre Mains",
       "subtitle": "VR Musical Instrument",
-      "date": "2017, ",
-      "location": "3D Web Fest",
+      "date": "San Francisco",
+      "location": "3D Web Fest 2017",
       "link": "./AQuatreMains/",
       "color_image": "./assets/images/AQM/AQM_thumb_color_v2.png",
       "bw_image": "./assets/images/AQM/AQM_thumb_bw_v2.png"
@@ -28,7 +28,8 @@ var Options = {
       "location": "Toronto",
       "link": "./projects/JordanStandard/",
       "color_image": "./assets/images/JS/JS_thumb_color.png",
-      "bw_image": "./assets/images/JS/JS_thumb_bw.png"
+      "bw_image": "./assets/images/JS/JS_thumb_bw.png",
+      "title_dark": true
     },
     {
       "title": "Latest Experiments",
@@ -40,7 +41,7 @@ var Options = {
       "bw_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_bw.png"
     },
     {
-      "title": "Music",
+      "title": "Music and Sound Design",
       "subtitle": "",
       "date": "",
       "location": "",
@@ -52,7 +53,7 @@ var Options = {
 			"title": "Illy: A Primitive Intelligence",
 			"subtitle": "VR/Browser Experince",
 			"date": "2016 - 2017",
-			"location": "",
+			"location": "Multiple",
 			"link": "https://illy-pi.github.io/",
 			"color_image": "./assets/images/Illy/Illy_thumb_color.jpg",
 			"bw_image": "./assets/images/Illy/Illy_thumb_bw.jpg"
@@ -60,7 +61,7 @@ var Options = {
 		{
 			"title": "Music Crafted Digital Environments",
 			"subtitle": "Workshop with A-Frame",
-			"date": "2017,",
+			"date": "2017",
 			"location": "Gray Area Festival",
 			"link": "https://github.com/yagizmungan/GAF17_music-crafted-environments",
 			"color_image": "./assets/images/GAF/GAF_thumb_color.png",
@@ -73,7 +74,8 @@ var Options = {
       "location": "",
       "link": "./snowssolace/",
       "color_image": "./assets/images/SS/SS_thumb_color.png",
-      "bw_image": "./assets/images/SS/SS_thumb_bw.png"
+      "bw_image": "./assets/images/SS/SS_thumb_bw.png",
+      "title_dark": true
     },
     {
       "title": "Nike Trial Zone",
@@ -82,13 +84,14 @@ var Options = {
       "location": "New York, Paris, Beijing",
       "link": "./projects/NTZ/",
       "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
-      "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png"
+      "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png",
+      "title_dark": true
     },
     {
       "title": "Urban Intermezzo",
       "subtitle": "Interactive Installation",
-      "date": "2016,",
-      "location": "Soundwave Biennale",
+      "date": "San Francisco",
+      "location": "Soundwave Biennale 2016",
       "link": "./projects/UrbanIntermezzo/",
       "color_image": "./assets/images/UI/UI_thumb_color.png",
       "bw_image": "./assets/images/UI/UI_thumb_bw.png"
@@ -97,19 +100,21 @@ var Options = {
       "title": "Overfall",
       "subtitle": "Indie Game",
       "date": "2016",
-      "location": "",
+      "location": "Steam",
       "link": "./projects/Overfall/",
       "color_image": "./assets/images/Overfall/Overfall_thumb_color.png",
-      "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png"
+      "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png",
+      "title_dark": false
     },
     {
       "title": "Anything Interactive",
       "subtitle": "In-Store Interactive Experince",
       "date": "2015 - 2016",
-      "location": "",
+      "location": "Multiple",
       "link": "./projects/AnythingInteractive/",
       "color_image": "./assets/images/AI/AI_thumb_color.png",
-      "bw_image": "./assets/images/AI/AI_thumb_bw.png"
+      "bw_image": "./assets/images/AI/AI_thumb_bw.png",
+      "title_dark": true
     },    
     {
       "title": "Float Hybrid Entertainment",
@@ -132,7 +137,7 @@ var Options = {
     {
       "title": "Enderman Arena of Music",
       "subtitle": "Artist Residency",
-      "date": "2013, ",
+      "date": "2013",
       "location": "Orwell",
       "link": "./EAoM.html",
       "color_image": "./assets/images/EAoM/EAoM_thumb_color.png",
@@ -141,7 +146,7 @@ var Options = {
     {
       "title": "Causailty",
       "subtitle": "Interactive Installation",
-      "date": "2013, ",
+      "date": "2013",
       "location": "Purdue University",
       "link": "./Causality.html",
       "color_image": "./assets/images/Causality/Causality_thumb_color.jpg",
@@ -198,561 +203,600 @@ var Options = {
   ],
   "bio_exhibitions": [
     {
-      "entry": [
-        { 
-          "text": "June 2017, ",
+      "entry": {
+        "date": { 
+          "text": "August 2017, ",
           "link": ""
         },
-        { 
-          "text": "3D Web Fest: ",
+        "event": { 
+          "text": "Balance-Unbalance 2017: ",
+          "link": "http://balance-unbalance2017.org/"
+        },
+        "project": { 
+          "text": "Human Gaze",
+          "link": "./HumanGaze/"
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "July 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "SIGGRAPH Immersive Expressions: ",
+          "link": "https://immersive-expressions.siggraph.org/"
+        },
+        "project": { 
+          "text": "Illy: a Primitive Intelligence",
+          "link": "https://illy-pi.github.io/"
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "June 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "3D Web Fest",
           "link": "http://www.3dwebfest.com"
         },
-        { 
+        "project": { 
           "text": "Á Quatre Mains",
           "link": "http://yagizmungan.com/AQuatreMains/"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "May 2017, ",
+      "entry": {
+        "date": { 
+          "text": "May 2017",
           "link": ""
         },
-        { 
-          "text": "Bay Area Maker Faire: ",
+        "event": { 
+          "text": "Bay Area Maker Faire",
           "link": "http://codame.com/events/maker-faire"
         },
-        { 
+        "project": { 
           "text": "Illy: A Primitive Intelligence (The Entity)",
           "link": "https://illy-pi.github.io"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "2017, ",
+      "entry": {
+        "date": { 
+          "text": "May 2017 - Present",
           "link": ""
         },
-        { 
-          "text": "Toronto: ",
+        "location": { 
+          "text": "Toronto Jumpman Store",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "The Jordan Standard",
           "link": "https://vimeo.com/206179957"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "March 2017, ",
+      "entry": {
+        "date": { 
+          "text": "March 2017",
           "link": ""
         },
-        { 
-          "text": "UploadVR Soiree: ",
+        "event": { 
+          "text": "UploadVR Soiree",
           "link": "https://www.eventbrite.com/e/art-and-vr-a-soiree-of-immersive-art-tech-tickets-32872431327#"
         },
-        { 
+        "project": { 
           "text": "Illy, a Primitive Intelligence (The Eye)",
           "link": "https://illy-pi.github.io"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Dec 2016, ",
+      "entry": {
+        "date": { 
+          "text": "Dec 2016",
           "link": ""
         },
-        { 
-          "text": "Dance Hack Day: ",
+        "event": { 
+          "text": "Dance Hack Day",
           "link": "http://www.dancehack.org/history/"
         },
-        { 
+        "project": { 
           "text": "Illy, a Primitive Intelligence (The Eye)",
           "link": "https://illy-pi.github.io"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Nov 2016, ",
+      "entry": {
+        "date": { 
+          "text": "Nov 2016",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "CODAME ARTEX: ",
           "link": "http://codame.com/events/art-tech-festival-2016-artex"
         },
-        { 
+        "project": { 
           "text": "Illy, a Primitive Intelligence (The Entity)",
           "link": "https://illy-pi.github.io"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Nov 2016, ",
+      "entry": {
+        "date": { 
+          "text": "Nov 2016",
           "link": ""
         },
-        { 
-          "text": "Jordan Bastille: ",
+        "location": { 
+          "text": "Jordan Bastille",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Nike Trial Zone",
           "link": "./projects/NTZ/"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Nov 2016, ",
+      "entry": {
+        "date": { 
+          "text": "Nov 2016",
           "link": ""
         },
-        { 
-          "text": "Nike SoHo: ",
+        "location": { 
+          "text": "Nike SoHo",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Nike Trial Zone",
           "link": "./projects/NTZ/"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Aug 2016, ",
+      "entry": {
+        "date": { 
+          "text": "Aug 2016",
           "link": ""
         },
-        { 
-          "text": "Soundwave SF: California Academy of Sciences, Gray Area Incubator ",
+        "event": { 
+          "text": "Soundwave SF",
           "link": "http://me-di-ate.net"
         },
-        { 
+        "project": { 
           "text": "Urban Intermezzo",
           "link": "./UrbanIntermezzo/"
+        },
+        "location": {
+          "text": "California Academy of Sciences and Gray Area Incubator",
+          "link": ""
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "June 2016, ",
+      "entry": {
+        "date": { 
+          "text": "June 2016",
           "link": ""
         },
-        { 
-          "text": "3D Web Fest ",
+        "event": { 
+          "text": "3D Web Fest",
           "link": "https://www.youtube.com/watch?v=Z8WhaCPIrzs"
         },
-        { 
+        "project": { 
           "text": "Illy, a Primitive Intelligence",
           "link": "https://illy-pi.github.io"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "June 2015, ",
+      "entry": {
+        "date": { 
+          "text": "June 2015",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "3D Web Fest ",
           "link": "https://www.youtube.com/watch?v=D-FILGRGqXw"
         },
-        { 
+        "project": { 
           "text": "Tone Pong",
           "link": "./TonePong/"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "June 2014, ",
+      "entry": {
+        "date": { 
+          "text": "June 2014",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "Dog Patch Gallery, AvaCon Metaverse Culture Series 2014",
           "link": "https://www.youtube.com/watch?v=7KbX990ossw"
         },
-        { 
+        "project": { 
           "text": "MineOpticon II",
           "link": "https://soundcloud.com/yagizmungan/sets/mineopticon-ii"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "June 2013, ",
+      "entry": {
+        "date": { 
+          "text": "June 2013",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "AvaCon Metaverse Culture Series 2013",
           "link": "https://www.avacon.org/blog/2013/10/metaverse-cultural-series-mineopticon/"
         },
-        { 
+        "project": { 
           "text": "MineOpticon",
           "link": "https://soundcloud.com/yagizmungan/sets/mineopticon"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Summer 2013, ",
+      "entry": {
+        "date": { 
+          "text": "Summer 2013",
           "link": ""
         },
-        { 
-          "text": "Ars Virtua - Artist in Residence ",
+        "event": { 
+          "text": "Ars Virtua - Artist in Residence",
           "link": "http://arsvirtua.com/residence.html"
         },
-        { 
+        "project": { 
           "text": "Enderman Arena of Music",
           "link": "./EAoM.html"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "March 2013, ",
+      "entry": {
+        "date": { 
+          "text": "March 2013",
           "link": ""
         },
-        { 
-          "text": "Patti and Rusty Rueff Galleries, Purdue University ",
+        "location": { 
+          "text": "Patti and Rusty Rueff Galleries, Purdue University",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Causality",
           "link": "./Causality.html"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "March 2013, ",
+      "entry": {
+        "date": { 
+          "text": "March 2013",
           "link": ""
         },
-        { 
-          "text": "E3 Series of Improvisation Performance, Foam City ",
+        "event": { 
+          "text": "E3 Series of Improvisation Performance, Foam City",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Gnossienne a la Quiaca: E3 Mix",
           "link": ""
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Dec 2012, ",
+      "entry": {
+        "date": { 
+          "text": "Dec 2012",
           "link": ""
         },
-        { 
-          "text": "Purdue Contemporary Dance Company Winter Works ",
+        "event": { 
+          "text": "Purdue Contemporary Dance Company Winter Works",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Coronal Rings",
           "link": "https://vimeo.com/55908302"
         }
-      ]
+      }
     },    
     {
-      "entry": [
-        { 
-          "text": "Aug 2012, ",
+      "entry": {
+        "date": { 
+          "text": "Aug 2012",
           "link": ""
         },
-        { 
-          "text": "AUDO 2012 ",
+        "event": { 
+          "text": "AUDO 2012",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "I Remember Coconut Skins: AUDO 2013",
           "link": "https://www.dropbox.com/s/ufe0duyvbovlz1o/AUDO3_mix.mp3"
         }
-      ]
+      }
     },  
     {
-      "entry": [
-        { 
-          "text": "May 2012, ",
+      "entry": {
+        "date": { 
+          "text": "May 2012",
           "link": ""
         },
-        { 
-          "text": "WBAA ",
+        "location": { 
+          "text": "WBA",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "In Ink",
           "link": "https://www.dropbox.com/s/tku2jnm6ei4ioag/In%20Ink%20%28Radio%20Edit%29.mp3"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Feb 2012, ",
+      "entry": {
+        "date": { 
+          "text": "Feb 2012",
           "link": ""
         },
-        { 
-          "text": "Nexus Dance Concert 2012, University of Colorado at Boulder ",
+        "event": { 
+          "text": "Nexus Dance Concert 2012, University of Colorado at Boulder",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "The Thought",
           "link": "https://vimeo.com/46470320"
         }
-      ]
+      }
     },
-    
     {
-      "entry": [
-        { 
-          "text": "June 2011, ",
+      "entry": {
+        "date": { 
+          "text": "June 2011",
           "link": ""
         },
-        { 
-          "text": "Prague Quadrennial of Performance Design and Space ",
+        "event": { 
+          "text": "Prague Quadrennial of Performance Design and Space",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Ad Infinitum3",
           "link": "./projecets/AI3/"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "April 2011, ",
+      "entry": {
+        "date": { 
+          "text": "April 2011",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "E3 Series of Improvisation Performance, Lala Galleries",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Instrument",
           "link": "http://vimeo.com/28375410"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Feb 2011, ",
+      "entry": {
+        "date": { 
+          "text": "Feb 2011",
           "link": ""
         },
-        { 
-          "text": "14o, Patti and Rusty Rueff Galleries ",
+        "event": { 
+          "text": "14o",
           "link": ""
         },
-        { 
+        "location": {
+          "text": "Patti and Rusty Rueff Galleries",
+          "link": ""
+        },
+        "project": { 
           "text": "The Castle of Asterion",
           "link": "./TheCastleofAsterion.html"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "Sept 2010, ",
+      "entry": {
+        "date": { 
+          "text": "Sept 2010",
           "link": ""
         },
-        { 
+        "event": { 
           "text": "AUDO: Alternative Practices in Sound",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Algorithmic Composition",
           "link": ""
         }
-      ]
+      }
     }
   ],
   "bio_publications": [
     {
-      "entry": [
-        { 
-          "text": "Dec 2015, ",
+      "entry": {
+        "date": { 
+          "text": "Dec 2015",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "100 Greatest Game Franchieses: Minecraft ",
           "link": "https://www.amazon.com/100-Greatest-Video-Game-Franchises/dp/1442278145"
         }
-      ]
+      }
     }, 
     {  
-    "entry": [
-        { 
-          "text": "Fall 2014, ",
+    "entry": {
+        "date":{ 
+          "text": "Fall 2014",
           "link": ""
         },
-        { 
-          "text": "Understanding Minecraft, McFarland & Company Press ",
+        "event": { 
+          "text": "Understanding Minecraft, McFarland & Company Press",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Fine Arts, Culture and Creativity in Minecraft",
           "link": "https://www.amazon.com/Understanding-Minecraft-Community-Possibilities-Minedraft/dp/0786479744"
         }
-      ]
+      }
     },    
     {                                
-    "entry": [
-        { 
-          "text": "Aug 2013, ",
+    "entry": {
+        "date": { 
+          "text": "Aug 2013",
           "link": ""
         },
-        { 
-          "text": "Purdue Libraries ",
+        "event": { 
+          "text": "Purdue Libraries",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Performing Video Games: Approaching Games as Musical Instruments",
           "link": "./PerformingVideoGames.pdf"
         }
-      ]
+      }
     },   
   ],
   "bio_workshops": [
     {
-      "entry": [
-        { 
-          "text": "May 2017, ",
+      "entry": {
+        "date": { 
+          "text": "May 2017",
           "link": ""
         },
-        { 
-          "text": "Gray Area Festival ",
+        "event": { 
+          "text": "Gray Area Festival",
           "link": "http://grayareafestival.io/workshops/"
         },
-        { 
+        "project": { 
           "text": "Music Crafted Digital Environments ",
           "link": "https://github.com/yagizmungan/GAF17_music-crafted-environments"
         }
-      ]
+      }
     },
     {
-      "entry": [
-        { 
-          "text": "June 2015, ",
+      "entry": {
+        "date": { 
+          "text": "June 2015",
           "link": ""
         },
-        {
-          "text": "FDG 2015 ",
+        "event": {
+          "text": "FDG 2015",
           "link": "http://www.fdg2015.org/"
         },
-        { 
+        "project": { 
           "text": "Emergence Art and Game Design ",
           "link": "http://emergence-art-minecraft.weebly.com/"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Sept 2013, ",
+      "entry": {
+        "date": { 
+          "text": "Sept 2013",
           "link": ""
         },
-        {
-          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+        "event": {
+          "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Merging Physical and Virtual ",
           "link": "https://dl.dropboxusercontent.com/u/265455/MergingPhysicalandVirtual.rar"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Summer 2013, ",
+      "entry": {
+        "date": { 
+          "text": "Summer 2013",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Pong in Unity3D ",
           "link": "https://dl.dropboxusercontent.com/u/265455/FSU/Pong.rar"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Summer 2013, ",
+      "entry": {
+        "date": { 
+          "text": "Summer 2013",
           "link": ""
         },
-        {
-          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+        "event": {
+          "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Introduction to Physical Computing ",
           "link": "https://dl.dropboxusercontent.com/u/265455/PhysicalComputing.zip"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Spring 2013, ",
+      "entry": {
+        "date": { 
+          "text": "Spring 2013",
           "link": ""
         },
-        {
-          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+        "event": {
+          "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Vision to Sound ",
           "link": "https://dl.dropboxusercontent.com/u/265455/VisiontoSound.rar"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Summer 2012, ",
+      "entry": {
+        "date": { 
+          "text": "Summer 2012",
           "link": ""
         },
-        {
-          "text": "Purdue Univesity ",
+        "event": {
+          "text": "Purdue Univesity - SPIRIT",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Introduction to Algorithmic Computing and Pure Data ",
           "link": "https://dl.dropboxusercontent.com/u/265455/AlgorithmicComposition&PureData.rar"
         }
-      ]
+      }
     }, 
     {
-      "entry": [
-        { 
-          "text": "Fall 2012, ",
+      "entry": {
+        "date": { 
+          "text": "Fall 2012",
           "link": ""
         },
-        {
-          "text": "Purdue Univesity - Electronic and Time-Based Art ",
+        "event": {
+          "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        { 
+        "project": { 
           "text": "Unity3D - MAX/MSP/JITTER ",
           "link": "https://dl.dropboxusercontent.com/u/265455/Unity-MaxMSPJitter.rar"
         }
-      ]
+      }
     }
   ]
 }
