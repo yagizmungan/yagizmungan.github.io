@@ -32,6 +32,17 @@ class App {
         for (let i in this.options.bio_footer_items){      
           let footer_item_element = new FooterItem(this.options.bio_footer_items[i]);
         }
+
+        for (let i in this.options.bio_section_links) {
+          this.options.bio_section_links[i].parent = "bio__main__links";
+          let section_link = new SectionLink(this.options.bio_section_links[i]);
+
+          if(i < this.options.bio_section_links.length - 1) {
+            let temp_div = document.createElement('div');
+            temp_div.innerHTML = "&nbsp;|&nbsp;";
+            document.getElementById("bio__main__links").appendChild(temp_div);
+          }
+        }
         break;
 
       case 'works':

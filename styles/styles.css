@@ -197,6 +197,12 @@ footer {
     margin-top: 20%;
     margin-left: 20%;
     margin-right: 20%; }
+    #bio__main__links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      #bio__main__links .section-link {
+        cursor: pointer; }
   #bio__works {
     text-align: left;
     margin-left: 20%;

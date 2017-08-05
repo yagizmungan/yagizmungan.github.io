@@ -161,11 +161,12 @@ var Options = {
     {
       "text": "about",
       "link": "bio.html"
-    },
-    {
-      "text": "old page",
-      "link": "./old/"
-    },
+    }
+    // ,
+    // {
+    //   "text": "old page",
+    //   "link": "./old/"
+    // },
   ],
   "bio_footer_items": [
     {
@@ -176,6 +177,24 @@ var Options = {
       "text": "old page",
       "link": "./old/"
     },
+  ],
+  "bio_section_links": [
+    {
+      "title": "Exhibitions",
+      "target_id": "bio__works__exhibitions" 
+    },
+    {
+      "title": "Publications",
+      "target_id": "bio__works__publications"
+    },
+    {
+      "title": "Workshops",
+      "target_id": "bio__works__workshops"
+    },
+    {
+      "title": "CV",
+      "target_id": "bio__cv"
+    }
   ],
   "bio_exhibitions": [
     {
