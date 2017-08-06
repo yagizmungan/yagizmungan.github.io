@@ -107,9 +107,24 @@ iframe.soundcloud {
 .flex-row {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 
-.experiment-item {
+.flex-row-item {
 	
+}
+
+.twitter-video {
+	min-width: 400px !important;
+}
+
+.twitter-tweet {
+	min-width: 400px !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+iframe.facebook {
+	width: auto;
 }
