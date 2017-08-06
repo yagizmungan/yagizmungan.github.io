@@ -165,7 +165,7 @@ var Options = {
   "footer_items": [
     {
       "text": "about",
-      "link": "bio.html"
+      "link": "about.html"
     }
     // ,
     // {
@@ -175,8 +175,8 @@ var Options = {
   ],
   "bio_footer_items": [
     {
-      "text": "projects",
-      "link": "index.html"
+      "text": "works",
+      "link": "./"
     },
     {
       "text": "old page",
