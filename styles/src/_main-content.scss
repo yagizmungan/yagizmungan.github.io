@@ -94,7 +94,19 @@
   left: 0px;
 }
 
+@media (max-width: 768px) {
+  .main__container {
+    width: 320px;
+    height: 200px;
+  }
+}
+
 @media (max-width: 640px) {
+  .main__container {
+    width: 400px;
+    height: 250px;
+  }
+  
   .main__container {
     width: 90%;
     height: auto;
