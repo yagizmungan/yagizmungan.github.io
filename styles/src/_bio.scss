@@ -10,9 +10,15 @@
   &__main {
     margin-top: 10%;
     margin-left: 20%;
-    margin-right: 20%;   
+    margin-right: 20%;
+    font-size: $large;  
+
+    &__contact{
+      font-size: $normal;
+    } 
 
     &__links {
+      font-size: $normal;
       margin-top: 10%;
       display: flex;
       flex-direction: row;

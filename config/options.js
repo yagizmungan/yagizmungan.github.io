@@ -205,11 +205,11 @@ var Options = {
     {
       "entry": {
         "date": { 
-          "text": "August 2017, ",
+          "text": "August 2017",
           "link": ""
         },
         "event": { 
-          "text": "Balance-Unbalance 2017: ",
+          "text": "Balance-Unbalance 2017",
           "link": "http://balance-unbalance2017.org/"
         },
         "project": { 
@@ -646,7 +646,7 @@ var Options = {
           "text": "Fall 2014",
           "link": ""
         },
-        "event": { 
+        "location": { 
           "text": "Understanding Minecraft, McFarland & Company Press",
           "link": ""
         },
