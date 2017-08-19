@@ -35,7 +35,12 @@ class MainItem {
 
     let info = document.createElement('div');
     info.classList.add('main__text-container__bottom');
-    info.innerHTML = options.location + ',&nbsp;' + options.date;
+    if(options.location.length > 0) {
+      info.innerHTML = options.location + ',&nbsp;' + options.date;
+    }
+    else {
+      info.innerHTML = options.date; 
+    }
 
     // let link = document.createElement('a');
 
