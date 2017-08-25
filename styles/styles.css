@@ -212,6 +212,8 @@ footer {
     margin-left: 20%;
     margin-right: 20%;
     font-size: 16px; }
+    #bio__main__text {
+      line-height: 120%; }
     #bio__main__contact {
       font-size: 12px; }
     #bio__main__links {

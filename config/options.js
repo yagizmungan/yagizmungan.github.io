@@ -80,7 +80,7 @@ var Options = {
     {
       "title": "Nike Trial Zone",
       "subtitle": "In-Store Interactive Experince",
-      "date": "2016,",
+      "date": "2016",
       "location": "New York, Paris, Beijing",
       "link": "./projects/NTZ/",
       "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
@@ -202,6 +202,54 @@ var Options = {
     }
   ],
   "bio_exhibitions": [
+    {
+      "entry": {
+        "date": { 
+          "text": "November 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "Dreamforce 2017",
+          "link": "https://www.salesforce.com/dreamforce//"
+        },
+        "project": { 
+          "text": "Unannounced Installation",
+          "link": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "October 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "ACM MultiMedia 2017",
+          "link": "http://www.acmmm.org/2017/"
+        },
+        "project": { 
+          "text": "Á Quatre Mains",
+          "link": "http://yagizmungan.com/AQuatreMains/"
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "September 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "CounterPulse Combustible Artist Residency",
+          "link": "http://www.counterpulse.org/combustible-art-tech-residency/"
+        },
+        "project": { 
+          "text": "Motion Aftereffect",
+          "link": "http://www.counterpulse.org/event/combustible-residency-2017/"
+        }
+      }
+    },
     {
       "entry": {
         "date": { 
