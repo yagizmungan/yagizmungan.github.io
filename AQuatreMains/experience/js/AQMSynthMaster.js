@@ -344,7 +344,7 @@ AQMSynthMaster = function() {
 			}
 			else {
 				var current_value = synth.vol_master.gain.value;
-				console.log(current_value);
+				// console.log(current_value);
 				synth.vol_master.gain.cancelScheduledValues(audio_context.currentTime);	
 				synth.vol_master.gain.value = current_value;
 			}
@@ -358,7 +358,7 @@ AQMSynthMaster = function() {
 			}
 			else {
 				var current_value = synth.vol_master.gain.value;
-				console.log(current_value);
+				// console.log(current_value);
 				synth.vol_master.gain.cancelScheduledValues(audio_context.currentTime);	
 				synth.vol_master.gain.value = current_value;
 			}
@@ -372,7 +372,7 @@ AQMSynthMaster = function() {
 			}
 			else {
 				var current_value = synth.vol_master.gain.value;
-				console.log(current_value);
+				// console.log(current_value);
 				synth.vol_master.gain.cancelScheduledValues(audio_context.currentTime);	
 				synth.vol_master.gain.value = current_value;
 			}			

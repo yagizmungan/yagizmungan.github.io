@@ -18,6 +18,7 @@ var App = function(){
 	var controller1_trigger_object, controller1_trigger_object;
 	var room;
 
+	var WEBVR_button;
 	var vrCanWork = false;
 
 	var all_controls = [];
@@ -76,10 +77,12 @@ var App = function(){
 		/*Actual Content*/
 		Level.init();
 	
-		if(vrCanWork) {
+		if(vrCanWork) {		
 			scene.position.y -= World.getWorldEdgeLength();
-			effect = new THREE.VREffect( renderer );
-			document.body.appendChild( WEBVR.getButton( effect ) );
+			effect = new THREE.VREffect(renderer);
+			WEBVR_button = WEBVR.getButton(effect);
+
+			document.body.appendChild(WEBVR_button);
 		}
 
 		window.addEventListener( 'resize', onWindowResize, false );
@@ -311,7 +314,11 @@ var App = function(){
 
 	var getVrCanWork = function() {
 		return vrCanWork;
-	}
+	};
+
+	var getWEBVRButton = function() {
+		return WEBVR_button;
+	};
 
 	// public methods
 	return{
@@ -326,6 +333,7 @@ var App = function(){
 		getController1: getController1,
 		getController2: getController2,
 		setupControls: setupControls,
-		getVrCanWork: getVrCanWork
+		getVrCanWork: getVrCanWork,
+		getWEBVRButton: getWEBVRButton
 	}
 }();

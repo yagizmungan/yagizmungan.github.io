@@ -40,6 +40,9 @@ var Level = function(){
 
 	var freq_scale = Math.pow(2, 1/12);
 
+	var reset_timer = null;
+	var reset_timer_time = 1000 * 60;
+
 	// // particles //
 	// var tick = 0;
 	// var particle_system;
@@ -311,10 +314,16 @@ var Level = function(){
 
 		// App.setupControls();
 		if(App.getVrCanWork()) {
-			App.getController1().addEventListener( 'triggerdown', function(){
+			App.getController1().addEventListener( 'triggerdown', function() {
+				// if(App.getVREffect().isPresenting) {
+				// 	App.getVREffect().requestPresent();
+				// }
 				checkHandHits(App.getController1(), 1);
 			});
-			App.getController2().addEventListener( 'triggerdown', function(){
+			App.getController2().addEventListener( 'triggerdown', function() {
+				// if(App.getVREffect().isPresenting) {
+				// 	App.getVREffect().requestPresent();
+				// }
 				checkHandHits(App.getController2(), 1);
 			});
 
@@ -430,6 +439,14 @@ var Level = function(){
 
 	 	// put these into an array
 	 	// for (var i = collision_results.length - 1; i >= 0; i--) {
+
+	 	if(collision_results_hexagonIDs.length > 0) {
+	 		clearResetTimer();
+	 	}
+	 	else {
+	 		startResetTimer();
+	 	}
+
  		for (var i = collision_results_hexagonIDs.length - 1; i >= 0; i--) {
       		// var current_hex_id = collision_results[i].object.hexagonID;
       		var current_hex_id = collision_results_hexagonIDs[i];
@@ -765,6 +782,25 @@ var Level = function(){
 			AQMSynthMaster.synthFadeOut(hexagons.synths[active_synths[i]]);
 		}
 		active_synths = [];
+	};
+
+	var startResetTimer = function() {
+		if(reset_timer == null) {
+			// console.log('reset timer initiated');
+			reset_timer = setTimeout( function() {
+				// console.log('reset timer hit, silencing all synths');
+				reset_timer = null;
+				silenceAllSynths();
+			}, reset_timer_time);
+		}
+	};
+
+	var clearResetTimer = function() {
+		if (reset_timer != null) {
+			// console.log('action detected clearing reset timer');
+			clearTimeout(reset_timer);
+			reset_timer = null;
+		}
 	};
 
 	// var setupUniverseParticles = function(){
