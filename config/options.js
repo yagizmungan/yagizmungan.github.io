@@ -4,6 +4,15 @@ var Options = {
 	},
 	"items": [
     {
+      "title": "MÆ - Motion Aftereffect",
+      "subtitle": "Dance Performance",
+      "date": "September, 2017",
+      "location": "CounterPulse, San Francisco",
+      "link": "./projects/MAE",
+      "color_image": "./assets/images/MAE/MAE_thumb_color.png",
+      "bw_image": "./assets/images/MAE/MAE_thumb_bw.png"
+    },
+    {
       "title": "Human Gaze",
       "subtitle": "VR Experince",
       "date": "UK",
