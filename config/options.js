@@ -4,6 +4,15 @@ var Options = {
 	},
 	"items": [
     {
+      "title": "Watson Primer",
+      "subtitle": "Installation",
+      "date": "Nov, 2017",
+      "location": "Dreamforce 2017, CES 2018",
+      "link": "./projects/WatsonPrimer",
+      "color_image": "./assets/images/WatsonPrimer/WatsonPrimer_thumb_color.png",
+      "bw_image": "./assets/images/WatsonPrimer/WatsonPrimer_thumb_bw.png"
+    },
+    {
       "title": "MÆ - Motion Aftereffect",
       "subtitle": "Dance Performance",
       "date": "September, 2017",
