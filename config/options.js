@@ -223,6 +223,54 @@ var Options = {
     {
       "entry": {
         "date": { 
+          "text": "March 2018",
+          "link": ""
+        },
+        "event": { 
+          "text": "IBM Think 2018",
+          "link": "https://www.ibm.com/events/think/"
+        },
+        "project": { 
+          "text": "IBM Primer",
+          "link": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "March 2018",
+          "link": ""
+        },
+        "event": { 
+          "text": "IBM Think 2018",
+          "link": "https://www.ibm.com/events/think/"
+        },
+        "project": { 
+          "text": "IBM Interactive Activations",
+          "link": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
+          "text": "January 2018",
+          "link": ""
+        },
+        "event": { 
+          "text": "CES 2018",
+          "link": "https://www.ibm.com/events/ces"
+        },
+        "project": { 
+          "text": "IBM Primer",
+          "link": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": { 
           "text": "November 2017",
           "link": ""
         },
@@ -231,7 +279,7 @@ var Options = {
           "link": "https://www.salesforce.com/dreamforce//"
         },
         "project": { 
-          "text": "Unannounced Installation",
+          "text": "IBM Primer",
           "link": ""
         }
       }
@@ -740,6 +788,22 @@ var Options = {
     },   
   ],
   "bio_workshops": [
+    {
+      "entry": {
+        "date": { 
+          "text": "Dec 2017",
+          "link": ""
+        },
+        "event": { 
+          "text": "Dancehack 2017",
+          "link": "http://www.dancehack.org/workshops/"
+        },
+        "project": { 
+          "text": "Audio Reactive Performances with Unity",
+          "link": ""
+        }
+      }
+    },
     {
       "entry": {
         "date": { 
