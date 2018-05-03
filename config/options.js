@@ -6,11 +6,11 @@ var Options = {
     {
       "title": "Watson Primer",
       "subtitle": "Installation",
-      "date": "Nov, 2017",
-      "location": "Dreamforce 2017, CES 2018",
+      "date": "CES 2018",
+      "location": "",
       "link": "./projects/WatsonPrimer",
-      "color_image": "./assets/images/WatsonPrimer/WatsonPrimer_thumb_color.png",
-      "bw_image": "./assets/images/WatsonPrimer/WatsonPrimer_thumb_bw.png"
+      "color_image": "./assets/images/WP/WP_thumb_color.jpg",
+      "bw_image": "./assets/images/WP/WP_thumb_bw.jpg"
     },
     {
       "title": "MÆ - Motion Aftereffect",
@@ -84,7 +84,7 @@ var Options = {
 			"link": "https://github.com/yagizmungan/GAF17_music-crafted-environments",
 			"color_image": "./assets/images/GAF/GAF_thumb_color.png",
 			"bw_image": "./assets/images/GAF/GAF_thumb_bw.png"
-		},    
+		},
     {
       "title": "Snow's Solace",
       "subtitle": "VR Experince",
@@ -133,7 +133,7 @@ var Options = {
       "color_image": "./assets/images/AI/AI_thumb_color.png",
       "bw_image": "./assets/images/AI/AI_thumb_bw.png",
       "title_dark": true
-    },    
+    },
     {
       "title": "Float Hybrid Entertainment",
       "subtitle": "",
@@ -204,7 +204,7 @@ var Options = {
   "bio_section_links": [
     {
       "title": "Exhibitions",
-      "target_id": "bio__works__exhibitions" 
+      "target_id": "bio__works__exhibitions"
     },
     {
       "title": "Publications",
@@ -222,15 +222,15 @@ var Options = {
   "bio_exhibitions": [
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "March 2018",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "IBM Think 2018",
           "link": "https://www.ibm.com/events/think/"
         },
-        "project": { 
+        "project": {
           "text": "IBM Primer",
           "link": ""
         }
@@ -238,15 +238,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "March 2018",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "IBM Think 2018",
           "link": "https://www.ibm.com/events/think/"
         },
-        "project": { 
+        "project": {
           "text": "IBM Interactive Activations",
           "link": ""
         }
@@ -254,15 +254,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "January 2018",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "CES 2018",
           "link": "https://www.ibm.com/events/ces"
         },
-        "project": { 
+        "project": {
           "text": "IBM Primer",
           "link": ""
         }
@@ -270,15 +270,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "November 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Dreamforce 2017",
           "link": "https://www.salesforce.com/dreamforce//"
         },
-        "project": { 
+        "project": {
           "text": "IBM Primer",
           "link": ""
         }
@@ -286,15 +286,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "October 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "ACM MultiMedia 2017",
           "link": "http://www.acmmm.org/2017/"
         },
-        "project": { 
+        "project": {
           "text": "Á Quatre Mains",
           "link": "http://yagizmungan.com/AQuatreMains/"
         }
@@ -302,15 +302,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "September 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "CounterPulse Combustible Artist Residency",
           "link": "http://www.counterpulse.org/combustible-art-tech-residency/"
         },
-        "project": { 
+        "project": {
           "text": "Motion Aftereffect",
           "link": "http://www.counterpulse.org/event/combustible-residency-2017/"
         }
@@ -318,15 +318,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "August 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Balance-Unbalance 2017",
           "link": "http://balance-unbalance2017.org/"
         },
-        "project": { 
+        "project": {
           "text": "Human Gaze",
           "link": "./HumanGaze/"
         }
@@ -334,15 +334,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "July 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "SIGGRAPH Immersive Expressions: ",
           "link": "https://immersive-expressions.siggraph.org/"
         },
-        "project": { 
+        "project": {
           "text": "Illy: a Primitive Intelligence",
           "link": "https://illy-pi.github.io/"
         }
@@ -350,15 +350,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "3D Web Fest",
           "link": "http://www.3dwebfest.com"
         },
-        "project": { 
+        "project": {
           "text": "Á Quatre Mains",
           "link": "http://yagizmungan.com/AQuatreMains/"
         }
@@ -366,15 +366,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "May 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Bay Area Maker Faire",
           "link": "http://codame.com/events/maker-faire"
         },
-        "project": { 
+        "project": {
           "text": "Illy: A Primitive Intelligence (The Entity)",
           "link": "https://illy-pi.github.io"
         }
@@ -382,15 +382,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "May 2017 - Present",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "Toronto Jumpman Store",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "The Jordan Standard",
           "link": "https://vimeo.com/206179957"
         }
@@ -398,15 +398,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "March 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "UploadVR Soiree",
           "link": "https://www.eventbrite.com/e/art-and-vr-a-soiree-of-immersive-art-tech-tickets-32872431327#"
         },
-        "project": { 
+        "project": {
           "text": "Illy, a Primitive Intelligence (The Eye)",
           "link": "https://illy-pi.github.io"
         }
@@ -414,15 +414,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Dec 2016",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Dance Hack Day",
           "link": "http://www.dancehack.org/history/"
         },
-        "project": { 
+        "project": {
           "text": "Illy, a Primitive Intelligence (The Eye)",
           "link": "https://illy-pi.github.io"
         }
@@ -430,15 +430,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Nov 2016",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "CODAME ARTEX: ",
           "link": "http://codame.com/events/art-tech-festival-2016-artex"
         },
-        "project": { 
+        "project": {
           "text": "Illy, a Primitive Intelligence (The Entity)",
           "link": "https://illy-pi.github.io"
         }
@@ -446,15 +446,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Nov 2016",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "Jordan Bastille",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Nike Trial Zone",
           "link": "./projects/NTZ/"
         }
@@ -462,15 +462,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Nov 2016",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "Nike SoHo",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Nike Trial Zone",
           "link": "./projects/NTZ/"
         }
@@ -478,15 +478,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Aug 2016",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Soundwave SF",
           "link": "http://me-di-ate.net"
         },
-        "project": { 
+        "project": {
           "text": "Urban Intermezzo",
           "link": "./UrbanIntermezzo/"
         },
@@ -498,15 +498,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2016",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "3D Web Fest",
           "link": "https://www.youtube.com/watch?v=Z8WhaCPIrzs"
         },
-        "project": { 
+        "project": {
           "text": "Illy, a Primitive Intelligence",
           "link": "https://illy-pi.github.io"
         }
@@ -514,15 +514,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2015",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "3D Web Fest ",
           "link": "https://www.youtube.com/watch?v=D-FILGRGqXw"
         },
-        "project": { 
+        "project": {
           "text": "Tone Pong",
           "link": "./TonePong/"
         }
@@ -530,15 +530,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2014",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Dog Patch Gallery, AvaCon Metaverse Culture Series 2014",
           "link": "https://www.youtube.com/watch?v=7KbX990ossw"
         },
-        "project": { 
+        "project": {
           "text": "MineOpticon II",
           "link": "https://soundcloud.com/yagizmungan/sets/mineopticon-ii"
         }
@@ -546,15 +546,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2013",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "AvaCon Metaverse Culture Series 2013",
           "link": "https://www.avacon.org/blog/2013/10/metaverse-cultural-series-mineopticon/"
         },
-        "project": { 
+        "project": {
           "text": "MineOpticon",
           "link": "https://soundcloud.com/yagizmungan/sets/mineopticon"
         }
@@ -562,15 +562,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Summer 2013",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Ars Virtua - Artist in Residence",
           "link": "http://arsvirtua.com/residence.html"
         },
-        "project": { 
+        "project": {
           "text": "Enderman Arena of Music",
           "link": "./EAoM.html"
         }
@@ -578,15 +578,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "March 2013",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "Patti and Rusty Rueff Galleries, Purdue University",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Causality",
           "link": "./Causality.html"
         }
@@ -594,15 +594,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "March 2013",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "E3 Series of Improvisation Performance, Foam City",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Gnossienne a la Quiaca: E3 Mix",
           "link": ""
         }
@@ -610,47 +610,47 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Dec 2012",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Purdue Contemporary Dance Company Winter Works",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Coronal Rings",
           "link": "https://vimeo.com/55908302"
         }
       }
-    },    
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Aug 2012",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "AUDO 2012",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "I Remember Coconut Skins: AUDO 2013",
           "link": "https://www.dropbox.com/s/ufe0duyvbovlz1o/AUDO3_mix.mp3"
         }
       }
-    },  
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "May 2012",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "WBA",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "In Ink",
           "link": "https://www.dropbox.com/s/tku2jnm6ei4ioag/In%20Ink%20%28Radio%20Edit%29.mp3"
         }
@@ -658,15 +658,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Feb 2012",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Nexus Dance Concert 2012, University of Colorado at Boulder",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "The Thought",
           "link": "https://vimeo.com/46470320"
         }
@@ -674,15 +674,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2011",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Prague Quadrennial of Performance Design and Space",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Ad Infinitum3",
           "link": "./projecets/AI3/"
         }
@@ -690,15 +690,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "April 2011",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "E3 Series of Improvisation Performance, Lala Galleries",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Instrument",
           "link": "http://vimeo.com/28375410"
         }
@@ -706,11 +706,11 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Feb 2011",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "14o",
           "link": ""
         },
@@ -718,7 +718,7 @@ var Options = {
           "text": "Patti and Rusty Rueff Galleries",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "The Castle of Asterion",
           "link": "./TheCastleofAsterion.html"
         }
@@ -726,15 +726,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Sept 2010",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "AUDO: Alternative Practices in Sound",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Algorithmic Composition",
           "link": ""
         }
@@ -744,61 +744,61 @@ var Options = {
   "bio_publications": [
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Dec 2015",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "100 Greatest Game Franchieses: Minecraft ",
           "link": "https://www.amazon.com/100-Greatest-Video-Game-Franchises/dp/1442278145"
         }
       }
-    }, 
-    {  
+    },
+    {
     "entry": {
-        "date":{ 
+        "date":{
           "text": "Fall 2014",
           "link": ""
         },
-        "location": { 
+        "location": {
           "text": "Understanding Minecraft, McFarland & Company Press",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Fine Arts, Culture and Creativity in Minecraft",
           "link": "https://www.amazon.com/Understanding-Minecraft-Community-Possibilities-Minedraft/dp/0786479744"
         }
       }
-    },    
-    {                                
+    },
+    {
     "entry": {
-        "date": { 
+        "date": {
           "text": "Aug 2013",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Purdue Libraries",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Performing Video Games: Approaching Games as Musical Instruments",
           "link": "./PerformingVideoGames.pdf"
         }
       }
-    },   
+    },
   ],
   "bio_workshops": [
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Dec 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Dancehack 2017",
           "link": "http://www.dancehack.org/workshops/"
         },
-        "project": { 
+        "project": {
           "text": "Audio Reactive Performances with Unity",
           "link": ""
         }
@@ -806,15 +806,15 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "May 2017",
           "link": ""
         },
-        "event": { 
+        "event": {
           "text": "Gray Area Festival",
           "link": "http://grayareafestival.io/workshops/"
         },
-        "project": { 
+        "project": {
           "text": "Music Crafted Digital Environments ",
           "link": "https://github.com/yagizmungan/GAF17_music-crafted-environments"
         }
@@ -822,7 +822,7 @@ var Options = {
     },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "June 2015",
           "link": ""
         },
@@ -830,15 +830,15 @@ var Options = {
           "text": "FDG 2015",
           "link": "http://www.fdg2015.org/"
         },
-        "project": { 
+        "project": {
           "text": "Emergence Art and Game Design ",
           "link": "http://emergence-art-minecraft.weebly.com/"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Sept 2013",
           "link": ""
         },
@@ -846,27 +846,27 @@ var Options = {
           "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Merging Physical and Virtual ",
           "link": "https://dl.dropboxusercontent.com/u/265455/MergingPhysicalandVirtual.rar"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Summer 2013",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Pong in Unity3D ",
           "link": "https://dl.dropboxusercontent.com/u/265455/FSU/Pong.rar"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Summer 2013",
           "link": ""
         },
@@ -874,15 +874,15 @@ var Options = {
           "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Introduction to Physical Computing ",
           "link": "https://dl.dropboxusercontent.com/u/265455/PhysicalComputing.zip"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Spring 2013",
           "link": ""
         },
@@ -890,15 +890,15 @@ var Options = {
           "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Vision to Sound ",
           "link": "https://dl.dropboxusercontent.com/u/265455/VisiontoSound.rar"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Summer 2012",
           "link": ""
         },
@@ -906,15 +906,15 @@ var Options = {
           "text": "Purdue Univesity - SPIRIT",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Introduction to Algorithmic Computing and Pure Data ",
           "link": "https://dl.dropboxusercontent.com/u/265455/AlgorithmicComposition&PureData.rar"
         }
       }
-    }, 
+    },
     {
       "entry": {
-        "date": { 
+        "date": {
           "text": "Fall 2012",
           "link": ""
         },
@@ -922,7 +922,7 @@ var Options = {
           "text": "Purdue Univesity - Electronic and Time-Based Art",
           "link": ""
         },
-        "project": { 
+        "project": {
           "text": "Unity3D - MAX/MSP/JITTER ",
           "link": "https://dl.dropboxusercontent.com/u/265455/Unity-MaxMSPJitter.rar"
         }
