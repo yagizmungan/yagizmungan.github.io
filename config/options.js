@@ -4,6 +4,15 @@ var Options = {
 	},
 	"items": [
     {
+      "title": "Watson Interactive Activations",
+      "subtitle": "Installation",
+      "date": "IBM Think",
+      "location": "",
+      "link": "./projects/WatsonActivations",
+      "color_image": "./assets/images/WA/WA_thumb_color.jpg",
+      "bw_image": "./assets/images/WA/WA_thumb_bw.jpg"
+    },
+    {
       "title": "Watson Primer",
       "subtitle": "Installation",
       "date": "CES 2018",
