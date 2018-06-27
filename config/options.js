@@ -22,6 +22,16 @@ var Options = {
       "bw_image": "./assets/images/WP/WP_thumb_bw.jpg"
     },
     {
+      "title": "Destiny 2 Ghost",
+      "subtitle": "Alexa Skill",
+      "date": "Fall 2017",
+      "location": "",
+      "link": "./projects/DestinyGhost",
+      "color_image": "./assets/images/DG/DG_thumb_color.jpg",
+      "bw_image": "./assets/images/DG/DG_thumb_bw.jpg",
+      "title_dark": true
+    },
+    {
       "title": "MÆ - Motion Aftereffect",
       "subtitle": "Dance Performance",
       "date": "September, 2017",
