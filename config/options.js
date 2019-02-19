@@ -6,7 +6,7 @@ var Options = {
     {
       "title": "Watson Interactive Activations",
       "subtitle": "Installation",
-      "date": "IBM Think",
+      "date": "IBM Think 2018",
       "location": "",
       "link": "./projects/WatsonActivations",
       "color_image": "./assets/images/WA/WA_thumb_color.jpg",
@@ -37,8 +37,8 @@ var Options = {
       "date": "September, 2017",
       "location": "CounterPulse, San Francisco",
       "link": "./projects/MAE",
-      "color_image": "./assets/images/MAE/MAE_thumb_color.png",
-      "bw_image": "./assets/images/MAE/MAE_thumb_bw.png"
+      "color_image": "./assets/images/MAE/MAE_thumb_color.jpg",
+      "bw_image": "./assets/images/MAE/MAE_thumb_bw.jpg"
     },
     {
       "title": "Human Gaze",
@@ -74,8 +74,8 @@ var Options = {
       "date": "",
       "location": "",
       "link": "./projects/LatestExperiments/",
-      "color_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_color.png",
-      "bw_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_bw.png"
+      "color_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_color.jpg",
+      "bw_image": "./assets/images/LatestExperiments/LatestExperiments_thumb_bw.jpg"
     },
     {
       "title": "Music and Sound Design",
@@ -83,8 +83,8 @@ var Options = {
       "date": "",
       "location": "",
       "link": "./projects/Music/",
-      "color_image": "./assets/images/Music/Music_thumb_color.png",
-      "bw_image": "./assets/images/Music/Music_thumb_bw.png"
+      "color_image": "./assets/images/Music/Music_thumb_color.jpg",
+      "bw_image": "./assets/images/Music/Music_thumb_bw.jpg"
     },
 		{
 			"title": "Illy: A Primitive Intelligence",
@@ -110,8 +110,8 @@ var Options = {
       "date": "2016",
       "location": "",
       "link": "./snowssolace/",
-      "color_image": "./assets/images/SS/SS_thumb_color.png",
-      "bw_image": "./assets/images/SS/SS_thumb_bw.png",
+      "color_image": "./assets/images/SS/SS_thumb_color.jpg",
+      "bw_image": "./assets/images/SS/SS_thumb_bw.jpg",
       "title_dark": true
     },
     {
@@ -120,8 +120,8 @@ var Options = {
       "date": "2016",
       "location": "New York, Paris, Beijing",
       "link": "./projects/NTZ/",
-      "color_image": "./assets/images/NTZ/NTZ_thumb_color.png",
-      "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.png",
+      "color_image": "./assets/images/NTZ/NTZ_thumb_color.jpg",
+      "bw_image": "./assets/images/NTZ/NTZ_thumb_bw.jpg",
       "title_dark": true
     },
     {
@@ -139,8 +139,8 @@ var Options = {
       "date": "2016",
       "location": "Steam",
       "link": "./projects/Overfall/",
-      "color_image": "./assets/images/Overfall/Overfall_thumb_color.png",
-      "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.png",
+      "color_image": "./assets/images/Overfall/Overfall_thumb_color.jpg",
+      "bw_image": "./assets/images/Overfall/Overfall_thumb_bw.jpg",
       "title_dark": false
     },
     {
@@ -239,6 +239,38 @@ var Options = {
     }
   ],
   "bio_exhibitions": [
+    {
+      "entry": {
+        "date": {
+          "text": "February 2019",
+          "link": ""
+        },
+        "event": {
+          "text": "IBM Think 2019",
+          "link": "https://www.ibm.com/events/think/"
+        },
+        "project": {
+          "text": "IBM Interactive Activations",
+          "link": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": {
+          "text": "Summer 2018",
+          "link": ""
+        },
+        "event": {
+          "text": "IBM Watson Munich IOT Center",
+          "link": ""
+        },
+        "project": {
+          "text": "Watson Exploratorium",
+          "link": ""
+        }
+      }
+    },
     {
       "entry": {
         "date": {
