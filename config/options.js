@@ -242,6 +242,22 @@ var Options = {
     {
       "entry": {
         "date": {
+          "text": "November - December 2019",
+          "link": ""
+        },
+        "event": {
+          "text": "Manresa Gallery | St. Ignatius Church",
+          "link": "https://www.manresagallery.org"
+        },
+        "project": {
+          "text": "As Above As Below",
+          "link": "https://www.asaboveasbelow.com"
+        }
+      }
+    },
+    {
+      "entry": {
+        "date": {
           "text": "February 2019",
           "link": ""
         },
